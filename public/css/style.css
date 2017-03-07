@@ -1,37 +1,117 @@
 /* line 1, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 body {
   padding-top: 20px;
+  font-family: Lobster Two;
+  font-size: 18px;
 }
 
-/* line 4, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 6, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 #myCarousel .nav {
-  display: block;
+  display: inline-block;
   background: #eee;
+  clear: both;
 }
 
-/* line 9, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 12, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-justified > li > a {
   border-radius: 0px;
 }
 
-/* line 13, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 16, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="0"].active a {
   background-color: #16a085;
 }
 
-/* line 15, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 18, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="1"].active a {
   background-color: #e67e22;
 }
 
-/* line 17, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 20, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="2"].active a {
   background-color: #2980b9;
 }
 
-/* line 19, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 22, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="3"].active a {
   background-color: #8e44ad;
+}
+
+/* line 24, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.header-mine {
+  float: right;
+  background-color: #f8af00 !important;
+  color: #3f5f74;
+}
+
+/* line 31, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.top-menu {
+  margin-top: 80px;
+  float: right;
+  text-decoration: none;
+}
+
+/* line 37, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.top-menu li {
+  padding-left: 30px;
+  font-size: 22px;
+  color: #3f5f74;
+}
+
+/* line 42, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.top-menu li {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+/* line 46, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.top-menu li:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: -15px;
+  bottom: 0;
+  height: 6px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+/* line 56, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.top-menu li:hover:after {
+  width: 100%;
+  background: #f8af00;
+}
+
+/* line 59, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.hr-line {
+  width: 100%;
+  height: 4px;
+  background-color: #f8af00;
+}
+
+/* line 64, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.welcome {
+  font-size: 30px;
+}
+
+/* line 67, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.welcome span {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+/* line 72, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+/* line 74, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.item {
+  display: inline-flex;
 }
 
 /*# sourceMappingURL=../css/style.map */
