@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.sass",
+		"../sass/_carrussel.sass"
+	],
+	"sourcesContent": [
+		"@import '_carrussel.sass';\n",
+		"body {\n  padding-top: 20px; }\n\n#myCarousel .nav {\n  a small {}\n  display: block;\n  background: #eee; }\n\n.nav-justified > li > a {\n  border-radius: 0px; }\n\n.nav-pills > li {\n  &[data-slide-to=\"0\"].active a {\n    background-color: #16a085; }\n  &[data-slide-to=\"1\"].active a {\n    background-color: #e67e22; }\n  &[data-slide-to=\"2\"].active a {\n    background-color: #2980b9; }\n  &[data-slide-to=\"3\"].active a {\n    background-color: #8e44ad; } }\n"
+	],
+	"mappings": ";ACAA,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,IAAK;CAAG;;;AAEvB,AAAY,WAAD,CAAC,IAAI,CAAC;EAEf,OAAO,EAAE,KAAM;EACf,UAAU,EAAE,IAAK;CAAG;;;AAEtB,AAAsB,cAAR,GAAG,EAAE,GAAG,CAAC,CAAC;EACtB,aAAa,EAAE,GAAI;CAAG;;;AAExB,AAC8B,UADpB,GAAG,EAAE,CACZ,AAAA,aAAC,CAAc,GAAG,AAAjB,CAAkB,OAAO,CAAC,CAAC,CAAC;EAC5B,gBAAgB,EAAE,OAAQ;CAAG;;;AAFjC,AAG8B,UAHpB,GAAG,EAAE,CAGZ,AAAA,aAAC,CAAc,GAAG,AAAjB,CAAkB,OAAO,CAAC,CAAC,CAAC;EAC5B,gBAAgB,EAAE,OAAQ;CAAG;;;AAJjC,AAK8B,UALpB,GAAG,EAAE,CAKZ,AAAA,aAAC,CAAc,GAAG,AAAjB,CAAkB,OAAO,CAAC,CAAC,CAAC;EAC5B,gBAAgB,EAAE,OAAQ;CAAG;;;AANjC,AAO8B,UAPpB,GAAG,EAAE,CAOZ,AAAA,aAAC,CAAc,GAAG,AAAjB,CAAkB,OAAO,CAAC,CAAC,CAAC;EAC5B,gBAAgB,EAAE,OAAQ;CAAG",
+	"names": []
+}

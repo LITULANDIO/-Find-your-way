@@ -1,0 +1,37 @@
+/* line 1, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+body {
+  padding-top: 20px;
+}
+
+/* line 4, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+#myCarousel .nav {
+  display: block;
+  background: #eee;
+}
+
+/* line 9, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.nav-justified > li > a {
+  border-radius: 0px;
+}
+
+/* line 13, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.nav-pills > li[data-slide-to="0"].active a {
+  background-color: #16a085;
+}
+
+/* line 15, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.nav-pills > li[data-slide-to="1"].active a {
+  background-color: #e67e22;
+}
+
+/* line 17, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.nav-pills > li[data-slide-to="2"].active a {
+  background-color: #2980b9;
+}
+
+/* line 19, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.nav-pills > li[data-slide-to="3"].active a {
+  background-color: #8e44ad;
+}
+
+/*# sourceMappingURL=../css/style.map */
