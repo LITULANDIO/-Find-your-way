@@ -1,39 +1,50 @@
 body
   padding-top: 20px
   font-family: Lobster Two;
-  font-size: 18px;
-
+  font-size: 18px
+#myCarousel
+ margin-top: 159px
 #myCarousel .nav
   a small
   display: inline-block
-  background: #eee
-  clear: both
-
+  background: #eee 
+.carousel.slide
+  margin-top: 159px
 .nav-justified > li > a
-  border-radius: 0px
-
+  border-radius: 2px
 .nav-pills > li
   &[data-slide-to="0"].active a
-    background-color: #16a085
+    background-color: #c0cb3e
   &[data-slide-to="1"].active a
-    background-color: #e67e22
+    background-color: #e67d3c
   &[data-slide-to="2"].active a
-    background-color: #2980b9
+    background-color: #75c4d5
   &[data-slide-to="3"].active a
-    background-color: #8e44ad
+    background-color: #d584b3
+  &[data-slide-to="4"].active a
+    background-color: #c8b783
+.label-taller
+ font-size: 25px
+ top: 60px
+.select-taller
+ font-size: 18px
+.carousel-caption
+ top: 100px
 .header-mine 
   float: right
-  background-color: #f8af00!important
+  background-color: #f8af00
   color: #3f5f74
 .logo
  
+.top-menu a
+  text-decoration: none  
 
 .top-menu 
- margin-top: 80px
+ margin-top: 40px
  float: right
- // display: flex
- // list-style: none
- text-decoration: none
+ display: flex
+ list-style: none
+
 .top-menu li
   padding-left: 30px
   font-size: 22px
@@ -63,6 +74,7 @@ body
 
 .welcome
  font-size: 30px
+ margin-top: 156px
 
  span 
   display: inline-block
@@ -73,3 +85,91 @@ body
  margin-bottom: 0px !important
 .item
  display: inline-flex
+
+
+
+ .shape
+  margin-top: 0px
+  border-style: solid
+  border-width: 0 70px 40px 0
+  float: right
+  height: 0px
+  width: 0px
+  -ms-transform: rotate(360deg)
+ 
+  -o-transform: rotate(360deg)
+  /* Opera 10.5*/
+  -webkit-transform: rotate(360deg)
+  /*Safari and Chrome*/
+  transform: rotate(360deg)
+
+.offer
+  margin-top: 0px
+  background: #fff
+  border: 1px solid #ddd
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
+  margin: 15px 0
+  overflow: hidden
+
+.offer-radius
+  border-radius: 10px
+
+.offer-danger
+ border-color: #e97e3a
+  border-radius: 20px
+  border: solid 2px #e97e3a
+  .shape
+    border-color: transparent #d9534f transparent transparent
+    border-color: rgba(255, 255, 255, 0) #d9534f rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+.offer-success
+  border-color: #bfcc40
+  border-radius: 20px
+  border: solid 2px #bfcc40
+  .shape
+    border-color: transparent #5cb85c transparent transparent
+    border-color: rgba(255, 255, 255, 0) #5cb85c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+1
+.offer-default
+  border-color: #999999
+  .shape
+    border-color: transparent #999999 transparent transparent
+    border-color: rgba(255, 255, 255, 0) #999999 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+.offer-primary
+  border-color: #428bca
+  .shape
+    border-color: transparent #428bca transparent transparent
+    border-color: rgba(255, 255, 255, 0) #428bca rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+.offer-info
+  border-color: #5bc0de
+  .shape
+    border-color: transparent #5bc0de transparent transparent
+    border-color: rgba(255, 255, 255, 0) #5bc0de rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+.offer-warning
+  border-color: #f0ad4e
+  .shape
+    border-color: transparent #f0ad4e transparent transparent
+    border-color: rgba(255, 255, 255, 0) #f0ad4e rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+.shape-text
+  margin-top: 0px
+  color: #fff
+  font-size: 12px
+  font-weight: bold
+  font-family: Lobster Two;
+  position: relative
+  right: -40px
+  white-space: nowrap
+  -ms-transform: rotate(30deg)
+  /* IE 9*/
+  -o-transform: rotate(360deg)
+  /* Opera 10.5*/
+  -webkit-transform: rotate(30deg)
+  /* Safari and Chrome*/
+  transform: rotate(30deg)
+
+.text-form
+  font-family: Lobster Two;

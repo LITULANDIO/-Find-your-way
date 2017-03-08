@@ -5,67 +5,103 @@ body {
   font-size: 18px;
 }
 
-/* line 6, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 5, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+#myCarousel {
+  margin-top: 159px;
+}
+
+/* line 7, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 #myCarousel .nav {
   display: inline-block;
   background: #eee;
-  clear: both;
 }
 
-/* line 12, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 11, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.carousel.slide {
+  margin-top: 159px;
+}
+
+/* line 13, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-justified > li > a {
-  border-radius: 0px;
+  border-radius: 2px;
 }
 
 /* line 16, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="0"].active a {
-  background-color: #16a085;
+  background-color: #c0cb3e;
 }
 
 /* line 18, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="1"].active a {
-  background-color: #e67e22;
+  background-color: #e67d3c;
 }
 
 /* line 20, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="2"].active a {
-  background-color: #2980b9;
+  background-color: #75c4d5;
 }
 
 /* line 22, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .nav-pills > li[data-slide-to="3"].active a {
-  background-color: #8e44ad;
+  background-color: #d584b3;
 }
 
 /* line 24, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
-.header-mine {
-  float: right;
-  background-color: #f8af00 !important;
-  color: #3f5f74;
+.nav-pills > li[data-slide-to="4"].active a {
+  background-color: #c8b783;
+}
+
+/* line 26, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.label-taller {
+  font-size: 25px;
+  top: 60px;
+}
+
+/* line 29, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.select-taller {
+  font-size: 18px;
 }
 
 /* line 31, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
-.top-menu {
-  margin-top: 80px;
+.carousel-caption {
+  top: 100px;
+}
+
+/* line 33, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.header-mine {
   float: right;
+  background-color: #f8af00;
+  color: #3f5f74;
+}
+
+/* line 39, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.top-menu a {
   text-decoration: none;
 }
 
-/* line 37, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 42, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.top-menu {
+  margin-top: 40px;
+  float: right;
+  display: flex;
+  list-style: none;
+}
+
+/* line 48, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .top-menu li {
   padding-left: 30px;
   font-size: 22px;
   color: #3f5f74;
 }
 
-/* line 42, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 53, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .top-menu li {
   display: inline-block;
   position: relative;
   padding-bottom: 3px;
 }
 
-/* line 46, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 57, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .top-menu li:after {
   content: '';
   display: block;
@@ -78,25 +114,25 @@ body {
   transition: width .5s ease, background-color .5s ease;
 }
 
-/* line 56, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 67, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .top-menu li:hover:after {
   width: 100%;
   background: #f8af00;
 }
 
-/* line 59, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 70, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .hr-line {
   width: 100%;
   height: 4px;
   background-color: #f8af00;
 }
 
-/* line 64, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 75, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .welcome {
   font-size: 30px;
 }
 
-/* line 67, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 78, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .welcome span {
   display: inline-block;
   opacity: 0;
@@ -104,14 +140,138 @@ body {
   transition: 2s;
 }
 
-/* line 72, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 83, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .navbar {
   margin-bottom: 0px !important;
 }
 
-/* line 74, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+/* line 85, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
 .item {
   display: inline-flex;
+}
+
+/* line 90, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.item .shape {
+  margin-top: 0px;
+  border-style: solid;
+  border-width: 0 70px 40px 0;
+  float: right;
+  height: 0px;
+  width: 0px;
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  /* Opera 10.5*/
+  -webkit-transform: rotate(360deg);
+  /*Safari and Chrome*/
+  transform: rotate(360deg);
+}
+
+/* line 105, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer {
+  margin-top: 0px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+/* line 113, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-radius {
+  border-radius: 10px;
+}
+
+/* line 116, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-danger {
+  border-color: #d9534f;
+  border: solid 2px;
+}
+
+/* line 119, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-danger .shape {
+  border-color: transparent #d9534f transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #d9534f rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+/* line 123, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-success {
+  border-color: #bfcc40;
+  border-radius: 20px;
+  border: solid 2px #bfcc40;
+}
+
+/* line 127, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-success .shape {
+  border-color: transparent #5cb85c transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #5cb85c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+/* line 131, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-default {
+  border-color: #999999;
+}
+
+/* line 133, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-default .shape {
+  border-color: transparent #999999 transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #999999 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+/* line 137, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-primary {
+  border-color: #428bca;
+}
+
+/* line 139, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-primary .shape {
+  border-color: transparent #428bca transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #428bca rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+/* line 143, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-info {
+  border-color: #5bc0de;
+}
+
+/* line 145, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-info .shape {
+  border-color: transparent #5bc0de transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #5bc0de rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+/* line 149, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-warning {
+  border-color: #f0ad4e;
+}
+
+/* line 151, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.offer-warning .shape {
+  border-color: transparent #f0ad4e transparent transparent;
+  border-color: rgba(255, 255, 255, 0) #f0ad4e rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+/* line 155, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.shape-text {
+  margin-top: 0px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: News Cycle;
+  position: relative;
+  right: -40px;
+  white-space: nowrap;
+  -ms-transform: rotate(30deg);
+  /* IE 9*/
+  -o-transform: rotate(360deg);
+  /* Opera 10.5*/
+  -webkit-transform: rotate(30deg);
+  /* Safari and Chrome*/
+  transform: rotate(30deg);
+}
+
+/* line 174, C:/Users/carle/Desktop/Projects_Skylab/myFinalProject_Skylab/public/sass/_carrussel.sass */
+.box {
+  font-family: News Cycle;
 }
 
 /*# sourceMappingURL=../css/style.map */
