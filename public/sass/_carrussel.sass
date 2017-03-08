@@ -1,17 +1,21 @@
+
 body
   padding-top: 20px
-  font-family: Lobster Two;
+  font-family: Lobster Two
   font-size: 18px
+
 #myCarousel
- margin-top: 159px
-#myCarousel .nav
-  a small
-  display: inline-block
-  background: #eee 
+  margin-top: 159px
+  .nav
+    display: inline-block
+    background: #eee
+
 .carousel.slide
   margin-top: 159px
+
 .nav-justified > li > a
   border-radius: 2px
+
 .nav-pills > li
   &[data-slide-to="0"].active a
     background-color: #c0cb3e
@@ -23,104 +27,113 @@ body
     background-color: #d584b3
   &[data-slide-to="4"].active a
     background-color: #c8b783
+
 .label-taller
- font-size: 25px
- top: 60px
+  font-size: 25px
+  top: 60px
+
+
 .select-taller
- font-size: 18px
+  font-size: 18px
+
+
 .carousel-caption
- top: 100px
-.header-mine 
+  top: 100px
+
+
+.header-mine
   float: right
   background-color: #f8af00
   color: #3f5f74
-.logo
- 
-.top-menu a
-  text-decoration: none  
 
-.top-menu 
- margin-top: 40px
- float: right
- display: flex
- list-style: none
 
-.top-menu li
-  padding-left: 30px
-  font-size: 22px
-  color: #3f5f74
+.top-menu
+  a
+    text-decoration: none
+  margin-top: 40px
+  float: right
+  display: flex
+  list-style: none
+  li
+    padding-left: 30px
+    font-size: 22px
+    color: #3f5f74
+    display: inline-block
+    position: relative
+    padding-bottom: 2px
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: -15px
+      bottom: 0
+      height: 6px
+      width: 0
+      background: transparent
+      transition: width .5s ease, background-color .5s ease
+    &:hover:after
+      width: 100%
+      background: #f8af00
 
-.top-menu li
-  display: inline-block
-  position: relative
-  padding-bottom: 3px
-  &:after
-    content: ''
-    display: block
-    position: absolute
-    right: -15px
-    bottom: 0
-    height: 6px
-    width: 0
-    background: transparent
-    transition: width .5s ease, background-color .5s ease
-  &:hover:after
-    width: 100%
-    background: #f8af00
+
+
+
+
+
+
 .hr-line
- width: 100%
- height: 4px
- background-color: #f8af00
+  margin-bottom: 20px
+  width: 100%
+  height: 4px
+  background-color: #f8af00
+
 
 .welcome
- font-size: 30px
- margin-top: 156px
+  font-size: 30px
+  span
+    display: inline-block
+    opacity: 0
+    -webkit-transition: 2s
+    transition: 2s
 
- span 
-  display: inline-block
-  opacity: 0
-  -webkit-transition: 2s
-  transition: 2s
 .navbar
- margin-bottom: 0px !important
+  margin-bottom: 0px !important
+
+
 .item
- display: inline-flex
+  display: inline-flex
+  .shape
+    margin-top: 0px
+    border-style: solid
+    border-width: 0 70px 40px 0
+    float: right
+    height: 0px
+    width: 0px
+    -ms-transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+  
 
-
-
- .shape
-  margin-top: 0px
-  border-style: solid
-  border-width: 0 70px 40px 0
-  float: right
-  height: 0px
-  width: 0px
-  -ms-transform: rotate(360deg)
- 
-  -o-transform: rotate(360deg)
-  /* Opera 10.5*/
-  -webkit-transform: rotate(360deg)
-  /*Safari and Chrome*/
-  transform: rotate(360deg)
 
 .offer
-  margin-top: 0px
   background: #fff
   border: 1px solid #ddd
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
-  margin: 15px 0
   overflow: hidden
+
+
 
 .offer-radius
   border-radius: 10px
 
+
 .offer-danger
- border-color: #e97e3a
-  border-radius: 20px
-  border: solid 2px #e97e3a
+  border-color: #d9534f
+  border: solid 2px
   .shape
     border-color: transparent #d9534f transparent transparent
     border-color: rgba(255, 255, 255, 0) #d9534f rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+
 
 .offer-success
   border-color: #bfcc40
@@ -129,12 +142,16 @@ body
   .shape
     border-color: transparent #5cb85c transparent transparent
     border-color: rgba(255, 255, 255, 0) #5cb85c rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
-1
+
+
+
 .offer-default
   border-color: #999999
   .shape
     border-color: transparent #999999 transparent transparent
     border-color: rgba(255, 255, 255, 0) #999999 rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+
 
 .offer-primary
   border-color: #428bca
@@ -142,11 +159,15 @@ body
     border-color: transparent #428bca transparent transparent
     border-color: rgba(255, 255, 255, 0) #428bca rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
 
+
+
 .offer-info
   border-color: #5bc0de
   .shape
     border-color: transparent #5bc0de transparent transparent
     border-color: rgba(255, 255, 255, 0) #5bc0de rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
+
+
 
 .offer-warning
   border-color: #f0ad4e
@@ -154,22 +175,43 @@ body
     border-color: transparent #f0ad4e transparent transparent
     border-color: rgba(255, 255, 255, 0) #f0ad4e rgba(255, 255, 255, 0) rgba(255, 255, 255, 0)
 
+
+
 .shape-text
   margin-top: 0px
   color: #fff
   font-size: 12px
   font-weight: bold
-  font-family: Lobster Two;
+  font-family: News Cycle
   position: relative
   right: -40px
   white-space: nowrap
   -ms-transform: rotate(30deg)
-  /* IE 9*/
-  -o-transform: rotate(360deg)
-  /* Opera 10.5*/
-  -webkit-transform: rotate(30deg)
-  /* Safari and Chrome*/
-  transform: rotate(30deg)
 
-.text-form
-  font-family: Lobster Two;
+
+.box
+  font-family: News Cycle
+
+.cont-body
+  
+  margin-left: 100px
+  margin-right: 150px
+
+.pre-footer
+  margin: 0px
+  width: 100%
+  background-color: #f8af00
+  text-align: justify
+  h1
+    color: white
+
+.footer
+  margin: 0px
+  width: 100%
+  height: 200px
+  background-color: #1d1d1b
+
+  .localitation
+    background-image: url("image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABfklEQVRIS6WW4TEFQRCEvxcBGSADIkAEiAARCAEZyAARIAJeBIgAGZCBajVbtbZmdmff219Xd3PT0z09c7cgdzaBI+AY0LXON/AIPNl1N9MigaPktxVA+4oAzw00TDcCugIuE8Uo5BpQvHt6QGLykAQpYScRswhIffgI5PqyrFtOEZJxx+tZBHRmfalz/ZgZXuzmgVW/0QCqX3dtERGQ3CSX1ecQKCDlvsCemzi5ULL/OxGQEu5XkZJrO+iX5KpZLQEVsBLQp2nvYa0FdANcrCida/NIOk97VS771maQ/cumKHXtAW9Z6RQnuSIL63kLoHvvwK6nb29gPYuP5te1tl4araCIlQfYc+YQaIZVuH4yjHq9qlm5s1MHjKRTbIaVtzVSA9v2oN0UU2yy0inOm6sCNmQzAxT1atibUk2mRyXW61U4NzObYbRA9X3ytoM71DOMlEAftFPLdG+OHG2Lv+ezQPV/RHdA15VOC/PVkrhbOqI3y0h56s9ESjYF/QKTs0cbPJsrEgAAAABJRU5ErkJggg== width='26' height='26'")
+
+/*# sourceMappingURL=../css/style.map
