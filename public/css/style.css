@@ -1,10 +1,11 @@
 body {
   padding-top: 20px;
   font-family: Lobster Two;
-  font-size: 18px; }
+  font-size: 18px;
+  margin-top: 150px; }
 
 #myCarousel {
-  margin-top: 159px; }
+  margin-top: 14px; }
   #myCarousel .nav {
     display: inline-block;
     background: #eee; }
@@ -31,6 +32,10 @@ body {
   font-size: 25px;
   top: 30px; }
 
+.logo {
+  float: left;
+  margin: 10px; }
+
 .select-taller {
   font-size: 18px; }
 
@@ -40,13 +45,16 @@ body {
 .carousel-inner {
   height: 250px; }
 
+.color-blue {
+  color: #062f4a; }
+
 .header-mine {
   float: right;
   background-color: #f8af00;
   color: #3f5f74; }
 
 .top-menu {
-  margin-top: -17px;
+  margin-top: 45px;
   float: right;
   display: flex;
   list-style: none; }
@@ -86,7 +94,7 @@ body {
   background-color: #f8af00; }
 
 .welcome {
-  font-size: 30px;
+  font-size: 50px;
   color: #062f4a; }
   .welcome span {
     display: inline-block;
