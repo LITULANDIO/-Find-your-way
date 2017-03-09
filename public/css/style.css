@@ -13,7 +13,8 @@ body {
   margin-top: 159px; }
 
 .nav-justified > li > a {
-  border-radius: 2px; }
+  border-radius: 2px;
+  color: #062f4a; }
 
 .nav-pills > li[data-slide-to="0"].active a {
   background-color: #c0cb3e; }
@@ -28,13 +29,16 @@ body {
 
 .label-taller {
   font-size: 25px;
-  top: 60px; }
+  top: 30px; }
 
 .select-taller {
   font-size: 18px; }
 
 .carousel-caption {
-  top: 100px; }
+  top: 60px; }
+
+.carousel-inner {
+  height: 250px; }
 
 .header-mine {
   float: right;
@@ -42,12 +46,13 @@ body {
   color: #3f5f74; }
 
 .top-menu {
-  margin-top: 40px;
+  margin-top: -17px;
   float: right;
   display: flex;
   list-style: none; }
   .top-menu a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #062f4a; }
   .top-menu li {
     padding-left: 30px;
     font-size: 22px;
@@ -69,14 +74,20 @@ body {
       width: 100%;
       background: #f8af00; }
 
+.form-control {
+  color: #fcf8e3 !important;
+  background-color: #333 !important;
+  border: 1px solid #f8af00 !important; }
+
 .hr-line {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
   height: 4px;
   background-color: #f8af00; }
 
 .welcome {
-  font-size: 30px; }
+  font-size: 30px;
+  color: #062f4a; }
   .welcome span {
     display: inline-block;
     opacity: 0;
