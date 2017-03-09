@@ -8,6 +8,6 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/public/html/index.html')
 })
 
-app.listen(PORT, function () {
-  console.log('Runing...')
-})
+// app.listen(PORT, function () {
+//   console.log('Runing...')
+// })
