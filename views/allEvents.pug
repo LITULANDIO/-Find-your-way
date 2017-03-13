@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Tasks Manager
+    link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.min.css")
+
+  body
+    .container
+        .col-md-6
+          h2 Event 
+          ul
+            each event in events
+                li
+                  h2 Categoria: #{event.category}
+                  h3 Titulo del evento: #{event.title}
+                  p Localidad: #{event.localitation}
+                  p Publicación: #{event.createEvent} 
+                  p Descripción: #{event.description} 
+                  p tags: #{event.tags}    
+                  
+    script(src="/bower_components/jquery/dist/jquery.min.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/js/main.js")
+

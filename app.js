@@ -3,8 +3,6 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const routerClients = require('./routes/clients') // routes
-const routerClient = require('./routes/client')
-
 mongoose.Promise = global.Promise // configuration
 
 const PORT = process.env.PORT || 3000
@@ -16,8 +14,8 @@ app.locals.moment = require('moment')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// app.set('view engine','pug')
-// app.use( express.static('public') )
+app.set('view engine', 'pug')
+app.use(express.static('public'))
 
 mongoose.connect(urlDB)
 

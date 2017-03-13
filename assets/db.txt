@@ -1,0 +1,32 @@
+
+bd: BDencuentra
+collection: events
+
+[
+Categoria: formacion/retiro.......
+Titular:
+Localización: Girona 43
+Fecha public: 
+Fecha inicio:
+Fecha fin:
+Descripción evento:
+tags: 
+]
+
+insert:
+
+db.events.insert({category:"retiro", title:"Retiro de Doshas", localitation:"Reus, Tarragona", 
+createEvent:"13-03-2016", startDate:"26-03-2016", endDate:"29-03-2016",
+description:"El evento está dirigido a todo tipo de personas que quieran disfrutar de un fin de 
+semana agradable, saludable, tranquilo, para poder conectar con la parte más intima de tu ser. 
+Podrás descubrir tu naturaleza a través de la medicina milenaria Ayurveda y entender tus fortalezas 
+y debilidades sin tener que juzgarte. Aprende a respirar y a sentir con tu yo más profundo.", 
+tags:["retiro en tarragona", "aprende a respirar", "saludable"]})
+
+remove:
+
+db.getCollection('events').remove({"_id": ObjectId("58c66cc18c0a427bbc8c3cfd")});
+
+ver todo:
+
+db.getCollection('events').find({});
