@@ -7,13 +7,18 @@ const routerClient = require('./routes/client')
 
 mongoose.Promise = global.Promise // configuration
 
+const PORT = process.env.PORT || 3000
+const urlDB = process.envDB_URI || 'mongodb://localhost:27017/BDencuentra'
 const app = express()
-const PORT = 3000
+
+app.locals.moment = require('moment')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const urlDB = 'mongodb://localhost:27017/BDencuentra'
+// app.set('view engine','pug')
+// app.use( express.static('public') )
+
 mongoose.connect(urlDB)
 
 app.use('/clients', routerClients)
