@@ -8,7 +8,7 @@ const routerClient = require('./routes/client')
 mongoose.Promise = global.Promise // configuration
 
 const PORT = process.env.PORT || 3000
-const urlDB = process.envDB_URI || 'mongodb://localhost:27017/BDencuentra'
+const urlDB = process.envDB_URI || 'mongodb://admin:admin@ds129010.mlab.com:29010/db_encuentra'
 const app = express()
 
 app.locals.moment = require('moment')

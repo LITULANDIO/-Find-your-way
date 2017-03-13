@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const collection = 'eventsUser'
+const collection = 'events'
 
 const EventSchema = new mongoose.Schema({
   // owner: { type: String, required: true },
