@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+  head
+  meta(charset='UTF-8')
+  title Encuentra tu camino: Tu portal de anuncios Yoga y Ayurveda
+  link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+  link(rel='stylesheet', type='text/css', href='/css/style.css')
+  link(href='https://fonts.googleapis.com/css?family=Lobster+Two', rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=News+Cycle', rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Barrio', rel='stylesheet')
+  link(rel='icon', type='image/png', href='../img/only_logo.png')
+body
+  include includes/top-header.pug
+  include includes/bottom-header.pug
+  .welcome.text-center.container
+    p.welcome-top
+      | Publica tu anuncio
+      .hr-line
+  nav.navbar.navbar-default.navbar-count
+    .container
+      ul.top-menu
+        li
+          a(href='about.html')  Mis anuncios en encuentra tu camino
+        li
+          a(href='about.html')  Datos del perfil
+  block content
+  script(src="/bower_components/jquery/dist/jquery.min.js")
+  script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
