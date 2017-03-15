@@ -26,26 +26,26 @@ block content
                 i.glyphicon.glyphicon-plus-sign
                 |  Crear anuncio
             .row.cont-body
-              .col-sm-6.col-md-4
-                .thumbnail.offer
-                  img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/Yoga-Meditation2.jpg', width='100%')
-                  .caption
-                    .container          
-                      each event in events
+              .col-sm-6.col-md-12
+                each event in events
+                  .thumbnail.offer.col-sm-8.col-md-4
+                    img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/Yoga-Meditation2.jpg', width='100%')
+                    .caption
+                      div.container
                           h3 Titulo: #{event.title}
                           p.size-mod
                           i.glyphicon.glyphicon-calendar
                           | Fecha:#{event.createdEvent}                            
-                  hr
-                  p.size-mod
-                    i.glyphicon.glyphicon-trash
-                    |  Eliminar
-                  p.size-mod
-                    i.glyphicon.glyphicon-pencil
-                    |  Modificar
-                  p.size-mod.text-center
-                    i.glyphicon.glyphicon-share-alt
-                    |  Compartir
+                          hr
+                          p.size-mod
+                            i.glyphicon.glyphicon-trash
+                            |  Eliminar
+                          p.size-mod
+                            i.glyphicon.glyphicon-pencil
+                            |  Modificar
+                          p.size-mod.text-center
+                            i.glyphicon.glyphicon-share-alt
+                            |  Compartir
         .panel.panel-default
           #headingTwo.panel-heading(role='tab')
             h4.panel-title
