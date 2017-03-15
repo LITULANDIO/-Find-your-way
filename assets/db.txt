@@ -15,13 +15,29 @@ tags:
 
 insert:
 
-db.events.insert({category:"retiro", title:"Retiro de Doshas", localitation:"Reus, Tarragona", 
-createEvent:"13-03-2016", startDate:"26-03-2016", endDate:"29-03-2016",
-description:"El evento está dirigido a todo tipo de personas que quieran disfrutar de un fin de 
-semana agradable, saludable, tranquilo, para poder conectar con la parte más intima de tu ser. 
-Podrás descubrir tu naturaleza a través de la medicina milenaria Ayurveda y entender tus fortalezas 
-y debilidades sin tener que juzgarte. Aprende a respirar y a sentir con tu yo más profundo.", 
-tags:["retiro en tarragona", "aprende a respirar", "saludable"]})
+db.events.insert({
+    "_id": {
+        "$oid": "58c6fc4af36d2849fdec8ea7"
+    },
+    "category": "Forrmacion",
+    "title": "Retiro de Doshas",
+    "path": "Ayurveda",
+    "comunity": "Catalunya",
+    "localitation": "Reus, Tarragona",
+    "createEvent": "13-03-2016",
+    "startDate": "26-03-2016",
+    "timeHourStart": "10",
+    "timeMinuteStart": "00",
+    "endDate": "29-03-2016",
+    "timeHourEnd": "15",
+    "timeMinuteEnd": "30",
+    "description": "El evento está dirigido a todo tipo de personas que quieran disfrutar de un fin de semana agradable, saludable, tranquilo, para poder conectar con la parte más intima de tu ser. Podrás descubrir tu naturaleza a través de la medicina milenaria Ayurveda y entender tus fortalezas y debilidades sin tener que juzgarte. Aprende a respirar y a sentir con tu yo más profundo.",
+    "tags": [
+        "retiro en tarragona",
+        "aprende a respirar",
+        "saludable"
+    ]
+})
 
 remove:
 

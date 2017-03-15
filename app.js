@@ -8,7 +8,6 @@ mongoose.Promise = global.Promise // configuration
 
 const PORT = process.env.PORT || 3000
 const urlDB = process.env.DB_URI || 'mongodb://admin:admin@ds129010.mlab.com:29010/db_encuentra'
-
 const app = express()
 
 app.locals.moment = require('moment')
@@ -23,7 +22,9 @@ app.set('view engine', 'pug')
 app.use(express.static(path.join(__dirname, 'public')))
 
 mongoose.connect(urlDB)
-
+const db = mongoose.connection
+db.on('error', console.error.bind(console, 'ERROR'))
+db.once('open', () => { console.log('CONNECTED') })
 app.use('/events', routerEvents)
 // app.use('/client', routerClient)
 

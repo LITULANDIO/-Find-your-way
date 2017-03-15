@@ -1,0 +1,87 @@
+extends layout
+
+block content
+  .welcome.text-center.container
+    p.welcome-top
+      | Mi cuenta
+      .hr-line
+  nav.navbar.navbar-default.navbar-count
+    .container
+      ul.top-menu
+        li
+          a(href='about.html')  Mis anuncios en encuentra tu camino
+        li
+          a(href='about.html')  Datos del perfil
+  section.container.size-categories.accurdion-categories
+    #accordion.panel-group(role='tablist', aria-multiselectable='true')
+      .panel.panel-default
+        #headingOne.panel-heading(role='tab')
+          h4.panel-title
+            a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+              span.size-categories Retiros
+        #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+          .panel-body
+            aside.text-right
+              a(href='createEvent.html')
+                i.glyphicon.glyphicon-plus-sign
+                |  Crear anuncio
+            .row.cont-body
+              .col-sm-6.col-md-4
+                .thumbnail.offer
+                  img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/Yoga-Meditation2.jpg', width='100%')
+                  .caption
+                    .container          
+                      each event in events
+                          h3 Titulo: #{event.title}
+                          p.size-mod
+                          i.glyphicon.glyphicon-calendar
+                          | Fecha:#{event.createdEvent}                            
+                  hr
+                  p.size-mod
+                    i.glyphicon.glyphicon-trash
+                    |  Eliminar
+                  p.size-mod
+                    i.glyphicon.glyphicon-pencil
+                    |  Modificar
+                  p.size-mod.text-center
+                    i.glyphicon.glyphicon-share-alt
+                    |  Compartir
+        .panel.panel-default
+          #headingTwo.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                span.size-categories Formaciones
+          #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+            .panel-body
+              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .panel.panel-default
+          #headingThree.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                span.size-categories Talleres
+          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .panel.panel-default
+          #headingThree.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                span.size-categories Conferencias
+          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        .panel.panel-default
+          #headingThree.panel-heading(role='tab')
+            h4.panel-title
+              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                span.size-categories Maestros espirituales
+          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+            .panel-body
+              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          
+  br
+  br
+  footer.footer
+    p.copy.col-md-6 Copyright ® 2017, All Rights Reserved
+  script(src='/bower_components/jquery/dist/jquery.min.js')
+  script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
