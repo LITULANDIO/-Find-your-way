@@ -1,10 +1,10 @@
-const Event = require('../../../models/events')
+const Retiro = require('../../../models/retiros')
 
 module.exports = (req, res) => {
   console.log('He recibido lo siguiente', req.body)
   const { title } = req.body
   const { category } = req.body
-  const { path } = req.body
+  // const { path } = req.body
   const { comunity } = req.body
   const { localitation } = req.body
   const { startDate } = req.body
@@ -15,11 +15,11 @@ module.exports = (req, res) => {
   const { timeMinuteEnd } = req.body
   const { description } = req.body
   const { tags } = req.body
-  const event = new Event({ title, category, path, comunity, localitation, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
+  const retiro = new Retiro({ title, category, comunity, localitation, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
 
-  console.log(event)
-  event.save()
+  console.log(retiro)
+  retiro.save()
 
   // res.status(200).json(event)
-  res.redirect('/events')
+  res.redirect('/retiros')
 }

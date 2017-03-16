@@ -1,0 +1,21 @@
+extends layout
+block content
+  .container
+    each retiro in retiros
+      .col-sm-6.col-md-3
+        .thumbnail.offer
+         a(href='#')
+          img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/two-sisters.jpg', width='100%')
+          h2.text-center #{retiro.title}
+          div
+            img.icon.icons8-Marker(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABfklEQVRIS6WW4TEFQRCEvxcBGSADIkAEiAARCAEZyAARIAJeBIgAGZCBajVbtbZmdmff219Xd3PT0z09c7cgdzaBI+AY0LXON/AIPNl1N9MigaPktxVA+4oAzw00TDcCugIuE8Uo5BpQvHt6QGLykAQpYScRswhIffgI5PqyrFtOEZJxx+tZBHRmfalz/ZgZXuzmgVW/0QCqX3dtERGQ3CSX1ecQKCDlvsCemzi5ULL/OxGQEu5XkZJrO+iX5KpZLQEVsBLQp2nvYa0FdANcrCida/NIOk97VS771maQ/cumKHXtAW9Z6RQnuSIL63kLoHvvwK6nb29gPYuP5te1tl4araCIlQfYc+YQaIZVuH4yjHq9qlm5s1MHjKRTbIaVtzVSA9v2oN0UU2yy0inOm6sCNmQzAxT1atibUk2mRyXW61U4NzObYbRA9X3ytoM71DOMlEAftFPLdG+OHG2Lv+ezQPV/RHdA15VOC/PVkrhbOqI3y0h56s9ESjYF/QKTs0cbPJsrEgAAAABJRU5ErkJggg==', width='26', height='26')
+            | Localización: #{retiro.localitation}
+          br
+          div
+            img.icon.icons8-Calendar-Filled(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABY0lEQVRoQ+1a0Q3CIBS8TqBuoJs4im6gk+gGOoqb6AbqBBpMSQhp4HEUqvj618Ad7+4opSkd5NcawAnAsofcAGwBXOQUwZ5Z/F1CEVdHhIUZMasEjlDXLP4UIa++Covx73P1ZPE3KWQD4ABgHrHWTyQ3CR8v5X8A2AM4GwI3kbtAhIuxU2EqIWZcI2bhC5EWJnWMFZjK/+nvJvJ3QlinS+HoREoVxPKqENa5Urh2EynlWBXelC1KlYLYQZj3CDtWKVy7z4j0zV7KWZZXE2GdK4XTRIaW7NBnb25bLEk6ERUyYK0kLU1E5IDXSeIsOyVF9egWJWZTxXZdtdi5zuJi4WoirLMsThOJOfBt7fQz0owQdq6zuJhxdCJsQSxOhYgcaGHTyE4RFicyVne/MZsqttOrVsUaRUOpEJFNFTu1m4j5+T6r6OQYQz3tIQd3+TVHOI4/JMaI2A0d4RjDock4mvn19gbNL4YzPmuBVAAAAABJRU5ErkJggg==', width='26', height='26')
+            |  Fecha: #{retiro.startDate}
+          p
+            | #{retiro.description}
+          hr
+          img(src='https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/price_tag-24.png', title='Price Tag', width='24')
+          |   #{retiro.tags} 

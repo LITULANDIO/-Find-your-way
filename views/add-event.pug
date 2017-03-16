@@ -3,7 +3,7 @@ extends layout
 block content
   h1.font-categories.container Retiros
   .container.well
-    form(action='/events', method='POST')
+    form(action='/add', method='POST')
       .row
         .col-xs-12.col-md-3
           fieldset.form-group
@@ -18,13 +18,13 @@ block content
               each val in ['Selecciona...', 'Yoga', 'Ayurveda', 'Yoga y Ayurveda']
                 option= val
 
-        .col-xs-12.col-md-3
-          fieldset.form-group
-            label(for='recipe-editor-ingredients') Categoria de anuncio
-            |
-            select.form-control(name="category")
-              each val in ['Selecciona...', 'Retiros', 'Formaciones', 'Talleres', 'Conferencias', 'Maestros espirituales']
-                option= val
+        //- .col-xs-12.col-md-3
+        //-   fieldset.form-group
+        //-     label(for='recipe-editor-ingredients') Categoria de anuncio
+        //-     |
+        //-     select.form-control(name="category")
+        //-       each val in ['Selecciona...', 'Retiros', 'Formaciones', 'Talleres', 'Conferencias', 'Maestros espirituales']
+        //-         option= val
         .col-xs-12.col-md-3
           fieldset.form-group
             label(for='recipe-editor-ingredients') Comunidad aut&oacute;noma
@@ -93,14 +93,14 @@ block content
             textarea#recipe-editor-directions.form-control(rows='3', name="tags")
           .text-center
             button.btn.btn-warning(type='submit' value="Submit") Publicar
-  .container          
-      each event in events
-          h2 Categoria: #{event.category}
-          h3 Titulo del evento: #{event.title}
-          p Localidad: #{event.localitation}
-          p Comunidad autónoma: #{event.comunity}
-          p Publicación: #{event.createEvent} 
-          p Hora inicio: #{event.timeHourStart}:#{event.timeMinuteStart}
-          p Descripción: #{event.description} 
-          p Tags: #{event.tags} 
+  //- .container          
+  //-     each retiro in retiros
+  //-         h2 Categoria: #{retiro.category}
+  //-         h3 Titulo del evento: #{retiro.title}
+  //-         p Localidad: #{retiro.localitation}
+  //-         p Comunidad autónoma: #{retiro.comunity}
+  //-         p Publicación: #{retiro.createEvent} 
+  //-         p Hora inicio: #{retiro.timeHourStart}:#{retiro.timeMinuteStart}
+  //-         p Descripción: #{retiro.description} 
+  //-         p Tags: #{retiro.tags} 
 

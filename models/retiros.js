@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
-const collection = 'events'
+const collection = 'retiros'
 
-const EventSchema = new mongoose.Schema({
+const RetiroSchema = new mongoose.Schema({
   // owner: { type: String, required: true },
-  category: { type: String, required: true },
+  category: { type: String, default: 'retiro' },
   title: { type: String, default: false },
   path: String,
   comunity: String,
@@ -19,4 +19,4 @@ const EventSchema = new mongoose.Schema({
   tags: String
 }, { collection })
 
-module.exports = mongoose.model('events', EventSchema)
+module.exports = mongoose.model('retiros', RetiroSchema)

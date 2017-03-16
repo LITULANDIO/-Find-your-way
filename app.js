@@ -25,7 +25,7 @@ mongoose.connect(urlDB)
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'ERROR'))
 db.once('open', () => { console.log('CONNECTED') })
-app.use('/home', routerEvents)
+app.use('/', routerEvents)
 // app.use('/client', routerClient)
 
 // app.get('/', function (req, res) {

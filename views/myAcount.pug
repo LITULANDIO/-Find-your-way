@@ -3,8 +3,8 @@ extends layout
 block content
   .welcome.text-center.container
     p.welcome-top
-      | Mi cuenta
-      .hr-line
+     | Mi cuenta
+    .hr-line
   nav.navbar.navbar-default.navbar-count
     .container
       ul.top-menu
@@ -27,15 +27,15 @@ block content
                 |  Crear anuncio
             .row.cont-body
               .col-sm-6.col-md-12
-                each event in events
+                each retiro in retiros
                   .thumbnail.offer.col-sm-8.col-md-4
                     img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/Yoga-Meditation2.jpg', width='100%')
                     .caption
                       div.container
-                          h3 Titulo: #{event.title}
+                          h3 Titulo: #{retiro.title}
                           p.size-mod
                           i.glyphicon.glyphicon-calendar
-                          | Fecha:#{event.createdEvent}                            
+                          | Fecha:#{retiro.createdEvent}                            
                           hr
                           p.size-mod
                             i.glyphicon.glyphicon-trash
@@ -81,7 +81,6 @@ block content
           
   br
   br
-  footer.footer
-    p.copy.col-md-6 Copyright ® 2017, All Rights Reserved
+
   script(src='/bower_components/jquery/dist/jquery.min.js')
   script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')

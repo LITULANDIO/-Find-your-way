@@ -1,7 +1,7 @@
-const Event = require('../../../models/events')
+const Retiro = require('../../../models/retiros')
 
 module.exports = (req, res) => {
-  Event.find()
-    .then(events => res.render('myAcount', { events }))
+  Retiro.find()
+    .then(retiros => res.render('myAcount', { retiros }))
     .catch(err => { throw err })
 }

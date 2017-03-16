@@ -18,63 +18,91 @@ block content
             .carousel-caption
               .form-group.label-taller.font-retiro
                 p.text-center.font-categories.size-title-categories Retiros
-                label.label-taller(for='sel1') Selecciona una categoria:
-                i.glyphicon.glyphicon-hand-down(width='70px')
-                select#sel1.form-control.form-personal.select-taller
-                  option Categoria...
-                  option Yoga
-                  option Ayurveda
+                form(action='/', method='POST')
+                  label.label-taller(for='sel1') Selecciona una categoria:
+                  i.glyphicon.glyphicon-hand-down(width='70px')
+                  select#sel1.form-control.form-personal.select-taller.col-md-1
+                    option Categoria...
+                    option Yoga
+                    option Ayurveda
+                    option Yoga y Ayurveda
+                  .col-md-1
+                      span.input-group-btn
+                        button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
           // End Item
           .item
             img.img-carrusel.img-opac(src='../img/formaciones.jpg', height='-300px;')
             .carousel-caption
               .form-group.label-taller.font-retiro
                 p.text-center.font-categories.size-title-categories Formaciones
-                label.label-taller.size-categories(for='sel1') Selecciona una categoria:
-                i.glyphicon.glyphicon-hand-down(width='70px')
-                select#sel1.form-control.form-personal.select-taller
-                  option Categoria...
-                  option Yoga
-                  option Ayurveda
+                form(action='/', method='POST')
+                  label.label-taller.size-categories(for='sel1') Selecciona una categoria:
+                  i.glyphicon.glyphicon-hand-down(width='70px')
+                  select#sel1.form-control.form-personal.select-taller.col-md-1
+                    option Categoria...
+                    option Yoga
+                    option Ayurveda
+                    option Yoga y Ayurveda
+                  .col-md-1
+                      span.input-group-btn
+                        button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
           // End Item
           .item
             img.img-carrusel.img-opac(src='../img/talleress.jpg')
             .carousel-caption
               .form-group.label-taller.font-retiro
                 p.text-center.font-categories.size-title-categories Talleres
-                label.label-taller(for='sel1') Selecciona una categoria:
-                i.glyphicon.glyphicon-hand-down(width='70px')
-                select#sel1.form-control.form-personal.select-taller
-                  option Categoria...
-                  option Yoga
-                  option Ayurveda
+                form(action='/', method='POST')
+                  label.label-taller(for='sel1') Selecciona una categoria:
+                  i.glyphicon.glyphicon-hand-down(width='70px')
+                  select#sel1.form-control.form-personal.select-taller.col-md-1
+                    option Categoria...
+                    option Yoga
+                    option Ayurveda
+                    option Yoga y Ayurveda
+                  .col-md-1
+                      span.input-group-btn
+                        button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
           // End Item
           .item
             img.img-carrusel.img-opac(src='../img/conferenciass.jpg')
             .carousel-caption
               .form-group.label-taller.font-retiro
                 p.text-center.font-categories.size-title-categories Conferencias
-                label.label-taller(for='sel1') Selecciona una categoria:
-                i.glyphicon.glyphicon-hand-down(width='70px')
-                .text-center.col-md-10
-                  select#sel1.form-control.form-personal.select-taller
-                    option Categoria...
-                    option Yoga
-                    option Ayurveda
-          // End Item
+                form(action='/', method='POST')
+                  label.label-taller(for='sel1') Selecciona una categoria:
+                  i.glyphicon.glyphicon-hand-down(width='70px')
+                  .text-center.col-md-10
+                    select#sel1.form-control.form-personal.select-taller.col-md-1
+                      option Categoria...
+                      option Yoga
+                      option Ayurveda
+                      option Yoga y Ayurveda
+                    .col-md-1
+                      span.input-group-btn
+                        button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
+            // End Item
           .item
             img.img-carrusel.img-opac(src='../img/maestross.jpg')
             .carousel-caption
+              form
               .form-group.label-taller.font-retiro
                 p.text-center.font-categories.size-title-categories Maestros espirituales
-                label.label-taller(for='sel1') Selecciona una categoria:
-                i.glyphicon.glyphicon-hand-down(width='70px')
-                select#sel1.form-control.form-personal.select-taller
-                  option Categoria...
-                  option Yoga
-                  option Ayurveda
+                form(action='/', method='POST')
+                  label.label-taller(for='sel1') Selecciona una categoria:
+                    i.glyphicon.glyphicon-hand-down(width='70px') 
+                    select#sel1.form-control.form-personal.select-taller.col-md-1
+                      option Categoria...
+                      option Yoga
+                      option Ayurveda
+                      option Yoga y Ayurveda
+                    .col-md-1
+                      span.input-group-btn
+                        button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search 
+ 
+                //- span#basic-addon2.input-group-addon.i.glyphicon.glyphicon-search Encuentra
           // End Item
-        // End Carousel Inner
+        // End Caousel Inner
         ul.nav.nav-pills.nav-justified.size-categories
           li.active(data-target='#myCarousel', data-slide-to='0')
             a(href='#')
