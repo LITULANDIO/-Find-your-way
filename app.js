@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const routerEvents = require('./routes/events') // routes
+const routerEvent = require('./routes/_event') // routes
 mongoose.Promise = global.Promise // configuration
 
 const PORT = process.env.PORT || 3000
@@ -26,7 +27,7 @@ const db = mongoose.connection
 db.on('error', console.error.bind(console, 'ERROR'))
 db.once('open', () => { console.log('CONNECTED') })
 app.use('/', routerEvents)
-// app.use('/client', routerClient)
+app.use('/', routerEvent)
 
 // app.get('/', function (req, res) {
 //   res.sendFile(__dirname + '/public/html/index.html')

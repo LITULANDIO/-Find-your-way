@@ -5,7 +5,7 @@ const RetiroSchema = new mongoose.Schema({
   // owner: { type: String, required: true },
   category: { type: String, default: 'retiro' },
   title: { type: String, default: false },
-  path: String,
+  road: String,
   comunity: String,
   localitation: String,
   createdEvent: { type: Number, default: Date.now },

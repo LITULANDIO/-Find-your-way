@@ -5,7 +5,7 @@ const getRetiros = require('./handlers/getByRetiros')
 // const removeById = require('./handlers/removeById')
 // const updateById = require('./handlers/updateById')
 
-router.get('/:retiros', getRetiros)
+router.get('/retiros/:tipo', getRetiros)
 // router.delete('/:id', removeById)
 // router.put('/:id', updateById)
 

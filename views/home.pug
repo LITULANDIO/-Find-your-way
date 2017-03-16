@@ -22,13 +22,13 @@ block content
                   label.label-taller(for='sel1') Selecciona una categoria:
                   i.glyphicon.glyphicon-hand-down(width='70px')
                   select#sel1.form-control.form-personal.select-taller.col-md-1
-                    option Categoria...
-                    option Yoga
-                    option Ayurveda
-                    option Yoga y Ayurveda
+                    option(value='1') Categoria...
+                    option(value='2') Yoga
+                    option(value='3') Ayurveda
+                    option(value='4') Yoga y Ayurveda
                   .col-md-1
                       span.input-group-btn
-                        button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
+                        button#search.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
           // End Item
           .item
             img.img-carrusel.img-opac(src='../img/formaciones.jpg', height='-300px;')
@@ -39,10 +39,10 @@ block content
                   label.label-taller.size-categories(for='sel1') Selecciona una categoria:
                   i.glyphicon.glyphicon-hand-down(width='70px')
                   select#sel1.form-control.form-personal.select-taller.col-md-1
-                    option Categoria...
-                    option Yoga
-                    option Ayurveda
-                    option Yoga y Ayurveda
+                    option(value='1') Categoria...
+                    option(value='2') Yoga
+                    option(value='3') Ayurveda
+                    option(value='4') Yoga y Ayurveda
                   .col-md-1
                       span.input-group-btn
                         button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
@@ -56,10 +56,10 @@ block content
                   label.label-taller(for='sel1') Selecciona una categoria:
                   i.glyphicon.glyphicon-hand-down(width='70px')
                   select#sel1.form-control.form-personal.select-taller.col-md-1
-                    option Categoria...
-                    option Yoga
-                    option Ayurveda
-                    option Yoga y Ayurveda
+                    option(value='1') Categoria...
+                    option(value='2') Yoga
+                    option(value='3') Ayurveda
+                    option(value='4') Yoga y Ayurveda
                   .col-md-1
                       span.input-group-btn
                         button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
@@ -72,13 +72,12 @@ block content
                 form(action='/', method='POST')
                   label.label-taller(for='sel1') Selecciona una categoria:
                   i.glyphicon.glyphicon-hand-down(width='70px')
-                  .text-center.col-md-10
-                    select#sel1.form-control.form-personal.select-taller.col-md-1
-                      option Categoria...
-                      option Yoga
-                      option Ayurveda
-                      option Yoga y Ayurveda
-                    .col-md-1
+                  select#sel1.form-control.form-personal.select-taller.col-md-1
+                    option(value='1') Categoria...
+                    option(value='2') Yoga
+                    option(value='3') Ayurveda
+                    option(value='4') Yoga y Ayurveda
+                  .col-md-1
                       span.input-group-btn
                         button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
             // End Item
