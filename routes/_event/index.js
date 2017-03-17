@@ -7,6 +7,6 @@ const updateById = require('./handlers/updateById')
 
 router.get('/retiros/:tipo', getRetiros)
 // router.delete('/:id', removeById)
-router.put('/retiros/add/:id', updateById)
+router.put('/retiros/edited/:id', updateById)
 
 module.exports = router

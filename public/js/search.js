@@ -2,19 +2,19 @@
 $(document).ready(function () {
   $('#sel1').on('change', function () {
     var selectedItem = this.value
-    $('#search').val(selectedItem)
+    $('#sel1').val(selectedItem)
   })
-  $('#search').on('click', function () {
-    console.log($('#search').val())
+  $('#sel1').on('click', function () {
+    console.log($('#sel1').val())
     const route1 = 'ayurveda'.toUpperCase()
     const route2 = 'yoga'.toUpperCase()
 
-    if ($('#search').val() == 2) {
+    if ($('#sel1').val() == 2) {
       console.log('hey!!!!!')
       window.location.replace('/retiros/Yoga')
-    } else if ($('#search').val() == 3) {
+    } else if ($('#sel1').val() == 3) {
       window.location.replace('/retiros/Ayurveda')
-    } else if ($('#search').val() == 4) {
+    } else if ($('#sel1').val() == 4) {
       window.location.replace('/retiros')
     }
   })
