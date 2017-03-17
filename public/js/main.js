@@ -1,18 +1,19 @@
-$(document).ready(function () {
-  $('#sel1').on('change', function () {
-  	var selectedItem = this.value
-  	$('#search').val(selectedItem)
-  })
-  $('#search').on('click', function () {
-  	console.log($('#search').val())
-
-    if ($('#search').val() == 2) {
-    	console.log('hey!!!!!')
-      window.location.replace('/retiros/yoga')
-    }  	else if ($('#search').val() == 3) {
-      window.location.href = '/retiros/ayurveda'
-    }  	else if ($('#search').val() == 4) {
-      window.location.href = '/retiros'
-    }
-  })
+$('.edit').on('click', function (e) {
+  $(this).parent().find('form').removeClass('hidden')
 })
+
+$('form.edit-task').on('submit', function (e) {
+  e.preventDefault()
+  const $form = $(this)
+  const title = $form.find('input[name="title"]').val()
+  const done = $form.find('input[name="done"]').is(':checked')
+
+  const url = this.action
+  const method = 'PUT'
+  const data = `title=${title}&done=${done}`
+
+  $.ajax({ url, method, data })
+    .then(() => window.location.reload())
+    .catch(() => console.log('Error!!'))
+})
+

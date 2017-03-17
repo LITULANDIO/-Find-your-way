@@ -21,5 +21,5 @@ module.exports = (req, res) => {
   retiro.save()
 
   // res.status(200).json(event)
-  res.redirect('/retiros')
+  res.redirect('/retiros/add')
 }

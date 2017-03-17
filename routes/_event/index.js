@@ -3,10 +3,10 @@ const router = express.Router()
 
 const getRetiros = require('./handlers/getByRetiros')
 // const removeById = require('./handlers/removeById')
-// const updateById = require('./handlers/updateById')
+const updateById = require('./handlers/updateById')
 
 router.get('/retiros/:tipo', getRetiros)
 // router.delete('/:id', removeById)
-// router.put('/:id', updateById)
+router.put('/retiros/add/:id', updateById)
 
 module.exports = router

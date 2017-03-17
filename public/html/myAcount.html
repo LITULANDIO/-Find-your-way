@@ -9,11 +9,22 @@
     <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/only_logo.png" />
-
+    <link rel="stylesheet" href="jquery-ui-1.10.2.cupertino.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script src="jquery.ui.datepicker-es.js"></script>
+    <script>
+$(function () {
+$.datepicker.setDefaults($.datepicker.regional["es"]);
+$("#datepicker").datepicker({
+firstDay: 1
+});
+});
+</script>
 </head>
 
 <body>
-
 
 <nav class="navbar  navbar-default  navbar-fixed-top header-mine">
     <div class="container">
@@ -33,6 +44,8 @@
             </ul>
         </div>
     </div>
+Fecha:
+<input type="text" name="hola" id="datepicker">
 
     <nav class="navbar navbar-default">
     <div class="container">

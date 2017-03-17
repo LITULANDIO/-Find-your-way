@@ -1,20 +1,32 @@
 extends layout
 
 block content
+  .welcome.text-center.container
+    p.welcome-top
+     | Mi cuenta
+    .hr-line
+  nav.navbar.navbar-default.navbar-count
+    .container
+      ul.top-menu
+        li
+          a(href='/acount')  Mis anuncios en encuentra tu camino
+        li
+          a(href='about.html')  Datos del perfil
+ 
   h1.font-categories.container Retiros
   .container.well
-    form(action='/add', method='POST')
+    form(action='/retiros', method='POST')
       .row
-        .col-xs-12.col-md-3
+        .col-xs-12.col-md-4
           fieldset.form-group
             label(for='recipetitle') Titulo
             |
             input#recipetitle.form-control(rows='1', maxlength='30', name="title")
-        .col-xs-12.col-md-3
+        .col-xs-12.col-md-4
           fieldset.form-group
             label(for='recipe-editor-ingredients') Camino
             |
-            select.form-control(name="path" id="selectPath")
+            select.form-control(name="road" id="selectPath")
               each val in ['Selecciona...', 'Yoga', 'Ayurveda', 'Yoga y Ayurveda']
                 option= val
 
@@ -25,7 +37,7 @@ block content
         //-     select.form-control(name="category")
         //-       each val in ['Selecciona...', 'Retiros', 'Formaciones', 'Talleres', 'Conferencias', 'Maestros espirituales']
         //-         option= val
-        .col-xs-12.col-md-3
+        .col-xs-12.col-md-4
           fieldset.form-group
             label(for='recipe-editor-ingredients') Comunidad aut&oacute;noma
             |
@@ -38,11 +50,12 @@ block content
             label(for='recipetitle') Localidad
             |
             input#recipetitle.form-control(rows='1', maxlength='30', name="localitation")
+
         .col-xs-12.col-md-2
           fieldset.form-group
             label(for='recipetitle') Fecha Inicio
             |
-            input#recipetitle.form-control(rows='1', maxlength='30', name="startDate")
+            input.tcal.form-control(name="startDate")
         .col-xs-12.col-md-1
           p.label-time Hora
         .col-xs-12.col-md-1.label-nums
@@ -65,7 +78,7 @@ block content
           fieldset.form-group
             label(for='recipetitle') Fecha Fin
             |
-            input#recipetitle.form-control(rows='1', maxlength='30', name="endDate")
+            input.tcal.form-control(name="endDate")
         .col-xs-12.col-md-1
           p Hora
         .col-xs-12.col-md-1
@@ -93,6 +106,9 @@ block content
             textarea#recipe-editor-directions.form-control(rows='3', name="tags")
           .text-center
             button.btn.btn-warning(type='submit' value="Submit") Publicar
+         
+
+
   //- .container          
   //-     each retiro in retiros
   //-         h2 Categoria: #{retiro.category}

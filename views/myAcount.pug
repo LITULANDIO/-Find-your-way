@@ -9,7 +9,7 @@ block content
     .container
       ul.top-menu
         li
-          a(href='about.html')  Mis anuncios en encuentra tu camino
+          a(href='/acount')  Mis anuncios en encuentra tu camino
         li
           a(href='about.html')  Datos del perfil
   section.container.size-categories.accurdion-categories
@@ -22,7 +22,7 @@ block content
         #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
           .panel-body
             aside.text-right
-              a(href='createEvent.html')
+              a(href='/retiros/add')
                 i.glyphicon.glyphicon-plus-sign
                 |  Crear anuncio
             .row.cont-body
@@ -31,20 +31,21 @@ block content
                   .thumbnail.offer.col-sm-8.col-md-4
                     img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/Yoga-Meditation2.jpg', width='100%')
                     .caption
-                      div.container
-                          h3 Titulo: #{retiro.title}
-                          p.size-mod
+                      div.container.eventRetiro
+                          h3.text-center Titulo: #{retiro.title}
+                          p
                           i.glyphicon.glyphicon-calendar
                           | Fecha:#{retiro.createdEvent}                            
                           hr
                           p.size-mod
-                            i.glyphicon.glyphicon-trash
+                          i.glyphicon.glyphicon-trash
                             |  Eliminar
                           p.size-mod
+                          a(href="/retiros/add/:id")  
                             i.glyphicon.glyphicon-pencil
-                            |  Modificar
+                              |  Modificar
                           p.size-mod.text-center
-                            i.glyphicon.glyphicon-share-alt
+                          i.glyphicon.glyphicon-share-alt
                             |  Compartir
         .panel.panel-default
           #headingTwo.panel-heading(role='tab')
