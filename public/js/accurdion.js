@@ -1,10 +1,8 @@
-$(function () {
-  function toggleChevron (e) {
-    $(e.target)
-            .prev('.panel-heading')
-            .find('i')
-            .toggleClass('fa-minus-circle')
-  }
-  $('#accordion').on('hidden.bs.collapse', toggleChevron)
-  $('#accordion').on('shown.bs.collapse', toggleChevron)
-})
+function toggleIcon (e) {
+  $(e.target)
+        .prev('.panel-heading')
+        .find('.more-less')
+        .toggleClass('glyphicon-plus glyphicon-minus')
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon)
+$('.panel-group').on('shown.bs.collapse', toggleIcon)

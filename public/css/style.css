@@ -161,7 +161,11 @@ div.form-group.label-taller {
   background: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden; }
+  overflow: hidden;
+  margin-left: -10px; }
+
+.margins {
+  margin-left: 18px; }
 
 .offer-radius {
   border-radius: 10px; }
@@ -220,9 +224,12 @@ div.form-group.label-taller {
   font-family: News Cycle; }
 
 .cont-body {
-  margin-top: 100px !important;
-  margin-left: 100px;
-  margin-right: 150px; }
+  margin-top: 20px !important;
+  margin-left: 90px; }
+
+.cont-body {
+  width: 1100px;
+  height: 60px; }
 
 .pre-footer {
   margin: 0px;
@@ -255,18 +262,22 @@ p {
   margin: 30px 0; }
 
 p a {
-  text-decoration: underline; }
+  text-decoration: underline;
+  text-decoration: none; }
 
 .accurdion-categories {
   margin-top: 20px; }
 
 .size-mod {
   margin: 0px;
-  font-size: 14px;
-  display: inline-block;
-  padding: 5px; }
+  font-size: 2px !important;
+  display: inline-block !important;
+  margin-left: 10px; }
   .size-mod hr {
     margin: 0px; }
+
+.sizes {
+  font-size: 15px !important; }
 
 @-webkit-keyframes HeroBG {
   0% {
@@ -531,5 +542,38 @@ body {
       border: 1px solid orange; }
     #tcalGrid td.tcalSelected {
       background-color: #f8af00; }
+
+.panel-group .panel {
+  border-radius: 3;
+  box-shadow: none;
+  border-color: #EEEEEE; }
+
+.panel-default > .panel-heading {
+  padding: 0;
+  border-radius: 3;
+  color: #212121;
+  background-color: #FAFAFA;
+  border-color: #EEEEEE; }
+
+.panel-title {
+  font-size: 20px; }
+  .panel-title > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none; }
+
+i {
+  font-size: 12px !important; }
+
+.more-less {
+  float: right;
+  color: #212121; }
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #EEEEEE; }
+
+.demo {
+  padding-top: 60px;
+  padding-bottom: 60px; }
 
 /*# sourceMappingURL=style.css.map */

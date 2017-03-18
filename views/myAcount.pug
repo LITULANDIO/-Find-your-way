@@ -12,14 +12,15 @@ block content
           a(href='/acount')  Mis anuncios en encuentra tu camino
         li
           a(href='about.html')  Datos del perfil
-  section.container.size-categories.accurdion-categories
-    #accordion.panel-group(role='tablist', aria-multiselectable='true')
+  .container.demo.size-font-categories
+    #accordion.panel-group(role='tablist', aria-multiselectable='')
       .panel.panel-default
         #headingOne.panel-heading(role='tab')
-          h4.panel-title
-            a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
-              span.size-categories Retiros
-        #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+          h2.panel-title
+            a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne')
+              i.more-less.glyphicon.glyphicon-plus
+              |  Retiros
+        #collapseOne.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
           .panel-body
             aside.text-right
               a(href='/retiros/add')
@@ -28,60 +29,58 @@ block content
             .row.cont-body
               .col-sm-6.col-md-12
                 each retiro in retiros
-                  .thumbnail.offer.col-sm-8.col-md-4
+                  .thumbnail.offer.margins.col-sm-6.col-md-3
                     img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/Yoga-Meditation2.jpg', width='100%')
                     .caption
-                      div.container.eventRetiro
-                          h3.text-center Titulo: #{retiro.title}
+                      div.container.size-mods
+                          h3.text-center 
+                          |Titulo: #{retiro.title}
                           p
                           i.glyphicon.glyphicon-calendar
                           | Fecha:#{retiro.createdEvent}                            
                           hr
+                      div.size-mods
+                          a.sizes(href="/retiros/add/:id") 
+                              i.glyphicon.glyphicon-trash
+                              |  Eliminar
                           p.size-mod
-                          i.glyphicon.glyphicon-trash
-                            |  Eliminar
-                          p.size-mod
-                          a(href="/retiros/add/:id")  
+                          a.sizes(href="/retiros/add/:id")  
                             i.glyphicon.glyphicon-pencil
-                              |  Modificar
+                            |  Modificar
                           p.size-mod.text-center
-                          i.glyphicon.glyphicon-share-alt
-                            |  Compartir
-        .panel.panel-default
-          #headingTwo.panel-heading(role='tab')
-            h4.panel-title
-              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                span.size-categories Formaciones
-          #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
-            .panel-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        .panel.panel-default
-          #headingThree.panel-heading(role='tab')
-            h4.panel-title
-              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-                span.size-categories Talleres
-          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
-            .panel-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        .panel.panel-default
-          #headingThree.panel-heading(role='tab')
-            h4.panel-title
-              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-                span.size-categories Conferencias
-          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
-            .panel-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-        .panel.panel-default
-          #headingThree.panel-heading(role='tab')
-            h4.panel-title
-              a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-                span.size-categories Maestros espirituales
-          #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
-            .panel-body
-              | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                          a.sizes(href="/retiros/add/:id")  
+                              i.glyphicon.glyphicon-share-alt
+                              |  Compartir
+      .panel.panel-default
+        #headingTwo.panel-heading(role='tab')
+          h4.panel-title
+            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+              i.more-less.glyphicon.glyphicon-plus
+              |  Formaciones
+        #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+          .panel-body
+            aside.text-right
+              a(href='/retiros/add')
+                i.glyphicon.glyphicon-plus-sign
+                |  Crear anuncio
+      .panel.panel-default
+        #headingThree.panel-heading(role='tab')
+          h4.panel-title
+            a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+              i.more-less.glyphicon.glyphicon-plus
+              |  Talleres
+        #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+          .panel-body
+            aside.text-right
+              a(href='/retiros/add')
+                i.glyphicon.glyphicon-plus-sign
+                |  Crear anuncio
+
+
           
   br
   br
 
   script(src='/bower_components/jquery/dist/jquery.min.js')
   script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+  script(src='/js/accurdion.js')
