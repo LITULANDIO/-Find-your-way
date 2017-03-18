@@ -6,7 +6,7 @@ body {
   margin-top: 150px; }
 
 .carousel-inner {
-  height: 400px !important; }
+  height: 380px !important; }
 
 #myCarousel {
   margin-top: 14px; }
@@ -225,7 +225,7 @@ div.form-group.label-taller {
 
 .cont-body {
   margin-top: 20px !important;
-  margin-left: 90px; }
+  margin-left: 100px; }
 
 .cont-body {
   width: 1100px;
@@ -233,6 +233,7 @@ div.form-group.label-taller {
 
 .pre-footer {
   margin: 0px;
+  height: 100%;
   width: 100%;
   background-color: #f8af00;
   text-align: justify; }
