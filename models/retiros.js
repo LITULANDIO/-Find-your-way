@@ -1,6 +1,8 @@
 const mongoose = require('mongoose')
 const collection = 'retiros'
 
+const moment = require('moment')
+moment.locale('es')
 const RetiroSchema = new mongoose.Schema({
   // owner: { type: String, required: true },
   category: { type: String, default: 'retiro' },
@@ -8,7 +10,8 @@ const RetiroSchema = new mongoose.Schema({
   road: String,
   comunity: String,
   localitation: String,
-  createdEvent: { type: Number, default: Date.now },
+  createdEvent: { type: String, default: moment().format('L')},
+  hourEvent: { type: String, default: moment().format('LT')},
   startDate: String,
   timeHourStart: Number,
   timeMinuteStart: Number,

@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
 const routerEvents = require('./routes/events') // routes
-const routerEvent = require('./routes/_event') // routes
+const routerEvent = require('./routes/event') // routes
 mongoose.Promise = global.Promise // configuration
 
 const PORT = process.env.PORT || 3000
