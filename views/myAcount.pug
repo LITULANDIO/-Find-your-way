@@ -29,7 +29,7 @@ block content
             .row.cont-body
               .col-sm-6.col-md-12
                 each retiro in retiros
-                  .thumbnail.offer.margins.col-sm-6.col-md-3
+                  .thumbnail.offer.margins.col-sm-6.col-md-3.retiro
                     img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/Yoga-Meditation2.jpg', width='100%')
                     .caption
                       div.container.size-mods
@@ -43,7 +43,7 @@ block content
                           | Hora Publi: #{retiro.hourEvent}         
                           hr
                       div.size-mods
-                          a.sizes.remove(href="/acount/"+ retiro.id) 
+                          button.btn.remove(type='button' data-id=`${retiro._id}`)
                               i.remove.glyphicon.glyphicon-trash
                               |  Eliminar
                           p.size-mod

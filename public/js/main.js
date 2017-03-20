@@ -1,11 +1,18 @@
+// DELETE
 
 $(document).ready(function () {
   $('.remove').on('click', function (e) {
-    const url = this.href
+// e.preventDefault()
+    const url = '/acount'
     const method = 'DELETE'
+    const id = $(this).attr('data-id')
+    const data = { id }
 
-    $.ajax({ url, method })
-    .then(() => window.location.reload(true))
+    $.ajax({ url, method, data })
+    .then(() => {
+      $(this).closest('.retiro').remove()
+    })
+
     .catch(() => console.log('Error!!'))
   })
 
@@ -13,7 +20,7 @@ $(document).ready(function () {
     $(this).parent().find('form').removeClass('hidden')
   })
 
-  $('form.edit-task').on('submit', function (e) {
+  $('form.edit-retiro').on('submit', function (e) {
     e.preventDefault()
     const $form = $(this)
     const title = $form.find('input[name="title"]').val()
