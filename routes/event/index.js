@@ -4,13 +4,11 @@ const router = express.Router()
 const getRetiros = require('./handlers/getByRetiros')
 const deleteById = require('./handlers/deleteById')
 const updateById = require('./handlers/editedById')
-const getByRetiroId = require('./handlers/getByRetiroId')
-const showDelete = require('./handlers/showDelete')
+const ShowDetails = require('./handlers/ShowDetails')
 
 router.get('/retiros/:tipo', getRetiros) // Filtramos resultados de tipos
-router.put('/retiros/edited/:id', updateById) //
+router.put('/retiros/edited/', updateById) //
 router.delete('/acount', deleteById) // eliminar evento
+router.get('/details', ShowDetails)
 
-router.get('/acount:id', showDelete)
-router.get('/acount:id', getByRetiroId)
 module.exports = router
