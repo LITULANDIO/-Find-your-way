@@ -14,4 +14,5 @@ router.get('/details', ShowDetails) // Muestra el detalle completo del evento
 router.put('/retiros/edited/:id', updateById) //
 router.get('/retiros/edited/:id', getOnlyRetiro)
 router.get('/details/:id', getDetails)
+router.get('/retiros/add', getOnlyRetiro)
 module.exports = router

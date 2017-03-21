@@ -22,7 +22,7 @@
      var picker_btn_icon = $('<i class="' + settings.icon + '"></i>')
 
         // The actual file input which stays hidden
-     var picker_btn_input = $('<input type="file" name="' + settings.name + '" />')
+     var picker_btn_input = $('<input type="file" name="' + settings.name + '"/>')
 
         // The actual element displayed
      var picker_btn = $('<div class="' + settings.class + ' img-upload-btn"></div>')

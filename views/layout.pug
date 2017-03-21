@@ -9,7 +9,8 @@ head
   link(href='https://fonts.googleapis.com/css?family=Barrio', rel='stylesheet')
   link(rel='icon', type='image/png', href='../img/only_logo.png')
   link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel='stylesheet', integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin='anonymous')
-  script(src='http://maps.google.com/maps/api/js?sensor=false&callback=iniciar')
+  script(src='http://maps.google.com/maps/api/js?sensor=false', type='text/javascript')
+  link(rel='stylesheet', href='/maps/documentation/javascript/demos/demos.css')
 
 
 nav.navbar.navbar-default.navbar-fixed-top.header-mine
@@ -72,6 +73,11 @@ include includes/footer.pug
   script(src='/js/tcal.js')
   script(src='/js/favorites.js')
   script(src='/js/imageLoad.js')
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC-8fnm-fKikIyZvY5Oww9qVdenK_5R3U4&callback=initMap', async='', defer='')
+
+
+
+
   
 
 
