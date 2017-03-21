@@ -773,6 +773,18 @@ i {
   padding-right: 20px;
   margin-left: -70px; }
 
+.panel-four {
+  margin-top: -65px;
+  margin-right: -90px;
+  padding-right: 20px;
+  margin-left: 870px; }
+
+.panel-five {
+  margin-top: -65px;
+  margin-right: -90px;
+  padding-right: 20px;
+  margin-left: 870px; }
+
 .panel-body {
   background-color: #f8f8f8;
   color: #4D4D4D; }
@@ -1055,5 +1067,49 @@ a.social-icon {
     height: 29px;
     width: 29px;
     font-size: 18px; } }
+.img-upload-btn {
+  position: relative;
+  overflow: hidden;
+  padding-top: 95%; }
+  .img-upload-btn input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block; }
+  .img-upload-btn i {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    left: 50%;
+    margin-top: -8px;
+    margin-left: -8px; }
+
+.btn-radio {
+  position: relative;
+  overflow: hidden; }
+  .btn-radio input[type=radio] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block; }
 
 /*# sourceMappingURL=style.css.map */

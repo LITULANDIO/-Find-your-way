@@ -8,6 +8,7 @@ const RetiroSchema = new mongoose.Schema({
   category: { type: String, default: 'retiro' },
   title: { type: String, default: false },
   road: String,
+  image: String,
   comunity: String,
   localitation: String,
   createdEvent: { type: String, default: moment().format('L')},

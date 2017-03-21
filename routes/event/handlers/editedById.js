@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
   Retiro.findByIdAndUpdate(id, {title, category, road, comunity, localitation, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
     .then(retiros => {
-      console.log('retiro modificado correctamente')
+      console.log('retiro modificado correctamente: ' + id)
       res.status(200).json(retiros)
     })
     .catch(err => res.status(500).json(err))

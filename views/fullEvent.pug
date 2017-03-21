@@ -3,7 +3,7 @@ extends layout
 block content
   .welcome.text-center.container
     p.welcome-top
-      | Anuncio
+      | #{retiros.title}
     .hr-line
   .my-container
     .row
@@ -32,19 +32,19 @@ block content
           .panel-heading.text-center Detalles
           .panel-body
             img.icon.icons8-Marker(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABfklEQVRIS6WW4TEFQRCEvxcBGSADIkAEiAARCAEZyAARIAJeBIgAGZCBajVbtbZmdmff219Xd3PT0z09c7cgdzaBI+AY0LXON/AIPNl1N9MigaPktxVA+4oAzw00TDcCugIuE8Uo5BpQvHt6QGLykAQpYScRswhIffgI5PqyrFtOEZJxx+tZBHRmfalz/ZgZXuzmgVW/0QCqX3dtERGQ3CSX1ecQKCDlvsCemzi5ULL/OxGQEu5XkZJrO+iX5KpZLQEVsBLQp2nvYa0FdANcrCida/NIOk97VS771maQ/cumKHXtAW9Z6RQnuSIL63kLoHvvwK6nb29gPYuP5te1tl4araCIlQfYc+YQaIZVuH4yjHq9qlm5s1MHjKRTbIaVtzVSA9v2oN0UU2yy0inOm6sCNmQzAxT1atibUk2mRyXW61U4NzObYbRA9X3ytoM71DOMlEAftFPLdG+OHG2Lv+ezQPV/RHdA15VOC/PVkrhbOqI3y0h56s9ESjYF/QKTs0cbPJsrEgAAAABJRU5ErkJggg==', width='26', height='26')
-            |  Localidad:
+            |  Localidad: #{retiros.localitation}
             hr
             |  
             img(src='https://maxcdn.icons8.com/Android/PNG/24/Time_and_Date/calendar-24.png', title='Calendar', width='24')
-            |  Fecha Inicio:
+            |  Fecha Inicio: #{retiros.startDate}
             br
-            | &nbsp; &nbsp; &nbsp; &nbsp; Fecha Fin:
+            | &nbsp; &nbsp; &nbsp; &nbsp; Fecha Fin: #{retiros.endDate}
             hr
             |  
             img.icon.icons8-Clock(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEK0lEQVRoQ82ajXEUMQyFlQqACiAVABUAFQAVABUAFQAVkFQAVABUkKQCoAJIBUAFMN+O343Wtz9eW87FMzuXm3FsPT3pWdbekcWNO2b2wMzupYfvPH78MjOe7+m5SN+brThqXAFDn5nZ8wmjS5cG2ImZfW0BVQsEAG8SABn818zOk6f5lPc9ILH0MLHG5w034aOZvasBtBXITTN7nwH4ZGZf0lPKgp/3xMx4YFYDQK/N7E/pgluAsNkHMwMM3icceIo3WzEKtgjRV4kl1n1R6qBSILDABgximb8JnZLxLU26XzI55RqMIBwMnAU7i2MNCN7/bGbEMiwAgE22jH9p8tpe+ZqwAwhyiJx7usT+0uKAOEtJCQjAIJtbRy0Q9kHKAQEY9n40B2YJCCAw/kdKxtJQyoG2ABEYouBuyheY2RtzQKD0ZQonvFILgg1bgeTMnLp83QGaAoI6kRct4eQ9FgEkBwMrSP4sEPLiZ5JYpG9rYk+xHgWEtREAjgCk+djnS84IhnMwIbEwEzEigWAPyY80cxADbBgeCAcSbBBSrXnRI7S0JnaiYCgZrAz564GIDWqdtxFUpDWiGWFZ7KPW27EiIGKDSbcCy44o1cr96u0dWBGQPYTXnBHMUwRRvpwICLkByj1ZCwDUI7QwS8cEOXIMEJ/kyG/06AUEO5HhIekBIm2OlNyequXX5lB8TLkPEJUj0WqlDXsyotw+BYgOGCpL/o4ePYFQ1FLcXgBEib47XAKRoPU6k/iE9cjBwc3FbZDfXh5TyHrDe4TvYH9PIL9T8emBoDIcuJGjOxBJozf6sqH/NQe+KxDOI2I37zR2DS1Oxtu+kmzk3d/1YYDvsENJEVmMYqYO88to+fUguOsjj1F9ryn/juQ36kC8ahAAGx2IESXKIUAAZFSiKM5qpfFQIAAiiR+KRoYSvqaMR504Ya8iJ3yeqIwfJF1AaIXS3x1d6AvVS93H3omdmzN5sdq7OhaCONS02asuBvVqPvQAK6Xdaz74w4Wk5xVAS5u0h/FaEzbIS0Rmsh3kWUHWJpvFPS0sXFvN9dkGHeuAEia4B0e1TAvtK5omUaKJCDO7qmGpic0kbo0170SKrNo4CYmHDZy92sTW2kqm65IvHkTxawWB0V0eRvDAoZIfEHTg+Zzt9Ky9egMMb4oOFWaeicXKYe0FJfGIgtHGBwztyYh3JiXpwRszqltsgAmK29krwRqQPGf4DksoWq9QQ40IJUoexmRO5J4oBcL/UaTBBtKMZxAEtDwKkH7XolskEgsLo1dsc1RuAaJzBgD5zy3YDPprBi1PnLR7+5QcxJlRfLvcCsSXCXjOA2JT/6MayuucLbxOf8D/qMY3zmGYdTezXAvEA8KbeA8DawaAYRlWNwPQhq1AvOF4W55GNuV9P0cs6Ydn+jlUjQNG//Mf/jcXnWbBbwoAAAAASUVORK5CYII=', width='24', height='24')
-            |  Hora Inicio:
+            |  Hora Inicio: #{retiros.timeHourStart}
             br
-            | &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Hora Fin:
+            | &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Hora Fin: #{retiros.timeHourEnd}
             hr
             |  
             img.icon.icons8-Euro-Filled(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADlUlEQVRoQ92aj5EMQRSHfxsBIuAiQAROBFwEiAAROBEgAi4CRHBEgAgQASKgvql+Uz1jdqb7vd65qX1VW67sdPf7+v3tnt3pSGTXkOO6pHuS7kg6lXQrffIlfkji80nSV0mfJf1uoUMUBOUfSHqWADw6AfRa0scIlBeE3X6UAIBpIVgGoItktao5PSAvGgOMFQboXNKbGpIaEKzwPuBCNXrxLC53VmqdUpCHkt5KauVGpVBY54mkD0sDSkAeJ4iluQ75PTDv5hZYAtkChOk/CzMHgjsRE1sSYmbSzfaBENhfriAmljaNmLk7lQD2gQBBhd6ikM2AGcgUCDmcWtFK/qRUavNh7ZvByZ+n4tlPMwZp6VIUNDINOzgWrE1bQ3fgkf9cbAzSwhrfJJEoaA4Ras/tTFsaRROAaCCvOWhepg6gG5qDsOD3YIADQefLjmHdVwkq15PvsBSK8DeW4blaYeyJNZo5SLRmEAsozwIlnQAudz9lR8Z5pK8tOUg0U9mkuMtloWWBjrQ9fQYzECb75dmSNOZndogCAvdaS27gBQYSreKWDgEAZE3pqr2BRLMVQUeW4mD0dE2KlDTODYQUyHnbI7lbRePMsz7p/NRASLu1mSMH8ChATEYC3dbEE04M5K9DE6zIhx3hXzvHl0zFs6T7VrKLgJgSVmGvItBNhzAIEGaZml1u2ZQCEwLh2sbjHtEOYsodexACxttac7FGHUI8sRaNky7ptEi/XdZI2tAy5J1uVMmS8YP0ezQFMdqi5A0jRXFNGbQo0aYxP0dHugTPBgyaRiaI+jdnCyBo40utwhmGVt6baDjIdZckLQ9WBD23GyhGiqWBnDvCkm1waZ7z9nmTByvcC2U852dzCY6wTI5QIFGS9ye5YAWeI8EA7XXF/EQ6sAiLRbMXc6AYMHb5wP/lBy2+N6HCs6ZH9l4+2C4SKxGrMI9dMFD9x9dBWApXAqC24zbggTXGMWIPtbDKeIfNCq2OwIsXdKZANIN5XKV0TJ+p8gFzl9gtXKxUudLncCnSbR5/3dijf61gO3SIlrt098fPuV/0bAkm/OrNYKjAFLFoWq61BjGBVzR5GWqLk/OZcK3zxvhWf3YTll6GTg3m9pxacyjrYAXmp70pFg+IdQCYHKhWQACgPJ/qH9p4QWynaDSJH4C8LocLoTxuWw1gikRBctMDRQuS/8xpfM6gdc9/5kTr4la+pLIX++ZWHvwH/EbHMzT0XQQAAAAASUVORK5CYII=', width='26', height='26')
@@ -56,7 +56,7 @@ block content
         .panel.panel-yellow
           .panel-heading.text-center Descripci&oacute;n
           .panel-body
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta varius enim, ut lacinia nisl bibendum ut. Donec viverra sodales.
+            |#{retiros.description}
     .col-md-5.panel-three
       .panel-two
         .panel.panel-yellow
@@ -73,6 +73,23 @@ block content
               i.fa.fa-google-plus
             a.social-icon.email(target='blank', data-tooltip='Contact e-Mail', href='mailto:hirensojitra007@gmail.com')
               i.fa.fa-envelope-o
+    .col-md-5.panel-four
+      .panel-two
+        .panel.panel-yellow
+          .panel-heading.text-center Ubicación
+          .panel-body.my-panel
+            span.text-center.c
+           
+    .col-md-5.panel-five
+      .panel-two
+        .panel.panel-yellow
+          .panel-heading.text-center Tags 
+          .panel-body.my-panel
+            span.text-center.c     
+            |#{retiros.tags}
+
+
+
   script(type='text/javascript').
     // Stop carousel
     $('.carousel').carousel({

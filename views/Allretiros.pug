@@ -6,9 +6,9 @@ block content
     each retiro in retiros
       .col-sm-6.col-md-3
         .thumbnail.offera
-         a(href='/details')
-          img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/two-sisters.jpg', width='100%')
-          h2.text-center #{retiro.title}
+         a(href='/details/'+ retiro.id)
+          img(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/two-sisters.jpg') 
+          h2.text-center 
           div
             img.icon.icons8-Marker(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABfklEQVRIS6WW4TEFQRCEvxcBGSADIkAEiAARCAEZyAARIAJeBIgAGZCBajVbtbZmdmff219Xd3PT0z09c7cgdzaBI+AY0LXON/AIPNl1N9MigaPktxVA+4oAzw00TDcCugIuE8Uo5BpQvHt6QGLykAQpYScRswhIffgI5PqyrFtOEZJxx+tZBHRmfalz/ZgZXuzmgVW/0QCqX3dtERGQ3CSX1ecQKCDlvsCemzi5ULL/OxGQEu5XkZJrO+iX5KpZLQEVsBLQp2nvYa0FdANcrCida/NIOk97VS771maQ/cumKHXtAW9Z6RQnuSIL63kLoHvvwK6nb29gPYuP5te1tl4araCIlQfYc+YQaIZVuH4yjHq9qlm5s1MHjKRTbIaVtzVSA9v2oN0UU2yy0inOm6sCNmQzAxT1atibUk2mRyXW61U4NzObYbRA9X3ytoM71DOMlEAftFPLdG+OHG2Lv+ezQPV/RHdA15VOC/PVkrhbOqI3y0h56s9ESjYF/QKTs0cbPJsrEgAAAABJRU5ErkJggg==', width='26', height='26')
             | Localización: #{retiro.localitation}

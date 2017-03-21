@@ -47,8 +47,7 @@ block content
                               i.remove.glyphicon.glyphicon-trash
                               |  Eliminar
                           p.size-mod
-                          a.remove.sizes(href="/acount/#{retiro.id}")
-                            i.glyphicon.glyphicon-pencil
+                          a.sizes(href='/retiros/edited/'+ retiro.id) 
                             |  Modificar
                           p.size-mod.text-center
                           a.sizes(href='#success', data-toggle='modal')  
@@ -61,7 +60,7 @@ block content
                           button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
                           h1
                             i.i-modal.glyphicon.glyphicon-thumbs-up
-                            |  Quieres compartir: #{retiro.title} 
+                            |  Quieres compartir: #{retiro.title[index]} 
                         .modal-body
                           .containear.margins-modal
                             br

@@ -2,6 +2,7 @@ const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
 
 const routerEvents = require('./routes/events') // routes
 const routerEvent = require('./routes/event') // routes
@@ -15,7 +16,7 @@ app.locals.moment = require('moment')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
+app.use(methodOverride('_method'))
 app.set('view engine', 'pug')
 
 // app.use(express.static('public'))
