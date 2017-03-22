@@ -4,7 +4,11 @@ block content
  
   .welcome.text-center.container
     p.welcome-top
-     | Publica tu anuncio
+     
+      if (method==='PUT')
+        | Editar Anuncio
+      else
+        |Publicar Anuncio
     .hr-line
   nav.navbar.navbar-default.navbar-count
     .container
@@ -143,21 +147,24 @@ block content
           .col-xs-12.col-md-12
             fieldset.form-group
               label(for='recipe-editor-ingredients') Descripci&oacute;n
-              textarea#recipe-editor-ingredients.form-control(rows='10' name="description")
-                  // -
-                  //  let valu = $('#recipe-editor-ingredients').value()
+              -
+                let textDescription = !retiros ? "" : retiros.description
+              textarea#recipe-editor-ingredients.form-control(rows='10' name="description")=textDescription 
 
-                  
 
             fieldset.form-group
               label(for='recipe-editor-directions') Tags
               input#recipe-editor-directions.form-control(rows='3' name="tags" value= !retiros ? " " : retiros.tags  )
             .text-center
+             
+             if (method=== 'PUT')
+              button.btn.btn-success(type='submit' value='Submit') Modificar
+             else  
               button.btn.btn-warning(type='submit' value="Submit") Publicar
 
          
   script(src='/js/imageLoad.js')
-  script(src='/js/formEvents.js')
+
 
   //- .container          
   //-     each retiro in retiros
