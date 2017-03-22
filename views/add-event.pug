@@ -22,12 +22,11 @@ block content
   .container.well
       form.edit-retiro(action= action ? action : '/retiros', method= method ? method : 'POST')
         .container
-          br
-          .col-sm-8
+          //.col-sm-8
             div.text-left
               | Imagen
               br
-        .row
+        //.row
             br
             fieldset.form-group.col-sm-2
                       .img-picker
@@ -163,7 +162,7 @@ block content
               button.btn.btn-warning(type='submit' value="Submit") Publicar
 
          
-  script(src='/js/imageLoad.js')
+  //script(src='/js/imageLoad.js')
 
 
   //- .container          
