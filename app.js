@@ -3,6 +3,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const methodOverride = require('method-override')
+const multer = require('multer')
 
 const routerEvents = require('./routes/events') // routes
 const routerEvent = require('./routes/event') // routes

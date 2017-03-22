@@ -12,21 +12,7 @@ block content
           .img-responsive.carousel-inner.cont-slider
             .item.active
               img.img-responsive(alt='', title='', src='https://www.amigosvalencia.com/imagenesblog/368296592.jpg')
-            .item
-              img.img-responsive(alt='', title='', src='http://placehold.it/600x400')
-            .item
-              img.img-responsive(alt='', title='', src='http://placehold.it/600x400')
-            .item
-              img.img-responsive(alt='', title='', src='http://placehold.it/600x400')
-          ol.carousel-indicators
-            li.active(data-slide-to='0', data-target='#article-photo-carousel')
-              img(alt='', src='')
-            li(data-slide-to='1', data-target='#article-photo-carousel')
-              img(alt='', src='')
-            li(data-slide-to='2', data-target='#article-photo-carousel')
-              img(alt='', src='http://placehold.it/250x180')
-            li(data-slide-to='3', data-target='#article-photo-carousel')
-              img(alt='', src='http://placehold.it/250x180')
+           
       .col-md-5
         .panel.panel-yellow
           .panel-heading.text-center Detalles
@@ -62,17 +48,30 @@ block content
         .panel.panel-yellow
           .panel-heading.text-center Compartir
           .panel-body.my-panel
-            span.text-center.c
-            a.social-icon.facebook(target='blank', data-tooltip='Facebook', href='http://www.facebook.com/SOJITRAHIREN')
-              i.fa.fa-facebook
-            a.social-icon.twitter(target='blank', data-tooltip='Twitter', href='https://www.twitter.com/Sojitra_Hiren')
-              i.fa.fa-twitter
-            a.social-icon.linkedin(target='blank', data-tooltip='LinkedIn', href='https://www.linkedin.com/in/hirensojitraamreli')
-              i.fa.fa-linkedin
-            a.social-icon.google-plus(target='blank', data-tooltip='Google +', href='https://plus.google.com/+HirenSojitraa')
-              i.fa.fa-google-plus
-            a.social-icon.email(target='blank', data-tooltip='Contact e-Mail', href='mailto:hirensojitra007@gmail.com')
-              i.fa.fa-envelope-o
+            
+            .social-nav    
+              ul
+                li
+                  a.twitter( target='_blank', title='Twitter', rel='nofollow' href='https://twitter.com/share', data-via='mariuCSS') 
+                    script.
+                                  !function(d,s,id){
+                                  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                  if(!d.getElementById(id)){
+                                  js=d.createElement(s);
+                                  js.id=id;
+                                  js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');')
+                    i.fa.fa-twitter
+                li
+                  a.facebook(target='_blank', title='Facebook', rel='nofollow', onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href=' http://www.facebook.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
+
+                    i.fa.fa-facebook
+                   
+                li
+                  a.google(target='_blank', title='Google plus', rel='nofollow',onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href='https://plus.google.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
+
+                    i.fa.fa-google-plus
+                      
+
     .col-md-5.panel-four
       .panel-two
         .panel.panel-yellow

@@ -9,6 +9,7 @@ const RetiroSchema = new mongoose.Schema({
   title: { type: String, default: false },
   road: String,
   image: String,
+  precio: Number,
   comunity: String,
   localitation: String,
   createdEvent: { type: String, default: moment().format('L')},

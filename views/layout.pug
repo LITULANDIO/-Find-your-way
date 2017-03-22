@@ -31,10 +31,10 @@ nav.navbar.navbar-default.navbar-fixed-top.header-mine
           a(href='javascript:agregar()')
             i.glyphicon.glyphicon-heart-empty
             |  Mis favoritos
-        li
-          a(href='Register-login.html')
-            i.glyphicon.glyphicon-log-in
-            |  loggin
+        //- li
+        //-   a(href='Register-login.html')
+        //-     i.glyphicon.glyphicon-log-in
+        //-     |  loggin
   nav.navbar.navbar-default
     .container
       a(href='/')
@@ -46,13 +46,13 @@ nav.navbar.navbar-default.navbar-fixed-top.header-mine
       ul.top-menu
         li
           a(href='about.html')
-          | Encuentra 
-          small
-            i.glyphicon.glyphicon-menu-down
-        li
-          a(href='about.html')  Conóncenos
-        li
-          a(href='about.html')  Blog
+          //- | Encuentra 
+          //- small
+          //-   i.glyphicon.glyphicon-menu-down
+        //- li
+        //-   a(href='about.html')  Conóncenos
+        //- li
+        //-   a(href='about.html')  Blog
         li
           a(href='/acount')  Anúnciate gratis
 
@@ -74,6 +74,7 @@ include includes/footer.pug
   script(src='/js/favorites.js')
   script(src='/js/imageLoad.js')
   script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC-8fnm-fKikIyZvY5Oww9qVdenK_5R3U4&callback=initMap', async='', defer='')
+  script(src='/js/formEvents.js')
 
 
 
