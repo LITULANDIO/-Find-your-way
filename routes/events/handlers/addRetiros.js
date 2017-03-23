@@ -5,10 +5,10 @@ module.exports = (req, res) => {
   const { title } = req.body
   const { category } = req.body
   const { road } = req.body
-  const { comunity } = req.body
-  const { localitation } = req.body
   const { lat } = req.body
   const { long } = req.body
+  const { comunity } = req.body
+  const { localitation } = req.body
   const { startDate } = req.body
   const { timeHourStart } = req.body
   const { timeMinuteStart } = req.body

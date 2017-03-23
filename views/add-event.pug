@@ -85,8 +85,8 @@ block content
               input#submit(type='button', value='Buscar')
                
               #map
-
-              
+              input#long(name="long", value= !retiros ? " " : retiros.long  )
+              input#lat(name="lat", value= !retiros ? " " : retiros.lat  )
             
                
           .col-xs-12.col-md-2
@@ -171,7 +171,7 @@ block content
   script(src='/js/main.js')       
   //-script(src='/js/imageLoad.js')
   script(src='/js/maps.js')
-  script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA61r6OA8-IEDX3MOYwvlOJmcZf3rbduHg&callback=initMap')
+  script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=initMap')
 
 
   //- .container          

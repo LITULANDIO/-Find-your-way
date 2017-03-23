@@ -17,8 +17,12 @@ function geocodeAddress (geocoder, resultsMap) {
   geocoder.geocode({'address': address}, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location)
+
       var long = results[0].geometry.viewport.b.f
       var lat = results[0].geometry.viewport.f.f
+
+      $('#long').val(long)
+      $('#lat').val(lat)
 
       console.log(lat + ' / ' + long)
 
