@@ -78,6 +78,7 @@ block content
           .panel-heading.text-center Ubicación
           .panel-body.my-panel
             span.text-center.c
+            #map
            
     .col-md-5.panel-five
       .panel-two
@@ -87,8 +88,8 @@ block content
             span.text-center.c     
             |#{retiros.tags}
 
-
-
+  script(src='/js/maps.js')
+  script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA61r6OA8-IEDX3MOYwvlOJmcZf3rbduHg&callback=initMap')
   //- script(type='text/javascript').
   //-   // Stop carousel
   //-   $('.carousel').carousel({

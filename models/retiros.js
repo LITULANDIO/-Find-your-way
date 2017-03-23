@@ -7,8 +7,6 @@ const RetiroSchema = new mongoose.Schema({
   // owner: { type: String, required: true },
   category: { type: String, default: 'retiro' },
   title: { type: String, default: false },
-  road: String,
-  image: String,
   precio: Number,
   comunity: String,
   localitation: String,

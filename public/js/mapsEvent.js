@@ -1,4 +1,4 @@
-// maps geocoding
+maps geocoding
 // const GeocoderRequest = {
 //                            address: string,
 //                            location: LatLng,
@@ -22,12 +22,12 @@ function initMap () {
 
 function geocodeAddress (geocoder, resultsMap) {
   var address = document.getElementById('address').value
-  geocoder.geocode({'address': address}, function (results, status) {
+  geocoder.geocode({'address': retiros.localitation, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location)
       var marker = new google.maps.Marker({
         map: resultsMap,
-        position: retiros.localitation
+        position: results[0].geometry.location
       })
     } else {
       alert('El geolocalizador no reconoce la dirección: ' + status)

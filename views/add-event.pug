@@ -8,7 +8,7 @@ block content
       if (method==='PUT')
         | Editar Anuncio
       else
-        |Publicar Anuncio
+        | Publicar Anuncio
     .hr-line
   nav.navbar.navbar-default.navbar-count
     .container
@@ -81,8 +81,13 @@ block content
             fieldset.form-group
               label(for='recipetitle') Localidad
               |
-              input#recipetitle.form-control(rows='1', maxlength='30', name="localitation" value= !retiros ? " " : retiros.localitation  )
+              input#address.form-control(rows='1',type="textbox", maxlength='30', name="localitation" value= !retiros ? " " : retiros.localitation  )
+              input#submit(type='button', value='Buscar')
+               
               #map
+
+              
+            
                
           .col-xs-12.col-md-2
             fieldset.form-group
@@ -161,8 +166,12 @@ block content
              else  
               button.btn.btn-warning(type='submit' value="Submit") Publicar
 
-         
-  //script(src='/js/imageLoad.js')
+  script(src='/bower_components/jquery/dist/jquery.min.js')
+  script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+  script(src='/js/mai.js')       
+  //-script(src='/js/imageLoad.js')
+  script(src='/js/maps.js')
+  script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA61r6OA8-IEDX3MOYwvlOJmcZf3rbduHg&callback=initMap')
 
 
   //- .container          

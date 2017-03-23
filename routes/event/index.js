@@ -11,8 +11,8 @@ const getDetails = require('./handlers/getDetails')
 router.get('/retiros/:tipo', getRetiros) // Filtramos resultados de tipos
 router.delete('/acount', deleteById) // eliminar evento
 router.get('/details', ShowDetails) // Muestra el detalle completo del evento
-router.put('/retiros/edited/:id', updateById) //
-router.get('/retiros/edited/:id', getOnlyRetiro)
-router.get('/details/:id', getDetails)
-router.get('/retiros/add', getOnlyRetiro)
+router.put('/retiros/edited/:id', updateById) // editamos evento metodo put
+router.get('/retiros/edited/:id', getOnlyRetiro) //
+router.get('/details/:id', getDetails) // renderizamos info detallada del evento
+// router.get('/retiros/add', getOnlyRetiro)
 module.exports = router

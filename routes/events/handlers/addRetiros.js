@@ -17,9 +17,8 @@ module.exports = (req, res) => {
   const { tags } = req.body
   const retiro = new Retiro({ title, category, road, comunity, localitation, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
 
-  console.log(retiro)
   retiro.save()
-
+  console.log('Retiro creado' + retiro)
   // res.status(200).json(event)
-  res.redirect('/retiros/add')
+  res.redirect('/acount')
 }
