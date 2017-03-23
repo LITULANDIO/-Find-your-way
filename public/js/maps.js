@@ -1,8 +1,8 @@
 
 function initMap () {
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 5,
-    center: {lat: 40.759220, lng: -3.658447}
+    zoom: 15,
+    center: {}
   })
   var geocoder = new google.maps.Geocoder()
   var infowindow = new google.maps.InfoWindow()
@@ -26,9 +26,14 @@ function geocodeAddress (geocoder, resultsMap) {
 
       console.log(lat + ' / ' + long)
 
+      var image = '/img/marker.gif'
+
       var marker = new google.maps.Marker({
         map: resultsMap,
-        position: results[0].geometry.location
+        position: results[0].geometry.location,
+        draggable: true,
+        animation: google.maps.Animation.DROP,
+        icon: image
 
       })
       console.log(results[0])
