@@ -1,8 +1,7 @@
 // DELETE
 
-$(document).ready(function () {
   $('.remove').on('click', function (e) {
-// e.preventDefault()
+    e.preventDefault()
     const url = '/acount'
     const method = 'DELETE'
     const id = $(this).attr('data-id')
@@ -19,9 +18,9 @@ $(document).ready(function () {
 // UPDATE
 
   $('form.edit-retiro').on('submit', function (e) {
-    e.preventDefault()
     const method = $(this).attr('method')
     if (method === 'PUT') {
+    	e.preventDefault()
       const $form = $(this)
       const title = $form.find('input[name="title"]').val()
       const category = $form.find('select[name="category"]').val()
@@ -44,4 +43,4 @@ $(document).ready(function () {
         .catch(() => console.log('Error!!'))
     }
   })
-})
+

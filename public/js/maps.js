@@ -1,12 +1,4 @@
-// maps geocoding
-// const GeocoderRequest = {
-//                            address: string,
-//                            location: LatLng,
-//                            placeId: string,
-//                            bounds: LatLngBounds,
-//                            componentRestrictions: GeocoderComponentRestrictions,
-//                            region: string
-//                           }
+
 function initMap () {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 5,
@@ -25,13 +17,35 @@ function geocodeAddress (geocoder, resultsMap) {
   geocoder.geocode({'address': address}, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       resultsMap.setCenter(results[0].geometry.location)
+      var long = results[0].geometry.viewport.b.f
+      var lat = results[0].geometry.viewport.f.f
+
+      console.log(lat + ' / ' + long)
+
       var marker = new google.maps.Marker({
         map: resultsMap,
-        position: retiros.localitation
+        position: results[0].geometry.location
+
       })
+      console.log(results[0])
     } else {
       alert('El geolocalizador no reconoce la dirección: ' + status)
     }
   })
 }
 
+  //  $('form.edit-retiro').on('submit', function (e) {
+  //   e.preventDefault()
+
+  //     var long = results[0].geometry.viewport.b.f
+  //     var lat = results[0].geometry.viewport.f.f
+
+  //     const url = '/retiros/add'
+  //     const method = 'POST'
+  //     const data = 'lat:lat&lon:long',
+
+  //     $.ajax({ url, data,  method })
+  //       .then(() => window.location = '/acount')
+  //       .catch(() => console.log('Error!!'))
+  //   }
+  // })
