@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $('#myCarousel').carousel({
-    interval: 0
+    interval: false
   })
 
   var clickEvent = false
