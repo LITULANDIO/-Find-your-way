@@ -4,6 +4,7 @@ head
   meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
   title Ayurveda & Yoga
   link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+  link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootsnipp.css')
   link(rel='stylesheet', type='text/css', href='/css/style.css')
   link(href='https://fonts.googleapis.com/css?family=Lobster+Two', rel='stylesheet')
   link(href='https://fonts.googleapis.com/css?family=News+Cycle', rel='stylesheet')
@@ -62,7 +63,9 @@ include includes/footer.pug
   block content
 
   footer.footer
-    p.copy.col-md-6 Copyright ® 2017, All Rights Reserved
+    p.copy
+    | Copyright ® 2017, 
+    a(href='https://www.linkedin.com/in/carles-far-pierres-390160139/?trk=nav_responsive_tab_profile_pic') Carles far - Front developer
     
   script(src="/bower_components/jquery/dist/jquery.min.js")
   script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")

@@ -7,7 +7,7 @@ function initMap () {
   var geoc = {lat: parseLat, lng: parseLong}
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
+    zoom: 10,
     center: geoc
   })
   var image = '/img/marker.gif'

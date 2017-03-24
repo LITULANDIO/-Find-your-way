@@ -6,7 +6,7 @@ body {
   margin-top: 150px; }
 
 .carousel-inner {
-  height: 380px !important; }
+  height: 340px !important; }
 
 #myCarousel {
   margin-top: 14px; }
@@ -130,7 +130,7 @@ div.form-group.label-taller {
   height: 4px;
   background-color: #f8af00; }
 
-.welcome-top {
+#welcome-top {
   margin-top: 20px; }
 
 .welcome {
@@ -241,17 +241,34 @@ div.form-group.label-taller {
     color: white; }
 
 .footer {
-  margin: 0px;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
   width: 100%;
-  height: 200px;
+  height: 100px;
   background-color: #1d1d1b; }
+  .footer a {
+    text-decoration: none !important;
+    color: white; }
+  .footer a:hover {
+    color: #f8af00; }
   .footer .localitation {
     background-image: url("image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABfklEQVRIS6WW4TEFQRCEvxcBGSADIkAEiAARCAEZyAARIAJeBIgAGZCBajVbtbZmdmff219Xd3PT0z09c7cgdzaBI+AY0LXON/AIPNl1N9MigaPktxVA+4oAzw00TDcCugIuE8Uo5BpQvHt6QGLykAQpYScRswhIffgI5PqyrFtOEZJxx+tZBHRmfalz/ZgZXuzmgVW/0QCqX3dtERGQ3CSX1ecQKCDlvsCemzi5ULL/OxGQEu5XkZJrO+iX5KpZLQEVsBLQp2nvYa0FdANcrCida/NIOk97VS771maQ/cumKHXtAW9Z6RQnuSIL63kLoHvvwK6nb29gPYuP5te1tl4araCIlQfYc+YQaIZVuH4yjHq9qlm5s1MHjKRTbIaVtzVSA9v2oN0UU2yy0inOm6sCNmQzAxT1atibUk2mRyXW61U4NzObYbRA9X3ytoM71DOMlEAftFPLdG+OHG2Lv+ezQPV/RHdA15VOC/PVkrhbOqI3y0h56s9ESjYF/QKTs0cbPJsrEgAAAABJRU5ErkJggg== width='26' height='26'"); }
 
 .navbar-default .navbar-nav > li > a {
   color: white; }
 
-/*# sourceMappingURL=../css/style.map */
+.links > a {
+  text-decoration: none !important; }
+
+img.link:hover, a img.link:hover {
+  border: 4px solid #f8af00;
+  border-radius: 10px; }
+
+.copy {
+  text-decoration: none !important;
+  color: white; }
+
 .navbar-count {
   margin-top: -30px;
   height: 60px; }
@@ -739,27 +756,40 @@ i {
   margin-top: -65px;
   padding-right: 15px; }
 
+.panel-bottom {
+  padding-left: 65px;
+  margin-top: -145px;
+  padding-right: 15px; }
+
 .my-panel {
-  padding-left: 160px !important;
-  margin-left: 0px !important; }
+  margin-left: 0px !important;
+  padding-left: 15px !important; }
+
+.margin-text {
+  text-align: justify; }
+
+.social {
+  margin-top: 0px;
+  margin-bottom: 0px; }
 
 .panel-three {
   margin-top: -65px;
   margin-right: -90px;
   padding-right: 20px;
-  margin-left: -70px; }
+  margin-left: -70px;
+  margin-bottom: 200px; }
 
 .panel-four {
-  margin-top: -65px;
-  margin-right: -90px;
+  margin-top: 270px;
+  margin-right: 0px;
   padding-right: 20px;
-  margin-left: 870px; }
+  margin-left: 890px; }
 
 .panel-five {
-  margin-top: -65px;
-  margin-right: -90px;
+  margin-top: 0px;
+  margin-right: 0px;
   padding-right: 20px;
-  margin-left: 870px; }
+  margin-left: 890px; }
 
 .panel-body {
   background-color: #f8f8f8;
@@ -806,12 +836,14 @@ hr {
       color: #00ACED; }
   .social-nav .facebook {
     background: #3B579D;
-    text-shadow: 0px 0px #2d4278, 1px 1px #2d4278, 2px 2px #2d4278, 3px 3px #2d4278, 4px 4px #2d4278, 5px 5px #2d4278, 6px 6px #2d4278, 7px 7px #2d4278, 8px 8px #2d4278, 9px 9px #2d4278, 10px 10px #2d4278, 11px 11px #2d4278, 12px 12px #2d4278, 13px 13px #2d4278, 14px 14px #2d4278, 15px 15px #2d4278, 16px 16px #2d4278, 17px 17px #2d4278, 18px 18px #2d4278, 19px 19px #2d4278, 20px 20px #2d4278, 21px 21px #2d4278, 22px 22px #2d4278, 23px 23px #2d4278, 24px 24px #2d4278, 25px 25px #2d4278, 26px 26px #2d4278, 27px 27px #2d4278, 28px 28px #2d4278, 29px 29px #2d4278, 30px 30px #2d4278; }
+    text-shadow: 0px 0px #2d4278, 1px 1px #2d4278, 2px 2px #2d4278, 3px 3px #2d4278, 4px 4px #2d4278, 5px 5px #2d4278, 6px 6px #2d4278, 7px 7px #2d4278, 8px 8px #2d4278, 9px 9px #2d4278, 10px 10px #2d4278, 11px 11px #2d4278, 12px 12px #2d4278, 13px 13px #2d4278, 14px 14px #2d4278, 15px 15px #2d4278, 16px 16px #2d4278, 17px 17px #2d4278, 18px 18px #2d4278, 19px 19px #2d4278, 20px 20px #2d4278, 21px 21px #2d4278, 22px 22px #2d4278, 23px 23px #2d4278, 24px 24px #2d4278, 25px 25px #2d4278, 26px 26px #2d4278, 27px 27px #2d4278, 28px 28px #2d4278, 29px 29px #2d4278, 30px 30px #2d4278;
+    margin-left: 30px; }
     .social-nav .facebook:hover {
       color: #3B579D; }
   .social-nav .google {
     background: #DD4A3A;
-    text-shadow: 0px 0px #c23122, 1px 1px #c23122, 2px 2px #c23122, 3px 3px #c23122, 4px 4px #c23122, 5px 5px #c23122, 6px 6px #c23122, 7px 7px #c23122, 8px 8px #c23122, 9px 9px #c23122, 10px 10px #c23122, 11px 11px #c23122, 12px 12px #c23122, 13px 13px #c23122, 14px 14px #c23122, 15px 15px #c23122, 16px 16px #c23122, 17px 17px #c23122, 18px 18px #c23122, 19px 19px #c23122, 20px 20px #c23122, 21px 21px #c23122, 22px 22px #c23122, 23px 23px #c23122, 24px 24px #c23122, 25px 25px #c23122, 26px 26px #c23122, 27px 27px #c23122, 28px 28px #c23122, 29px 29px #c23122, 30px 30px #c23122; }
+    text-shadow: 0px 0px #c23122, 1px 1px #c23122, 2px 2px #c23122, 3px 3px #c23122, 4px 4px #c23122, 5px 5px #c23122, 6px 6px #c23122, 7px 7px #c23122, 8px 8px #c23122, 9px 9px #c23122, 10px 10px #c23122, 11px 11px #c23122, 12px 12px #c23122, 13px 13px #c23122, 14px 14px #c23122, 15px 15px #c23122, 16px 16px #c23122, 17px 17px #c23122, 18px 18px #c23122, 19px 19px #c23122, 20px 20px #c23122, 21px 21px #c23122, 22px 22px #c23122, 23px 23px #c23122, 24px 24px #c23122, 25px 25px #c23122, 26px 26px #c23122, 27px 27px #c23122, 28px 28px #c23122, 29px 29px #c23122, 30px 30px #c23122;
+    margin-left: 30px; }
     .social-nav .google:hover {
       color: #DD4A3A; }
   .social-nav .linkedin {
@@ -824,6 +856,14 @@ hr {
     text-shadow: 0px 0px #9f191e, 1px 1px #9f191e, 2px 2px #9f191e, 3px 3px #9f191e, 4px 4px #9f191e, 5px 5px #9f191e, 6px 6px #9f191e, 7px 7px #9f191e, 8px 8px #9f191e, 9px 9px #9f191e, 10px 10px #9f191e, 11px 11px #9f191e, 12px 12px #9f191e, 13px 13px #9f191e, 14px 14px #9f191e, 15px 15px #9f191e, 16px 16px #9f191e, 17px 17px #9f191e, 18px 18px #9f191e, 19px 19px #9f191e, 20px 20px #9f191e, 21px 21px #9f191e, 22px 22px #9f191e, 23px 23px #9f191e, 24px 24px #9f191e, 25px 25px #9f191e, 26px 26px #9f191e, 27px 27px #9f191e, 28px 28px #9f191e, 29px 29px #9f191e, 30px 30px #9f191e; }
     .social-nav .pinterest:hover {
       color: #CB2026; }
+
+.social {
+  margin-left: 90px; }
+
+.img-top {
+  border-radius: 25px;
+  opacity: 0.6;
+  padding-top: 0px; }
 
 .social-cont {
   border-style: solid;
