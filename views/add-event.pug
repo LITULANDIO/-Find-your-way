@@ -43,7 +43,7 @@ block content
             fieldset.form-group
               label(for='recipetitle') Titulo
               | 
-              input#recipetitle.form-control(rows='1', maxlength='30', name="title", value= !retiros ? " " : retiros.title ) 
+              input#recipetitle.form-control(rows='1', maxlength='30', name="title", required ,  value= !retiros ? " " : retiros.title ) 
           .col-xs-12.col-md-4
             fieldset.form-group
               label(for='recipe-editor-ingredients') Camino
@@ -85,8 +85,8 @@ block content
               input#submit(type='button', value='Buscar')
                
               #map
-              input#long(name="long", value= !retiros ? " " : retiros.long  )
-              input#lat(name="lat", value= !retiros ? " " : retiros.lat  )
+              input#long(name="long",hidden,  value= !retiros ? " " : retiros.long  )
+              input#lat(name="lat",hidden,  value= !retiros ? " " : retiros.lat  )
             
                
           .col-xs-12.col-md-2
