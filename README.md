@@ -7,7 +7,7 @@ view app: [VER](http://encuentratucamino.herokuapp.com/)
 
 ### TECNOLOGÍAS USADAS
 
-![html5-css3](https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjRhtPgse_SAhVEBMAKHcKDDfIQjRwIBw&url=https%3A%2F%2Fwww.competencefactory.nl%2Ffactory%2Ftrainingen%2Fcursus-overview-webdesign&bvm=bv.150729734,bs.2,d.ZGg&psig=AFQjCNHrivBP2kOCwCFJIErzkcDm1nI5rA&ust=1490452459434455)
+[![html5-css3](https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjRhtPgse_SAhVEBMAKHcKDDfIQjRwIBw&url=https%3A%2F%2Fwww.competencefactory.nl%2Ffactory%2Ftrainingen%2Fcursus-overview-webdesign&bvm=bv.150729734,bs.2,d.ZGg&psig=AFQjCNHrivBP2kOCwCFJIErzkcDm1nI5rA&ust=1490452459434455)]
 
 ![js/jquery/ajax](https://www.google.es/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjVi-Khse_SAhWUHsAKHVx4AjUQjRwIBw&url=http%3A%2F%2Fdaniellfeijo.com%2Fen%2F2015%2F09%2F18%2Fajax-com-jquery-e-javascript-para-marcarmos-um-servico-de-uma-lista-como-aprovado%2F&bvm=bv.150729734,d.ZGg&psig=AFQjCNEvi147S2PcLv_1QPbFwVfGQnsntQ&ust=1490452536137100)
 
@@ -38,19 +38,19 @@ git clone https://github.com/LITULANDIO/myFinalProject_Skylab.git
 ```
 
 ## Agradecimientos: 
-- David Monreal: Fundador  
+- David Monreal: Padre Fundador  
 - Alex: El patito  
 - Juanma: Maestro Yoda
 
 ## Compañeros: 
--Alejandro
--Bijay
--Ernesto 
--Ezequiel
--Fran
--Ignasi
--Jonas
--Josep
--Stivali
--Oscar 
--Xavi
+- Alejandro
+- Bijay
+- Ernesto 
+- Ezequiel
+- Fran
+- Ignasi
+- Jonas
+- Josep
+- Stivali
+- Oscar 
+- Xavi
