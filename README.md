@@ -6,7 +6,7 @@ view app: [VER](http://encuentratucamino.herokuapp.com/)
 
 ### TECNOLOGÍAS USADAS
 
-![front-back](https://github.com/LITULANDIO/myFinalProject_Skylab/tree/master/assets/technologies.gif)
+[![front-back](https://github.com/LITULANDIO/myFinalProject_Skylab/tree/master/assets/technologies.gif)](WWW.ENCUENTRA.COM)
 
 
 
@@ -36,4 +36,4 @@ git clone https://github.com/LITULANDIO/myFinalProject_Skylab.git
 - Oscar 
 - Xavi
 
-https://github.com/LITULANDIO/myFinalProject_Skylab/tree/master/assets/technologies.gif
+## GRACIAS SKYLAB CODERS - GRACIAS FAMILIA 
