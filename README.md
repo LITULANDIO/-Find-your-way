@@ -6,7 +6,7 @@ view app: [VER](http://encuentratucamino.herokuapp.com/)
 
 ### TECNOLOGÍAS USADAS
 
-[![front-back](https://github.com/LITULANDIO/myFinalProject_Skylab/tree/master/assets/technologies.gif)](WWW.ENCUENTRA.COM)
+![front-back](https://github.com/LITULANDIO/myFinalProject_Skylab/blob/master/assets/technologies.gif?raw=true)
 
 
 
