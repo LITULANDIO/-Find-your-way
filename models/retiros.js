@@ -1,9 +1,10 @@
-const mongoose = require('mongoose')
-const collection = 'retiros'
 
-const moment = require('moment')
-moment.locale('es')
-const RetiroSchema = new mongoose.Schema({
+const mongoose = require('mongoose') // requerimos mongoose
+const collection = 'retiros' // creamos una colección llamada retiros
+
+const moment = require('moment') // libreria moments
+moment.locale('es') // traducir moments de inglés a español
+const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especificamos los campos con sus tipos
   // owner: { type: String, required: true },
   category: { type: String, default: 'retiro' },
   title: { type: String, default: false },
@@ -25,4 +26,4 @@ const RetiroSchema = new mongoose.Schema({
   tags: String
 }, { collection })
 
-module.exports = mongoose.model('retiros', RetiroSchema)
+module.exports = mongoose.model('retiros', RetiroSchema) // exportamos el modelo creado de la base de datos + coleccion

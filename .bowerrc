@@ -1,3 +1,4 @@
+//especificamos la ruta donde queremos que se instale bower, en la  carpeta de los archivos estáticos
 {
   "directory": "public/bower_components"
 }

@@ -7,14 +7,14 @@
   "description": "",
   "main": "",
   "license": "MIT",
-  "ignore": [
+  "ignore": [ //ignoramos todo aquello que no queremos subir al repositorio
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
-  "dependencies": {
+  "dependencies": { // dependencias donde se instalan librerias 
     "bootstrap": "^3.3.7",
     "moment": "^2.17.1",
     "hover": "^2.1.1"
