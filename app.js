@@ -26,12 +26,13 @@ app.set('view engine', 'pug') // declaramos que en la carpeta view (dinámica) s
 // app.use(express.static('public'))
 // app.use(express.static(__dirname + '/public'))
 app.use(express.static(path.join(__dirname, 'public'))) // Especificamos donde se encuentran los archivos estáticos
-
+// path acceso de ruta
 mongoose.connect(urlDB) // conectamos con la bd mediante mongoose con la url especificada
 const db = mongoose.connection
 db.on('error', console.error.bind(console, 'ERROR')) // comprovamos si existe un error en la conexión
 db.once('open', () => { console.log('CONNECTED') }) // si la conexión es correcta  enviamos un console.log
-app.use('/', routerEvents) //
+
+app.use('/', routerEvents) // middleware especificando la ruta donde encontraremos el indice de rutas
 app.use('/', routerEvent) //
 
 // app.get('/', function (req, res) {
