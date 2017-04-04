@@ -8,6 +8,8 @@ const ShowDetails = require('./handlers/ShowDetails')
 const getOnlyRetiro = require('./handlers/getByonlyRetiro')
 const getDetails = require('./handlers/getDetails')
 
+// -----------------------------------END POINTS-----------------------------------------------------------
+
 router.get('/retiros/:tipo', getRetiros) // Filtramos resultados de tipos
 router.delete('/acount', deleteById) // eliminar evento
 router.get('/details', ShowDetails) // Muestra el detalle completo del evento

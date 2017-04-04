@@ -8,6 +8,7 @@ const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especif
   // owner: { type: String, required: true },
   category: { type: String, default: 'retiro' },
   title: { type: String, default: false },
+  imageUrl: String,
   precio: Number,
   road: String,
   lat: Number,

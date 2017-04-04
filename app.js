@@ -3,7 +3,8 @@ const path = require('path')
 const bodyParser = require('body-parser') // importamos el modulo bodyparser
 const mongoose = require('mongoose') // requerimos mongoose después de su isntalación npm
 const methodOverride = require('method-override')
-const multer = require('multer')
+const multer = require('multer')// para leer los archivos de imagen
+const cloudinary = require('cloudinary')
 
 const routerEvents = require('./routes/events') // routes --> consideraciones generales
 const routerEvent = require('./routes/event') // routes --> consideraciones concretas
@@ -16,8 +17,9 @@ const app = express() // creamos el servidor
 app.locals.moment = require('moment') // requerimos la libreria moments
 
 // app.use Middleware --> es una función conectora
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json()) // middleware que requerimos para poder utilizar el método post y recoger los valores del formulario
+const uploader = (multer({dest: './uploads'}))
 app.use(methodOverride('_method'))
 app.set('view engine', 'pug') // declaramos que en la carpeta view (dinámica) se encuentran  las paginas apunto para ser renderizadas con pug
 
@@ -40,3 +42,8 @@ app.use('/', routerEvent) //
 // })
 
 app.listen(PORT, () => console.log(`Running on PORT ${PORT}...`)) // llamamos al puerto
+
+// heroku es un serviicio de housting con unaa version gratuita, el problema es que no tiene permisos
+// de escritura,con lo cual no se pueden subir imagenes ya que no deja escribir en el servidor.
+// Para ello usaremos un servicio de housting de imaganes llamado clodinary, permite editar.
+// intalar el npm la libreria cloudinary, y con una linea de codigo
