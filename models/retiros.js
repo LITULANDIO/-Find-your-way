@@ -29,7 +29,7 @@ const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especif
 
 RetiroSchema.virtual('imageurl').get(function () {
   if (this.imageUrl === undefined) {
-    return '.imgs/nodisponible.png'
+    return '.img/nodisponible.png'
   }
   return this.imageUrl
 })

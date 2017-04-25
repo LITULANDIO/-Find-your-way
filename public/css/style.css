@@ -760,14 +760,19 @@ i {
   background: #d24228; }
 
 .image1 {
-  max-width: 831px !important; }
-  .image1 img {
+  max-width: 831px !important;
+  border-radius: 6px 6px 0 0; }
+
+.image2 {
+  width: 300px;
+  height: 300px; }
+  .image2 img {
     border: 2px solid #FFFFFF;
     float: left;
     height: 54px;
     left: 0;
     width: 100px; }
-  .image1 .active img {
+  .image2 .active img {
     border: 2px solid #428BCA;
     opacity: 0.7; }
 
@@ -921,6 +926,9 @@ hr {
 
 .bottom-map {
   height: 280px; }
+
+.events-link {
+  padding: 0px; }
 
 .social-cont {
   border-style: solid;
@@ -1247,14 +1255,14 @@ a.social-icon {
   width: 50%;
   border: 1px solid #f8af00;
   box-shadow: 1px, 1px, 1px;
-  opacity: 0.8;
+  opacity: 10;
   float: right; }
 
 .map-events {
   position: fixed;
-  margin-top: -30px;
-  margin-left: 100px;
-  width: 94%;
+  margin-top: 4px;
+  margin-left: 16px;
+  width: 99%;
   height: 100%;
   display: block; }
 

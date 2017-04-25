@@ -6,8 +6,8 @@ block content
       input#address(type="text" placeholder="indica el lugar").in   
       h1#title-mine.text-center
     .hr-line
-    div.map-events
-       #maps
+      div.map-events
+        #maps
     div.over
       each retiro in retiros
         
@@ -15,7 +15,8 @@ block content
         .col-sm-4.col-md-4.events-link
           .thumbnail.offer.margins.links.hvr-grow-shadow
            a.image-a(href='/details/'+ retiro.id)
-            img.link(src='https://encuentraturetiro.com/wp-content/uploads/2016/12/two-sisters.jpg') 
+            img(src= retiro.imageUrl, width="201px" height="174px" class="image2")
+            
             h2.text-center
               |#{retiro.title} 
             div
