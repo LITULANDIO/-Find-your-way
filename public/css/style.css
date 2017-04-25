@@ -1,4 +1,21 @@
 @charset "UTF-8";
+.ino {
+  margin-top: 24px;
+  position: absolute;
+  margin-left: -41px; }
+
+.in {
+  margin-top: 24px;
+  position: absolute;
+  margin-left: 0px;
+  border-bottom: 1px solid #f8af00;
+  outline: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  width: 173px;
+  font-size: 21px; }
+
 body {
   padding-top: 20px;
   font-family: Lobster Two;
@@ -742,6 +759,18 @@ i {
 .google .icon-modal, .google .slide-modal {
   background: #d24228; }
 
+.image1 {
+  max-width: 831px !important; }
+  .image1 img {
+    border: 2px solid #FFFFFF;
+    float: left;
+    height: 54px;
+    left: 0;
+    width: 100px; }
+  .image1 .active img {
+    border: 2px solid #428BCA;
+    opacity: 0.7; }
+
 .my-container {
   padding-right: 100px;
   padding-left: 100px;
@@ -1223,8 +1252,9 @@ a.social-icon {
 
 .map-events {
   position: fixed;
+  margin-top: -30px;
   margin-left: 100px;
-  width: 90%;
+  width: 94%;
   height: 100%;
   display: block; }
 

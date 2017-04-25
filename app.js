@@ -1,10 +1,10 @@
 const express = require('express')  // importamos el modulo express
 const path = require('path')
-const bodyParser = require('body-parser') // importamos el modulo bodyparser
+const bodyParser = require('body-parser') // modulo para acceder a los datos del post
 const mongoose = require('mongoose') // requerimos mongoose después de su isntalación npm
-const methodOverride = require('method-override')
-const multer = require('multer')// para leer los archivos de imagen
-const cloudinary = require('cloudinary')
+const method_override = require('method-override')// modulo para sobreescrivir rutas
+const multer = require('multer')// modulo para cargar las imagenes temporales
+const formidable = require('express-formidable')
 
 const routerEvents = require('./routes/events') // routes --> consideraciones generales
 const routerEvent = require('./routes/event') // routes --> consideraciones concretas
@@ -19,10 +19,11 @@ app.locals.moment = require('moment') // requerimos la libreria moments
 // app.use Middleware --> es una función conectora
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json()) // middleware que requerimos para poder utilizar el método post y recoger los valores del formulario
-const uploader = (multer({dest: './uploads'}))
-app.use(methodOverride('_method'))
+app.use(multer({dest: './uploads'}).single('image_item'))
+app.use(method_override('_method'))
 app.set('view engine', 'pug') // declaramos que en la carpeta view (dinámica) se encuentran  las paginas apunto para ser renderizadas con pug
 
+// app.use(formidable.({keepExtensions: true}))
 // Los end points devuelven html o json renderizado --> app.route
 
 // app.use(express.static('public'))

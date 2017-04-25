@@ -1,7 +1,5 @@
 const Retiro = require('../../../models/retiros')
 const cloudinary = require('cloudinary')
-const multer = require('multer')
-const uploader = (multer({dest: './uploads'}))
 
 cloudinary.config({
   cloud_name: 'skylab',
@@ -14,7 +12,7 @@ module.exports = (req, res) => {
   console.log('He recibido lo siguiente', req.body)
   const { title } = req.body
   const { category } = req.body
-  // const { imageUrl } = req.file
+  const { imageUrl } = req.file
   const { road } = req.body
   const { lat } = req.body
   const { long } = req.body
@@ -28,16 +26,32 @@ module.exports = (req, res) => {
   const { timeMinuteEnd } = req.body
   const { description } = req.body
   const { tags } = req.body
-  const retiro = new Retiro({ title, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
+  const retiro = new Retiro({ title, imageUrl, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
 
-  // if (req.file) {
-  //   cloudinary.uploader.upload(req.file.path,
-  // function (result) {
-  //   retiro.imageUrl = result.url
-  // })
-  // }
+  console.log('la imagen es: ' + req.file.imageUrl)
 
-  retiro.save()
+  if (req.file) {
+    cloudinary.uploader.upload(req.file.path,
+  function (result) {
+    retiro.imageUrl = result.url
+    retiro.save(function (err) {
+      res.render('fullEvent')
+    })
+  },
+      {
+        public_id: 'sample_id',
+        crop: 'limit',
+        width: 100,
+        height: 100
+      }
+)
+  } else {
+    retiro.save(function (err) {
+      console.log(retiro)
+      res.render('fullEvent')
+    })
+  }
+
   console.log('Retiro creado' + retiro)
   // res.status(200).json(event)
   res.redirect('/acount')

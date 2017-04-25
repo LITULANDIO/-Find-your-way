@@ -8,7 +8,7 @@ const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especif
   // owner: { type: String, required: true },
   category: { type: String, default: 'retiro' },
   title: { type: String, default: false },
-  imageUrl: String,
+  imageUrl: {type: String, required: true},
   precio: Number,
   road: String,
   lat: Number,
@@ -26,5 +26,12 @@ const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especif
   description: String,
   tags: String
 }, { collection })
+
+RetiroSchema.virtual('imageurl').get(function () {
+  if (this.imageUrl === undefined) {
+    return '.imgs/nodisponible.png'
+  }
+  return this.imageUrl
+})
 
 module.exports = mongoose.model('retiros', RetiroSchema) // exportamos el modelo creado de la base de datos + coleccion
