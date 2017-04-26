@@ -345,21 +345,22 @@ p a {
 label {
   font-weight: 300; }
 
-.panel-login {
-  border: none;
-  -webkit-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
-  -moz-box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39);
-  box-shadow: 0px 0px 49px 14px rgba(188, 190, 194, 0.39); }
-  .panel-login .checkbox {
+#login {
+  margin-top: -18px;
+  margin-right: 264px; }
+
+#register {
+  margin-left: -227px; }
+  #register .checkbox {
     padding-left: 20px; }
-    .panel-login .checkbox input[type=checkbox] {
+    #register .checkbox input[type=checkbox] {
       margin-left: 0px; }
-    .panel-login .checkbox label {
+    #register .checkbox label {
       padding-left: 25px;
       font-weight: 300;
       display: inline-block;
       position: relative; }
-      .panel-login .checkbox label::before {
+      #register .checkbox label::before {
         content: "";
         display: inline-block;
         position: absolute;
@@ -373,7 +374,7 @@ label {
         -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
         -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
         transition: border 0.15s ease-in-out, color 0.15s ease-in-out; }
-      .panel-login .checkbox label::after {
+      #register .checkbox label::after {
         display: inline-block;
         position: absolute;
         width: 16px;
@@ -385,22 +386,22 @@ label {
         padding-top: 1px;
         font-size: 11px;
         color: #555555; }
-    .panel-login .checkbox input[type="checkbox"] {
+    #register .checkbox input[type="checkbox"] {
       opacity: 0; }
-      .panel-login .checkbox input[type="checkbox"]:focus + label::before {
+      #register .checkbox input[type="checkbox"]:focus + label::before {
         outline: thin dotted;
         outline: 5px auto -webkit-focus-ring-color;
         outline-offset: -2px; }
-      .panel-login .checkbox input[type="checkbox"]:checked + label::after {
+      #register .checkbox input[type="checkbox"]:checked + label::after {
         font-family: "FontAwesome";
         content: ""; }
-  .panel-login > .panel-heading .tabs {
+  #register > .panel-heading .tabs {
     padding: 0; }
-  .panel-login h2 {
+  #register h2 {
     font-size: 20px;
     font-weight: 300;
     margin: 30px; }
-  .panel-login > .panel-heading {
+  #register > .panel-heading {
     color: #848c9d;
     background-color: #e8e9ec;
     border-color: #fff;
@@ -411,16 +412,16 @@ label {
     border-top-right-radius: 0px;
     border-bottom: 0px;
     padding: 0px 15px; }
-  .panel-login .form-group {
+  #register .form-group {
     padding: 0 30px; }
-  .panel-login > .panel-heading .login {
+  #register > .panel-heading .login {
     padding: 20px 30px;
     border-bottom-leftt-radius: 5px; }
-  .panel-login > .panel-heading .register {
+  #register > .panel-heading .register {
     padding: 20px 30px;
     background: #2d3b55;
     border-bottom-right-radius: 5px; }
-  .panel-login > .panel-heading a {
+  #register > .panel-heading a {
     text-decoration: none;
     color: #666;
     font-weight: 300;
@@ -428,14 +429,14 @@ label {
     -webkit-transition: all 0.1s linear;
     -moz-transition: all 0.1s linear;
     transition: all 0.1s linear; }
-    .panel-login > .panel-heading a#register-form-link {
+    #register > .panel-heading a#register-form-link {
       color: #fff;
       width: 100%;
       text-align: right; }
-    .panel-login > .panel-heading a#login-form-link {
+    #register > .panel-heading a#login-form-link {
       width: 100%;
       text-align: left; }
-  .panel-login input[type="text"], .panel-login input[type="email"], .panel-login input[type="password"] {
+  #register input[type="text"], #register input[type="email"], #register input[type="password"] {
     height: 45px;
     border: 0;
     font-size: 16px;
@@ -447,7 +448,7 @@ label {
     border-bottom: 1px solid #e7e7e7;
     border-radius: 0px;
     padding: 6px 0px; }
-  .panel-login input:hover, .panel-login input:focus {
+  #register input:hover, #register input:focus {
     outline: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;

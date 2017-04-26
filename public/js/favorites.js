@@ -5,7 +5,7 @@ function agregar () {
     window.external.AddFavorite(url, titulo)
   } else {
     if (navigator.appName == 'Netscape') {
-      alert('Presione Crtl+D para agregar este sitio en sus Bookmarks')
+      alert('Presione Crtl+D para agregar este sitio a Mis Favoritos')
     }
   }
 }

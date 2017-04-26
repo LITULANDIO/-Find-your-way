@@ -4,7 +4,9 @@ const bodyParser = require('body-parser') // modulo para acceder a los datos del
 const mongoose = require('mongoose') // requerimos mongoose después de su isntalación npm
 const method_override = require('method-override')// modulo para sobreescrivir rutas
 const multer = require('multer')// modulo para cargar las imagenes temporales
-const formidable = require('express-formidable')
+const formidable = require('express-formidable') // modulo para subir archivos al servidor
+const session = require('express-session') // modulo para control de session para login
+const cookieParser = require('cookie-parser') // modulo para configurar cookies
 
 const routerEvents = require('./routes/events') // routes --> consideraciones generales
 const routerEvent = require('./routes/event') // routes --> consideraciones concretas
@@ -23,7 +25,15 @@ app.use(multer({dest: './uploads'}).single('image_item'))
 app.use(method_override('_method'))
 app.set('view engine', 'pug') // declaramos que en la carpeta view (dinámica) se encuentran  las paginas apunto para ser renderizadas con pug
 
-// app.use(formidable.({keepExtensions: true}))
+app.use(cookieParser())
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
+
+require('./routes/passport')(app)
 // Los end points devuelven html o json renderizado --> app.route
 
 // app.use(express.static('public'))
