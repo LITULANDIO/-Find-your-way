@@ -13,7 +13,7 @@ block content
 					.panel-body
 						.row
 							.col-lg-12
-								form#login-form(action='#', method='post', role='form', style='display: block;')
+								form#login-form(action='/myAcount', method='post', role='form', style='display: block;')
 									h2.font-categories LOGIN
 									.form-group
 										input#username.form-control(type='text', name='username', tabindex='1', placeholder='Username', value='')
@@ -25,7 +25,7 @@ block content
 									.col-xs-6.form-group.pull-right
 										a(href='myAcount')
 											input#login-submit.form-control.btn.btn-login.font-categories(type='submit', name='login-submit', tabindex='4', value='Log In')
-								form#register-form(action='#', method='post', role='form', style='display: none;')
+								form#register-form(action='/login', method='post', role='form', style='display: none;')
 									h2.font-categories REGISTRO
 									.form-group
 										input#username.form-control(type='text', name='username', tabindex='1', placeholder='Username', value='')

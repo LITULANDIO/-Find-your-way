@@ -1,4 +1,3 @@
-
 // Funcion que muestra la ubicacion de los objetos en Google Maps
 var map
 
@@ -18,8 +17,26 @@ function viewMap () {
 
     // construyo el mapa
   map = new google.maps.Map(document.getElementById('maps'),
-    mapOptions)
-
+        mapOptions)
+  var longs = []
+  var lat
+  var long
+  var collection = $('#lat').val()
+  // console.log(collection)
+  for (var i = collection.length - 1; i >= 0; i--) {
+    longs.push(collection[i])
+  }
+  $.each(longs, function (value, index) {
+    console.log(value + '/' + index)
+  })
+  // for (var i in collection)
+  //   console.log(collection[i])
+  // collection.each(function () {
+  //   lat = $('#lat p').html()
+  //   long = $('#long p').html()
+  //   longs.push(lat + ' / ' + long)
+  // })
+  console.log(longs)
   addMarkers()
 }
 
@@ -35,16 +52,18 @@ var lat = document.getElementById('lat').innerHTML
 var long = document.getElementById('long').innerHTML
 var parseLat = parseFloat(lat)
 var parseLong = parseFloat(long)
-var geoc = {lat: parseLat, lng: parseLong}
+var geoc = { lat: parseLat, lng: parseLong }
 
 var markersArray = [{
 
-  lat: parseLat, lng: parseLong}
+  lat: parseLat,
+  lng: parseLong
+}
 
 ]
 
 console.log(markersArray)
-// agrego multiples POIs al mapa
+    // agrego multiples POIs al mapa
 function addMarkers () {
   for (var i = 0; i < markersArray.length; i++) {
     var location = new google.maps.LatLng(markersArray[i].lat, markersArray[i].lng)

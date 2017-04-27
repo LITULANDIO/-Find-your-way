@@ -504,7 +504,9 @@ body {
 .over {
   width: 780px;
   height: auto;
-  overflow: auto; }
+  overflow: auto;
+  display: flex;
+  flex-wrap: wrap; }
 
 .tcalInput {
   background: url("/img/cal.gif") 100% 50% no-repeat;
