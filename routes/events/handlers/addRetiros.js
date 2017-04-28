@@ -41,8 +41,8 @@ module.exports = (req, res) => {
       {
         public_id: 'sample_id',
         crop: 'limit',
-        width: 100,
-        height: 100
+        width: 1000,
+        height: 1000
       }
 )
   } else {

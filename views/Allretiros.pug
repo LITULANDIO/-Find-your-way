@@ -3,7 +3,7 @@ block content
   
     .container 
       img(src='/img/search.png', width='26px', height='26px').ino 
-      input#address(type="text" placeholder="indica el lugar").in   
+      input#search( type="text" placeholder="indica el lugar").in   
       h1#title-mine.text-center
     .hr-line
       div.map-events
@@ -17,7 +17,7 @@ block content
            a.image-a(href='/details/'+ retiro.id)
             img(src= retiro.imageUrl, width="201px" height="174px" class="image2")
             
-            h2.text-center
+            h2#box.text-center
               |#{retiro.title} 
             div
               
@@ -28,21 +28,22 @@ block content
             br
             div
               img.icon.icons8-Calendar-Filled(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABY0lEQVRoQ+1a0Q3CIBS8TqBuoJs4im6gk+gGOoqb6AbqBBpMSQhp4HEUqvj618Ad7+4opSkd5NcawAnAsofcAGwBXOQUwZ5Z/F1CEVdHhIUZMasEjlDXLP4UIa++Covx73P1ZPE3KWQD4ABgHrHWTyQ3CR8v5X8A2AM4GwI3kbtAhIuxU2EqIWZcI2bhC5EWJnWMFZjK/+nvJvJ3QlinS+HoREoVxPKqENa5Urh2EynlWBXelC1KlYLYQZj3CDtWKVy7z4j0zV7KWZZXE2GdK4XTRIaW7NBnb25bLEk6ERUyYK0kLU1E5IDXSeIsOyVF9egWJWZTxXZdtdi5zuJi4WoirLMsThOJOfBt7fQz0owQdq6zuJhxdCJsQSxOhYgcaGHTyE4RFicyVne/MZsqttOrVsUaRUOpEJFNFTu1m4j5+T6r6OQYQz3tIQd3+TVHOI4/JMaI2A0d4RjDock4mvn19gbNL4YzPmuBVAAAAABJRU5ErkJggg==', width='26', height='26')
-              |  Fecha: 
+              |Fecha:#{retiro.startDate}
             p
               |
             hr
               
             div.iter
-              div#lat #{retiro.lat}
-              div#long #{retiro.long}
+              div#lat(hidden) #{retiro.lat}
+              div#long(hidden) #{retiro.long}
             img(src='https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/price_tag-24.png', title='Price Tag', width='24')
             |   #{retiro.tags} 
 
           
             
     script(src='/js/allMaps.js')
+    script(src='/js/filters.js')
     
     script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=initMap')
     script(src='/js/insert-title.js')
-    
+     
