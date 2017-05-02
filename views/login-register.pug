@@ -16,28 +16,30 @@ block content
 								form#login-form(action='/acount', method='post', role='form', style='display: block;')
 									h2.font-categories LOGIN
 									.form-group
-										input#username.form-control(type='text', name='username', tabindex='1', placeholder='Username', value='')
+										input#username.form-control(type='text', name='username',placeholder='Username', value='')
 									.form-group
-										input#password.form-control(type='password', name='password', tabindex='2', placeholder='Password')
+										input#password.form-control(type='password', name='password', placeholder='Password')
 									.col-xs-6.form-group.pull-left.checkbox
 										input#checkbox1(type='checkbox', name='remember')
 										label(for='checkbox1') Recordar contraseña
 									.col-xs-6.form-group.pull-right
 										a(href='myAcount')
-											input#login-submit.form-control.btn.btn-login.font-categories(type='submit', name='login-submit', tabindex='4', value='Log In')
-								form#register-form(action='/login', method='post', role='form', style='display: none;')
+											input#login-submit.form-control.btn.btn-login.font-categories(type='submit', name='login-submit', value='Log In')
+
+
+								form#register-form(action='/register', method='post', role='form', style='display: none;')
 									h2.font-categories REGISTRO
 									.form-group
-										input#username.form-control(type='text', name='username', tabindex='1', placeholder='Username', value='')
+										input#username.form-control(type='text', name='username', placeholder='Username', value='')
 									.form-group
-										input#email.form-control(type='email', name='email', tabindex='1', placeholder='Email Address', value='')
+										input#email.form-control(type='email', name='email', placeholder='Email Address', value='')
 									.form-group
-										input#password.form-control(type='password', name='password', tabindex='2', placeholder='Password')
+										input#password.form-control(type='password', name='password', placeholder='Password')
 									
 									.form-group
 										.row
 											.col-sm-6.col-sm-offset-3
-												input#register-submit.form-control.btn.btn-register.font-categories(type='submit', name='register-submit', tabindex='4', value='Registrarme')
+												input#register-submit.form-control.btn.btn-register.font-categories(type='submit', name='register-submit', value='Registrarme')
 							
 							
 								

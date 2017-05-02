@@ -1,6 +1,6 @@
 const express = require('express')
 const passport = require('passport')
-const Account = require('../../models/Account')
+const Account = require('../../models/counts')
 
 const router = express.Router()
 
@@ -30,21 +30,21 @@ passport.deserializeUser(Account.deserializeUser())
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
   console.log(req.user.username)
-  res.redirect('/acount')
+  res.render('myAcount')
 })
 
-router.post('/login', function (req, res, next) {
+router.post('/register', function (req, res, next) {
   const { username, password, email } = req.body
-  const account = new Account({ username, email })
+  const count = new Account({ username, email, password })
 
-  Account.register(account, password, function (err) {
+  Account.register(count, password, function (err) {
     if (err) {
       console.log('error while user register!', err)
       return next(err)
     }
 
     console.log('user registered!')
-    res.redirect('/acount')
+    res.redirect('/login')
   })
 })
 

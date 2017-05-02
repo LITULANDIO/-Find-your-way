@@ -19,7 +19,7 @@ router.get('/acount', myAcount) // Entramos en la cuenta personal
 router.get('/retiros/add', showForm) // Vemos el formulario vacio
 router.post('/retiros', addRetiros) // Guardamos los datos del formulario
 router.get('/login', login)
-router.post('/acount', user)
+router.post('/register', user)
 
 // router.get('/acount', showAcount) // entrar en la zona privada
 // router.get('/', getAl) // localhost:3010/clients

@@ -1,4 +1,4 @@
-const User = require('../../../models/Account')
+const User = require('../../../models/counts')
 
 console.log(':)')
 module.exports = (req, res) => {
@@ -10,9 +10,8 @@ module.exports = (req, res) => {
   const user = new User({ username, email, password })
 
   user.save()
- .then(() => {
-   console.log('Retiro creado' + user)
+  res.redirect('/login')
+
+  console.log('user creado' + user)
   // res.status(200).json(event)
-   res.redirect('/login')
- })
 }
