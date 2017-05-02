@@ -45,9 +45,11 @@ app.use('/', routerEvent) //
 //   res.sendFile(__dirname + '/public/html/index.html')
 // })
 function LoggedIn (req, res, next) {
-  if (req.isAuthenticated()) return next()
-  console.log(req.isAuthenticated())
-  res.redirect('/')
+  if (req.isAuthenticated()) // return next()
+  // console.log(req.isAuthenticated())
+  {
+    res.redirect('/')
+  }
 }
 
 app.listen(PORT, () => console.log(`Running on PORT ${PORT}...`)) // llamamos al puerto

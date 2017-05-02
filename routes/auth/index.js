@@ -25,7 +25,7 @@ passport.serializeUser(Account.serializeUser())
 passport.deserializeUser(Account.deserializeUser())
 
 // LOGIN
-router.post('/acount', passport.authenticate('local'), (req, res) => {
+router.post('/acount', passport.authenticate('local', { session: false }), (req, res) => {
   console.log(req.user.username)
   res.redirect('acount')
 })
@@ -38,7 +38,7 @@ router.post('/register', function (req, res, next) {
   Account.register(count, password, function (err) {
     if (err) {
       console.log('error while user register!', err)
-      return next(err)
+      return res.json({success: false, msg: 'Username already exists.'})
     }
 
     console.log('user registered!')
