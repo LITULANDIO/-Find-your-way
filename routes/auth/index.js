@@ -24,15 +24,13 @@ passport.use(new LocalStrategy(Account.authenticate()))
 passport.serializeUser(Account.serializeUser())
 passport.deserializeUser(Account.deserializeUser())
 
-// These get routes will be handled with modal windows in the client
-// router.get('/register', (req, res) => res.render('register'))
-// router.get('/login', (req, res) => res.render('login'))
-
-router.post('/login', passport.authenticate('local'), (req, res) => {
+// LOGIN
+router.post('/acount', passport.authenticate('local'), (req, res) => {
   console.log(req.user.username)
-  res.render('myAcount')
+  res.redirect('acount')
 })
 
+// REGISTER
 router.post('/register', function (req, res, next) {
   const { username, password, email } = req.body
   const count = new Account({ username, email, password })
@@ -48,6 +46,7 @@ router.post('/register', function (req, res, next) {
   })
 })
 
+// LOGOUT
 router.get('/logout', (req, res) => {
   req.logout()
   res.redirect('/')
