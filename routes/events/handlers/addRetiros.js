@@ -10,6 +10,7 @@ cloudinary.config({
 console.log(':)')
 module.exports = (req, res) => {
   console.log('He recibido lo siguiente', req.body)
+  const owner = req.user.username
   const { title } = req.body
   const { category } = req.body
   const { imageUrl } = req.file
@@ -26,7 +27,7 @@ module.exports = (req, res) => {
   const { timeMinuteEnd } = req.body
   const { description } = req.body
   const { tags } = req.body
-  const retiro = new Retiro({ title, imageUrl, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
+  const retiro = new Retiro({ owner, title, imageUrl, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
 
   console.log('la imagen es: ' + req.file.imageUrl)
 

@@ -5,8 +5,6 @@ const mongoose = require('mongoose') // requerimos mongoose después de su isnta
 const method_override = require('method-override')// modulo para sobreescrivir rutas
 const multer = require('multer')// modulo para cargar las imagenes temporales
 const formidable = require('express-formidable') // modulo para subir archivos al servidor
-const session = require('express-session') // modulo para control de session para login
-const cookieParser = require('cookie-parser') // modulo para configurar cookies
 
 const routerEvents = require('./routes/events') // routes --> consideraciones generales
 const routerEvent = require('./routes/event') // routes --> consideraciones concretas
@@ -19,25 +17,20 @@ const app = express() // creamos el servidor
 app.locals.moment = require('moment') // requerimos la libreria moments
 
 // app.use Middleware --> es una función conectora
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()) // middleware que requerimos para poder utilizar el método post y recoger los valores del formulario
 app.use(multer({dest: './uploads'}).single('image_item'))
 app.use(method_override('_method'))
 app.set('view engine', 'pug') // declaramos que en la carpeta view (dinámica) se encuentran  las paginas apunto para ser renderizadas con pug
 
-app.use(cookieParser())
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
-}))
+//* **** Authorization part *********
+const authRouter = require('./routes/auth')
 
-require('./routes/passport')(app)
+app.use(authRouter)
+
+//* **********************************
 // Los end points devuelven html o json renderizado --> app.route
 
-// app.use(express.static('public'))
-// app.use(express.static(__dirname + '/public'))
 app.use(express.static(path.join(__dirname, 'public'))) // Especificamos donde se encuentran los archivos estáticos
 // path acceso de ruta
 mongoose.connect(urlDB) // conectamos con la bd mediante mongoose con la url especificada
@@ -51,6 +44,11 @@ app.use('/', routerEvent) //
 // app.get('/', function (req, res) {
 //   res.sendFile(__dirname + '/public/html/index.html')
 // })
+function LoggedIn (req, res, next) {
+  if (req.isAuthenticated()) return next()
+  console.log(req.isAuthenticated())
+  res.redirect('/')
+}
 
 app.listen(PORT, () => console.log(`Running on PORT ${PORT}...`)) // llamamos al puerto
 

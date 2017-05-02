@@ -504,7 +504,7 @@ body {
 .over {
   width: 780px;
   height: auto;
-  overflow: auto;
+  overflow-x: hidden;
   display: flex;
   flex-wrap: wrap; }
 
