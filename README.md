@@ -33,22 +33,3 @@ node app.js
 **Tener en cuenta que el puerto 3000 tiene que estar libre ya que es el puerto usable**
 
 
-## Agradecimientos: 
-- David Monreal: Padre Fundador  
-- Alex: El patito  
-- Juanma: Maestro Yoda
-
-## Compañeros: 
-- Alejandro
-- Bijay
-- Ernesto 
-- Ezequiel
-- Fran
-- Ignasi
-- Jonas
-- Josep
-- Stivali
-- Oscar 
-- Xavi
-
-## GRACIAS SKYLAB CODERS - GRACIAS FAMILIA 
