@@ -18,9 +18,15 @@ router.get('/acount', myAcount) // Entramos en la cuenta personal
 router.get('/retiros/add', showForm) // Vemos el formulario vacio
 router.post('/retiros', addRetiros) // Guardamos los datos del formulario
 router.get('/login', login)
+router.get('/', isLoggedIn, getRetiros)
 
 // router.get('/acount', showAcount) // entrar en la zona privada
 // router.get('/', getAl) // localhost:3010/clients
 // router.post('/add', addRetiros)
 
 module.exports = router
+
+function isLoggedIn (req, res, next) {
+  if (req.isAuthenticated()) return next()
+  res.redirect('/login')
+}

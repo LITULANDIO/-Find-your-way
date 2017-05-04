@@ -10,6 +10,11 @@ block content
       ul.top-menu
         li
           a(href='/acount')  Mis anuncios en encuentra tu camino
+          if user
+            h3 HOLA #{user.username} !
+     
+          else
+            h3 You are NOT logged!
         //- li
         //-   a(href='about.html')  Datos del perfil
   .container.demo.size-font-categories
@@ -27,6 +32,7 @@ block content
                 i.glyphicon.glyphicon-plus-sign
                 |  Crear anuncio
             .row.cont-body
+
               .col-sm-6.col-md-12
                 each retiro in retiros
                   .thumbnail.offer.margins.col-sm-6.col-md-3.retiro

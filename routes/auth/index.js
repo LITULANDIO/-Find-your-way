@@ -25,7 +25,7 @@ passport.serializeUser(Account.serializeUser())
 passport.deserializeUser(Account.deserializeUser())
 
 // LOGIN
-router.post('/acount', passport.authenticate('local', { session: false }), (req, res) => {
+router.post('/acount', passport.authenticate('local', { session: true }), (req, res) => {
   console.log(req.user.username)
   res.redirect('acount')
 })
