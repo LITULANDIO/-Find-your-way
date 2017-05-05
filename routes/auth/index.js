@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser') // modulo para configurar cookies
 router.use(cookieParser())
 router.use(session({
   secret: 'supersecretworddonottelltoanyone',
-  resave: true,
+  resave: false,
   saveUninitialized: true
 }))
 

@@ -5,6 +5,7 @@ const mongoose = require('mongoose') // requerimos mongoose después de su isnta
 const method_override = require('method-override')// modulo para sobreescrivir rutas
 const multer = require('multer')// modulo para cargar las imagenes temporales
 const formidable = require('express-formidable') // modulo para subir archivos al servidor
+mongoose.Promise = require('bluebird')
 
 const routerEvents = require('./routes/events') // routes --> consideraciones generales
 const routerEvent = require('./routes/event') // routes --> consideraciones concretas
@@ -27,6 +28,9 @@ app.set('view engine', 'pug') // declaramos que en la carpeta view (dinámica) s
 const authRouter = require('./routes/auth')
 
 app.use(authRouter)
+// app.use('/acount', loggedIn, routerEvents)
+app.get('/acount', loggedIn, routerEvents)
+    // do something only if user is authenticated
 
 //* **********************************
 // Los end points devuelven html o json renderizado --> app.route
@@ -44,10 +48,10 @@ app.use('/', routerEvent) //
 // app.get('/', function (req, res) {
 //   res.sendFile(__dirname + '/public/html/index.html')
 // })
-function LoggedIn (req, res, next) {
-  if (req.isAuthenticated()) // return next()
-  // console.log(req.isAuthenticated())
-  {
+function loggedIn (req, res, next) {
+  if (req.isAuthenticated()) {
+    next()
+  } else {
     res.redirect('/')
   }
 }
