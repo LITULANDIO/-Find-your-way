@@ -9,7 +9,7 @@ cloudinary.config({
 
 console.log(':)')
 module.exports = (req, res) => {
-  console.log('He recibido lo siguiente', req.body)
+  // console.log('He recibido lo siguiente', req.body)
   const owner = req.user.username
   const { title } = req.body
   const { category } = req.body
@@ -48,7 +48,7 @@ module.exports = (req, res) => {
 )
   } else {
     retiro.save(function (err) {
-      console.log(retiro)
+     // console.log(retiro)
       res.render('fullEvent')
     })
   }
