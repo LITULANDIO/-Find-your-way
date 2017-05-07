@@ -32,6 +32,11 @@ nav.navbar.navbar-default.navbar-fixed-top.header-mine
             i.glyphicon.glyphicon-heart-empty
             |  Mis favoritos
         li
+          if user
+            a(href='/logout')
+              i.glyphicon.glyphicon-log-out
+              |  Salir
+          else
           a(href='/login')
             i.glyphicon.glyphicon-log-in
             |  loggin

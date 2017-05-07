@@ -17,10 +17,15 @@ block content
           a(href='/acount')  Mis anuncios en encuentra tu camino
         li
           a(href='about.html')  Datos del perfil
+      if user
+        h3 HOLA #{user.username} !
+     
+      else
+        h3 You are NOT logged!
  
   h1.font-categories.container Retiros
   .container.well
-      form.edit-retiro(action= action ? action : '/retiros' method= method ? method : 'POST' enctype="multipart/form-data")
+      form.edit-retiro(action= action ? action : '/acount/add' method= method ? method : 'POST' enctype="multipart/form-data")
         .container
           .col-sm-8        
         .row

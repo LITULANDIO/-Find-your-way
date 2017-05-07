@@ -15,8 +15,8 @@ const login = require('./handlers/show-login')
 router.get('/', Home) // 1 ruta muestra home
 router.get('/retiros', getRetiros) // Muestra todos los retiros
 router.get('/acount', myAcount) // Entramos en la cuenta personal
-router.get('/retiros/add', showForm) // Vemos el formulario vacio
-router.post('/retiros', addRetiros) // Guardamos los datos del formulario
+router.get('/acount/empty', showForm) // Vemos el formulario vacio
+router.post('/acount/add', addRetiros) // Guardamos los datos del formulario
 router.get('/login', login)
 
 // router.get('/acount', showAcount) // entrar en la zona privada

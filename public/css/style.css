@@ -277,7 +277,7 @@ div.form-group.label-taller {
   height: 100px;
   background-color: #1d1d1b;
   bottom: 0;
-  position: absolute; }
+  position: fixed; }
   .footer a {
     text-decoration: none !important;
     color: white; }
@@ -526,6 +526,9 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-wrap: wrap; }
+
+.well {
+  margin-bottom: 100px; }
 
 .tcalInput {
   background: url("/img/cal.gif") 100% 50% no-repeat;
@@ -1286,7 +1289,8 @@ a.social-icon {
   opacity: 10;
   float: right;
   margin-top: -92px;
-  clear: both; }
+  clear: both;
+  z-index: 1; }
 
 .map-events {
   margin-top: 4px;
