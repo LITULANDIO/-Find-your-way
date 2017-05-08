@@ -35,9 +35,9 @@ module.exports = (req, res) => {
     cloudinary.uploader.upload(req.file.path,
   function (result) {
     retiro.imageUrl = result.url
-    retiro.save(function (err) {
-      res.render('fullEvent')
-    })
+    retiro.save()// (function (err) {
+      // res.render('add-event')
+    // })
   },
       {
         public_id: 'sample_id',
@@ -47,10 +47,10 @@ module.exports = (req, res) => {
       }
 )
   } else {
-    retiro.save(function (err) {
+    retiro.save()// (function (err) {
      // console.log(retiro)
-      res.render('fullEvent')
-    })
+      // res.render('add-event')
+    // })
   }
 
   console.log('Retiro creado' + retiro)

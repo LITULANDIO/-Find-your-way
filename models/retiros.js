@@ -7,7 +7,7 @@ const moment = require('moment') // libreria moments
 moment.locale('es') // traducir moments de inglés a español
 
 const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especificamos los campos con sus tipos
-  owner: {type: String, required: true},
+  owner: {type: String, required: false},
   category: { type: String, default: 'retiro' },
   title: String,
   imageUrl: String,
