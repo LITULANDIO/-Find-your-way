@@ -1,11 +1,11 @@
 @charset "UTF-8";
 .ino {
-  margin-top: auto;
+  margin-top: 24px;
   position: absolute;
   margin-left: -4px; }
 
 .intros {
-  margin-top: auto;
+  margin-top: 24px;
   position: absolute;
   margin-left: 25px;
   border-bottom: 1px solid #f8af00;
@@ -31,10 +31,15 @@ body {
     display: inline-block;
     background: #eee; }
 
-.title-find {
+h2.title-find {
   display: flex;
   margin: auto;
   margin-bottom: 21px; }
+  @media screen and (min-width: 300px) and (max-width: 535px) {
+    h2.title-find {
+      font-size: 15px;
+      margin-top: -80px;
+      margin-left: -100px; } }
 
 .search {
   margin-left: -13px !important;
@@ -68,9 +73,6 @@ body {
 .nav-pills > li[data-slide-to="4"].active a {
   background-color: #f8af00; }
 
-#title-mine {
-  margin-top: auto; }
-
 .label-taller {
   font-size: 25px;
   top: -50px; }
@@ -78,6 +80,10 @@ body {
 .logo {
   float: left;
   margin-top: 5px; }
+  @media screen and (min-width: 300px) and (max-width: 535px) {
+    .logo {
+      max-width: 90px;
+      max-height: 50px; } }
 
 .title-mine {
   margin-top: 40px; }
@@ -107,26 +113,33 @@ body {
   .top-menu a {
     text-decoration: none;
     color: #062f4a; }
-  .top-menu li {
-    padding-left: 30px;
-    font-size: 22px;
-    color: #3f5f74;
-    display: inline-block;
-    position: relative;
-    padding-bottom: 2px; }
-    .top-menu li:after {
-      content: "";
-      display: block;
-      position: absolute;
-      right: -15px;
-      bottom: 0;
-      height: 6px;
-      width: 0;
-      background: transparent;
-      transition: width 0.5s ease, background-color 0.5s ease; }
-    .top-menu li:hover:after {
-      width: 100%;
-      background: #f8af00; }
+  @media screen and (min-width: 300px) and (max-width: 725px) {
+    .top-menu {
+      margin-top: 0px; } }
+
+.center-logo li {
+  padding-left: 30px;
+  font-size: 22px;
+  color: #3f5f74;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px; }
+  @media screen and (min-width: 300px) and (max-width: 747px) {
+    .center-logo li {
+      font-size: 18px; } }
+  .center-logo li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    height: 6px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease; }
+  .center-logo li:hover:after {
+    width: 100%;
+    background: #f8af00; }
 
 .form-personal {
   color: #fcf8e3 !important;
@@ -157,7 +170,7 @@ div.form-group.label-taller {
   background-color: #f8af00; }
 
 .hr-line2 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   width: 100%;
   height: 4px;
   background-color: #f8af00; }
@@ -165,16 +178,7 @@ div.form-group.label-taller {
 #welcome-top {
   margin-top: 10px; }
 
-.welcome-top {
-  margin: 25px; }
-
-.welcome-top-acount {
-  margin-top: 65px;
-  font-size: 40px;
-  color: #062f4a; }
-
 .welcome {
-  margin-top: -35px;
   font-size: 40px;
   color: #062f4a; }
   .welcome span {
@@ -185,6 +189,9 @@ div.form-group.label-taller {
 
 .navbar {
   margin-bottom: 0px !important; }
+  @media screen and (min-width: 300px) and (max-width: 535px) {
+    .navbar {
+      max-height: 90px; } }
 
 .item {
   display: inline-flex; }
@@ -284,10 +291,9 @@ div.form-group.label-taller {
 .footer {
   color: white;
   margin: auto 0px;
-  padding: 0px;
-  padding-left: 30px;
+  padding: 10px;
   width: 100%;
-  height: 60px;
+  height: 100px;
   background-color: #1d1d1b;
   bottom: 0;
   position: fixed; }
@@ -311,18 +317,6 @@ div.form-group.label-taller {
 .copy {
   text-decoration: none !important;
   color: white; }
-
-img {
-  max-width: 290px; }
-
-.navbar {
-  max-height: 120px; }
-
-#container {
-  width: auto; }
-
-header h1 a {
-  width: auto; }
 
 .navbar-count {
   margin-top: -30px;

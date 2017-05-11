@@ -1,9 +1,9 @@
 .ino
-  margin-top: auto
+  margin-top: 24px
   position: absolute
   margin-left: -4px
 .intros
-  margin-top: auto
+  margin-top: 24px
   position: absolute
   margin-left: 25px
   border-bottom: 1px solid #f8af00
@@ -26,10 +26,14 @@ body
   .nav
     display: inline-block
     background: #eee
-.title-find
+h2.title-find
   display: flex
   margin: auto
   margin-bottom: 21px
+  @media screen and (min-width:300px) and (max-width: 535px)
+    font-size: 15px
+    margin-top: -80px
+    margin-left: -100px
 .search
   margin-left: -13px !important
   border-radius: 2px !important
@@ -58,12 +62,13 @@ body
   &[data-slide-to="4"].active a
     background-color: #f8af00//#c8b783
 
-#title-mine
-  margin-top: auto
 .label-taller
   font-size: 25px
   top: -50px
 .logo
+  @media screen and (min-width:300px) and (max-width: 535px)
+    max-width: 90px
+    max-height: 50px
   float: left
   margin-top: 5px
 .title-mine
@@ -91,11 +96,19 @@ body
   a
     text-decoration: none
     color: #062f4a
+  @media screen and (min-width:300px) and (max-width: 725px)
+    margin-top: 0px 
   margin-top: 45px
   float: right
   display: flex
   list-style: none
+
+.center-logo
+
   li
+    @media screen and (min-width:300px) and (max-width: 747px)
+      font-size: 18px
+      
     padding-left: 30px
     font-size: 22px
     color: #3f5f74
@@ -143,7 +156,7 @@ div.form-group.label-taller
   background-color: #f8af00
 
 .hr-line2
-  margin-bottom: 10px
+  margin-bottom: 30px
   width: 100%
   height: 4px
   background-color: #f8af00
@@ -151,15 +164,8 @@ div.form-group.label-taller
 
 #welcome-top
   margin-top: 10px
-.welcome-top
-  margin: 25px
-.welcome-top-acount
-  margin-top: 65px
-  font-size: 40px
-  color: #062f4a
 
 .welcome
-  margin-top: -35px
   font-size: 40px
   color: #062f4a
   span
@@ -168,6 +174,9 @@ div.form-group.label-taller
     -webkit-transition: 2s
     transition: 2s
 .navbar
+  
+  @media screen and (min-width:300px) and (max-width: 535px)
+    max-height: 90px
   margin-bottom: 0px !important
 
 
@@ -292,10 +301,9 @@ div.form-group.label-taller
     color: #f8af00
   color: white
   margin: auto 0px
-  padding: 0px
-  padding-left: 30px
+  padding: 10px
   width: 100%
-  height: 60px
+  height: 100px
   background-color: #1d1d1b
   bottom: 0
   position: fixed
@@ -320,15 +328,18 @@ div.form-group.label-taller
   text-decoration: none !important
   color: white
 
-@media screen and (max-width:600px)
-img   
-  max-width: 290px
-.navbar
-  max-height: 120px
+// @media screen and (min-width:300px) and (max-width: 535px)
+// // img   
+// //   max-width: 290px
+// .title-find h2
+//   font-size: 21px
+ 
+// .navbar
+//   max-height: 100px
    
-#container  
-  width: auto  
-header h1 a  
-  width: auto  
+// #container  
+//   width: auto  
+// header h1 a  
+//   width: auto  
   
   
