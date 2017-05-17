@@ -1,1 +1,6 @@
-module.exports = (req, res) => res.render('myAcount')
+
+module.exports = (req, res) => {
+  const { user } = req
+  res.render('myAcount', {user: user})
+}
+
