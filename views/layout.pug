@@ -37,9 +37,9 @@ nav.navbar.navbar-default.navbar-fixed-top.header-mine
               i.glyphicon.glyphicon-log-out
               |  Salir
           else
-          a(href='/login')
-            i.glyphicon.glyphicon-log-in
-            |  loggin
+            a(href='/login')
+              i.glyphicon.glyphicon-log-in
+              |  loggin
   nav.navbar.navbar-default
     .container.center-logo
       a(href='/')
@@ -60,7 +60,12 @@ nav.navbar.navbar-default.navbar-fixed-top.header-mine
           //- li
           //-   a(href='about.html')  Blog
         li
-          a(href='/login')  Anúnciate gratis
+          if user
+            a(href='/myAcount')
+              i.glyphicon.glyphicon-user
+              |  Mi Cuenta
+          else
+            a(href='/login')  Anúnciate gratis
 
  
 
