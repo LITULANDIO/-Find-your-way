@@ -96,7 +96,7 @@ label.size-categories {
 .logo {
   float: left;
   margin-top: 5px; }
-  @media screen and (min-width: 300px) and (max-width: 535px) {
+  @media screen and (min-width: 200px) and (max-width: 535px) {
     .logo {
       max-width: 90px;
       max-height: 50px; } }
@@ -129,7 +129,7 @@ label.size-categories {
   .top-menu a {
     text-decoration: none;
     color: #062f4a; }
-  @media screen and (min-width: 300px) and (max-width: 725px) {
+  @media screen and (min-width: 200px) and (max-width: 725px) {
     .top-menu {
       margin-top: 0px; } }
 
@@ -140,7 +140,7 @@ label.size-categories {
   display: inline-block;
   position: relative;
   padding-bottom: 2px; }
-  @media screen and (min-width: 300px) and (max-width: 747px) {
+  @media screen and (min-width: 200px) and (max-width: 747px) {
     .center-logo li {
       font-size: 18px; } }
   .center-logo li:after {
@@ -174,12 +174,12 @@ label.size-categories {
 .size-title-categories {
   font-size: 50px;
   margin-bottom: 30px; }
-  @media screen and (min-width: 372px) and (max-width: 400px) {
+  @media screen and (min-width: 200px) and (max-width: 400px) {
     .size-title-categories {
       font-size: 30px;
       margin-top: -20px; } }
 
-@media screen and (min-width: 372px) and (max-width: 400px) {
+@media screen and (min-width: 200px) and (max-width: 400px) {
   p.media {
     font-size: 20px;
     width: 200px; } }
@@ -206,7 +206,7 @@ div.form-group.label-taller {
 .welcome {
   font-size: 40px;
   color: #062f4a; }
-  @media screen and (min-width: 372px) and (max-width: 400px) {
+  @media screen and (min-width: 200px) and (max-width: 400px) {
     .welcome {
       font-size: 20px;
       margin-top: 0px !important; } }
@@ -218,7 +218,7 @@ div.form-group.label-taller {
 
 .navbar {
   margin-bottom: 0px !important; }
-  @media screen and (min-width: 300px) and (max-width: 535px) {
+  @media screen and (min-width: 200px) and (max-width: 535px) {
     .navbar {
       max-height: 90px; } }
 
