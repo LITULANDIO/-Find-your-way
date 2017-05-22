@@ -59,8 +59,12 @@ h2.title-find {
   border-radius: 2px;
   color: #062f4a; }
 
-.size-categories {
+label.size-categories {
   font-size: 22px; }
+  @media screen and (min-width: 372px) and (max-width: 535px) {
+    label.size-categories {
+      font-size: 18px;
+      margin-top: -40px !important; } }
 
 .nav-pills > li[data-slide-to="0"].active a {
   background-color: #f8af00; }
@@ -72,6 +76,18 @@ h2.title-find {
   background-color: #f8af00; }
 .nav-pills > li[data-slide-to="4"].active a {
   background-color: #f8af00; }
+
+@media screen and (min-width: 300px) and (max-width: 1250px) {
+  #sel1.form-control.form-personal.select-taller {
+    width: 400px;
+    display: flex; } }
+@media screen and (min-width: 300px) and (max-width: 1118px) {
+  #sel1.form-control.form-personal.select-taller {
+    margin-left: -20px; } }
+@media screen and (min-width: 300px) and (max-width: 555px) {
+  #sel1.form-control.form-personal.select-taller {
+    margin: auto;
+    width: 200px; } }
 
 .label-taller {
   font-size: 25px;
@@ -158,6 +174,15 @@ h2.title-find {
 .size-title-categories {
   font-size: 50px;
   margin-bottom: 30px; }
+  @media screen and (min-width: 372px) and (max-width: 400px) {
+    .size-title-categories {
+      font-size: 30px;
+      margin-top: -20px; } }
+
+@media screen and (min-width: 372px) and (max-width: 400px) {
+  p.media {
+    font-size: 20px;
+    width: 200px; } }
 
 div.form-group.label-taller {
   margin-top: -60px; }
@@ -181,6 +206,11 @@ div.form-group.label-taller {
 .welcome {
   font-size: 40px;
   color: #062f4a; }
+  @media screen and (min-width: 372px) and (max-width: 400px) {
+    .welcome {
+      font-size: 20px;
+      margin-top: 0px !important;
+      margin-bottom: 0; } }
   .welcome span {
     display: inline-block;
     opacity: 0;

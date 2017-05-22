@@ -48,7 +48,10 @@ h2.title-find
 .nav-justified > li > a
   border-radius: 2px
   color: #062f4a
-.size-categories
+label.size-categories
+  @media screen and (min-width:372px) and (max-width: 535px)
+    font-size: 18px
+    margin-top: -40px !important
   font-size: 22px
 .nav-pills > li
   &[data-slide-to="0"].active a
@@ -62,6 +65,15 @@ h2.title-find
   &[data-slide-to="4"].active a
     background-color: #f8af00//#c8b783
 
+#sel1.form-control.form-personal.select-taller
+  @media screen and (min-width:300px) and (max-width: 1250px)
+    width: 400px
+    display: flex
+  @media screen and (min-width:300px) and (max-width: 1118px)
+    margin-left: -20px 
+  @media screen and (min-width:300px) and (max-width: 555px)
+    margin: auto
+    width: 200px  
 .label-taller
   font-size: 25px
   top: -50px
@@ -144,9 +156,18 @@ h2.title-find
 .font-categories
   font-family: Barrio
 .size-title-categories
+  @media screen and (min-width:372px) and (max-width: 400px)
+    font-size: 30px
+    margin-top: -20px
   font-size: 50px
   margin-bottom: 30px
+
+p.media
+  @media screen and (min-width:372px) and (max-width: 400px)
+    font-size: 20px 
+    width: 200px
 div.form-group.label-taller
+
   margin-top: -60px
 .hr-line
   margin-bottom: 30px
@@ -166,6 +187,10 @@ div.form-group.label-taller
   margin-top: 10px
 
 .welcome
+  @media screen and (min-width:372px) and (max-width: 400px)
+    font-size: 20px
+    margin-top: 0px !important
+    margin-bottom: 0
   font-size: 40px
   color: #062f4a
   span

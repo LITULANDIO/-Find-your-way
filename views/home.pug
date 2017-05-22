@@ -10,8 +10,7 @@ block content
           strong V
           | ida
         .hr-line
-   
-        #myCarousel.carousel.slide(data-ride='carousel')
+    #myCarousel.carousel.slide(data-ride='carousel')
           // Wrapper for slides
           .carousel-inner
             .item.active
@@ -21,17 +20,15 @@ block content
                   p.text-center.font-categories.size-title-categories Retiros
                   .col-xs-12  
                     form(action='/', method='POST')
-                      label.label-taller(for='sel1') Selecciona una categoria&nbsp; 
-                      i.glyphicon.glyphicon-hand-down(width='120px')
+                      label.label-taller.size-categories.media(for='sel1') Selecciona una categoria&nbsp; 
+                        i.glyphicon.glyphicon-hand-down(width='120px')
                       select#sel1.form-control.form-personal.select-taller.col-md-1
                         option(value='1') Categoria...
                         option(value='2') Yoga
                         option(value='3') Ayurveda
                         option(value='4') Tantra
                         option(value='5') Trinidad
-                      .col-xs-1
-                          span.input-group-btn
-                            button#search.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
+                      
             // End Item
             .item
               img.img-carrusel.img-opac(src='../img/formaciones.gif', height='-300px;')
@@ -47,9 +44,7 @@ block content
                       option(value='3') Ayurveda
                       option(value='4') Tantra
                       option(value='5') Trinidad
-                    .col-md-1
-                        span.input-group-btn
-                          button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
+                    
             // End Item
             .item
               img.img-carrusel.img-opac(src='../img/talleres.gif')
@@ -57,7 +52,7 @@ block content
                 .form-group.label-taller.font-retiro
                   p.text-center.font-categories.size-title-categories Talleres
                   form(action='/', method='POST')
-                    label.label-taller(for='sel1') Selecciona una categoria&nbsp;
+                    label.label-taller.size-categories(for='sel1') Selecciona una categoria&nbsp;
                     i.glyphicon.glyphicon-hand-down(width='70px')
                     select#sel1.form-control.form-personal.select-taller.col-md-1
                       option(value='1') Categoria...
@@ -65,9 +60,7 @@ block content
                       option(value='3') Ayurveda
                       option(value='4') Tantra
                       option(value='5') Trinidad
-                    .col-md-1
-                        span.input-group-btn
-                          button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
+                    
             // End Item
             .item
               img.img-carrusel.img-opac(src='../img/conferencias.gif')
@@ -75,7 +68,7 @@ block content
                 .form-group.label-taller.font-retiro
                   p.text-center.font-categories.size-title-categories Conferencias
                   form(action='/', method='POST')
-                    label.label-taller(for='sel1') Selecciona una categoria&nbsp;
+                    label.label-taller.size-categories(for='sel1') Selecciona una categoria&nbsp;
                     i.glyphicon.glyphicon-hand-down(width='70px')
                     select#sel1.form-control.form-personal.select-taller.col-md-1
                       option(value='1') Categoria...
@@ -83,9 +76,7 @@ block content
                       option(value='3') Ayurveda
                       option(value='4') Tantra
                       option(value='5') Trinidad
-                    .col-md-1
-                        span.input-group-btn
-                          button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search
+                    
               // End Item
             .item
               img.img-carrusel.img-opac(src='../img/maestros.gif')
@@ -94,7 +85,7 @@ block content
                 .form-group.label-taller.font-retiro
                   p.text-center.font-categories.size-title-categories Maestros espirituales
                   form(action='/', method='POST')
-                    label.label-taller(for='sel1') Selecciona una categoria&nbsp;
+                    label.media(for='sel1') Selecciona una categoria&nbsp;
                       i.glyphicon.glyphicon-hand-down(width='70px') 
                       select#sel1.form-control.form-personal.select-taller.col-md-1
                         option(value='1') Categoria...
@@ -102,9 +93,9 @@ block content
                         option(value='3') Ayurveda
                         option(value='4') Tantra
                         option(value='5') Trinidad
-                      .col-md-1
-                        span.input-group-btn
-                          button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search 
+                      //- .col-md-1
+                      //-   span.input-group-btn
+                      //-     button.btn.btn-warning.search(type='button').i.glyphicon.glyphicon-search 
    
                   //- span#basic-addon2.input-group-addon.i.glyphicon.glyphicon-search Encuentra
             // End Item
@@ -131,19 +122,4 @@ block content
                 i.glyphicon.glyphicon-user
                 |  Maestros espirituales
 
-        // End Carousel
-    //- section.row.pre-footer.cont-body
-    //-   .container
-    //-     .col-md-4
-    //-       h1.text-center Conecta
-    //-       p
-    //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, voluptas suscipit itaque, vel a excepturi eius fugit reiciendis velit fuga ad vero, corrupti maiores eos ipsum consectetur molestiae error quos?
-    //-     .col-md-4
-    //-       h1.text-center Conecta
-    //-       p
-    //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iste fuga eveniet ex? Quasi, adipisci. Laboriosam quisquam ab distinctio, magnam eos, natus ullam incidunt eaque ratione asperiores ea id ipsa!
-    //-     .col-md-4
-    //-       h1.text-center Conecta
-    //-       p
-    //-         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio iste fuga eveniet ex? Quasi, adipisci. Laboriosam quisquam ab distinctio, magnam eos, natus ullam incidunt eaque ratione asperiores ea id ipsa!
-    //-       
+          
