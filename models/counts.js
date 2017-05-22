@@ -4,7 +4,8 @@ const passportLocalMongoose = require('passport-local-mongoose')
 // const collection = 'accounts'
 
 const Account = new mongoose.Schema({
-  email: String
+
+  email: {type: String, required: true}
 })
 
 Account.plugin(passportLocalMongoose)

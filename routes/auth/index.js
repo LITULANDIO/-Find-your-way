@@ -38,8 +38,8 @@ router.post('/register', function (req, res, next) {
 
   Account.register(count, password, function (err) {
     if (err) {
-      // console.log('error while user register!', err)
-      return res.send({success: false, msg: 'Username already exists.'})
+      console.log('error while user register!', err)
+      return res.send('Username already exists.')
     }
 
     console.log('user registered!')
