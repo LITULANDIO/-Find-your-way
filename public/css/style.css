@@ -37,8 +37,8 @@ h2.title-find {
   margin-bottom: 21px; }
   @media screen and (min-width: 100px) and (max-width: 535px) {
     h2.title-find {
-      font-size: 15px;
-      margin-top: -80px;
+      font-size: 12px;
+      margin-top: 22px;
       margin-left: -100px; } }
 
 .search {
@@ -185,7 +185,7 @@ label.size-categories {
   padding-bottom: 2px; }
   @media screen and (min-width: 100px) and (max-width: 747px) {
     .center-logo li {
-      font-size: 18px; } }
+      font-size: 15px; } }
   .center-logo li:after {
     content: "";
     display: block;
@@ -263,7 +263,7 @@ div.form-group.label-taller {
   margin-bottom: 0px !important; }
   @media screen and (min-width: 100px) and (max-width: 535px) {
     .navbar {
-      max-height: 90px; } }
+      max-height: 170px; } }
 
 .item {
   display: inline-flex; }
