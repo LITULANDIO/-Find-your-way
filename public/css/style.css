@@ -137,9 +137,24 @@ label.size-categories {
 
 .carousel-inner {
   height: 250px; }
-  @media screen and (min-width: 100px) and (max-width: 376px) {
+  @media screen and (min-width: 100px) and (max-width: 701px) {
+    .carousel-inner {
+      height: 320px !important; } }
+  @media screen and (min-width: 100px) and (max-width: 626px) {
+    .carousel-inner {
+      height: 250px !important; } }
+  @media screen and (min-width: 100px) and (max-width: 490px) {
+    .carousel-inner {
+      height: 240px !important; } }
+  @media screen and (min-width: 100px) and (max-width: 404px) {
+    .carousel-inner {
+      height: 200px !important; } }
+  @media screen and (min-width: 100px) and (max-width: 568px) {
     .carousel-inner {
       height: 170px !important; } }
+  @media screen and (min-width: 412px) and (max-width: 732px) {
+    .carousel-inner {
+      height: 220px !important; } }
 
 .color-blue {
   color: #062f4a; }
@@ -205,7 +220,7 @@ label.size-categories {
   @media screen and (min-width: 100px) and (max-width: 400px) {
     .size-title-categories {
       font-size: 30px;
-      margin-top: -20px; } }
+      margin-top: -30px; } }
 
 @media screen and (min-width: 100px) and (max-width: 400px) {
   p.media {
