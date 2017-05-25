@@ -3,18 +3,18 @@ extends layout
 block content
   .welcome.text-center.container
     p#welcome-top
-      | #{retiros.title}
+     | #{retiros.title}
     .hr-line
   .my-container
     .row
-      .col-md-7
+      .col-md-7.responsive-image
         #article-photo-carousel.img-responsive.carousel.slide
           .img-responsive.carousel-inner.cont-slider
             .item.active
             img(src= retiros.imageUrl, width="100%" height="100%" class="image1")
          
            
-      .col-md-5
+      .col-sm-12.col-md-5.responsive-image
         .panel.panel-yellow
           .panel-heading.text-center Detalles
           .panel-body
@@ -36,16 +36,23 @@ block content
             |  
             img.icon.icons8-Euro-Filled(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADlUlEQVRoQ92aj5EMQRSHfxsBIuAiQAROBFwEiAAROBEgAi4CRHBEgAgQASKgvql+Uz1jdqb7vd65qX1VW67sdPf7+v3tnt3pSGTXkOO6pHuS7kg6lXQrffIlfkji80nSV0mfJf1uoUMUBOUfSHqWADw6AfRa0scIlBeE3X6UAIBpIVgGoItktao5PSAvGgOMFQboXNKbGpIaEKzwPuBCNXrxLC53VmqdUpCHkt5KauVGpVBY54mkD0sDSkAeJ4iluQ75PTDv5hZYAtkChOk/CzMHgjsRE1sSYmbSzfaBENhfriAmljaNmLk7lQD2gQBBhd6ikM2AGcgUCDmcWtFK/qRUavNh7ZvByZ+n4tlPMwZp6VIUNDINOzgWrE1bQ3fgkf9cbAzSwhrfJJEoaA4Ras/tTFsaRROAaCCvOWhepg6gG5qDsOD3YIADQefLjmHdVwkq15PvsBSK8DeW4blaYeyJNZo5SLRmEAsozwIlnQAudz9lR8Z5pK8tOUg0U9mkuMtloWWBjrQ9fQYzECb75dmSNOZndogCAvdaS27gBQYSreKWDgEAZE3pqr2BRLMVQUeW4mD0dE2KlDTODYQUyHnbI7lbRePMsz7p/NRASLu1mSMH8ChATEYC3dbEE04M5K9DE6zIhx3hXzvHl0zFs6T7VrKLgJgSVmGvItBNhzAIEGaZml1u2ZQCEwLh2sbjHtEOYsodexACxttac7FGHUI8sRaNky7ptEi/XdZI2tAy5J1uVMmS8YP0ezQFMdqi5A0jRXFNGbQo0aYxP0dHugTPBgyaRiaI+jdnCyBo40utwhmGVt6baDjIdZckLQ9WBD23GyhGiqWBnDvCkm1waZ7z9nmTByvcC2U852dzCY6wTI5QIFGS9ye5YAWeI8EA7XXF/EQ6sAiLRbMXc6AYMHb5wP/lBy2+N6HCs6ZH9l4+2C4SKxGrMI9dMFD9x9dBWApXAqC24zbggTXGMWIPtbDKeIfNCq2OwIsXdKZANIN5XKV0TJ+p8gFzl9gtXKxUudLncCnSbR5/3dijf61gO3SIlrt098fPuV/0bAkm/OrNYKjAFLFoWq61BjGBVzR5GWqLk/OZcK3zxvhWf3YTll6GTg3m9pxacyjrYAXmp70pFg+IdQCYHKhWQACgPJ/qH9p4QWynaDSJH4C8LocLoTxuWw1gikRBctMDRQuS/8xpfM6gdc9/5kTr4la+pLIX++ZWHvwH/EbHMzT0XQQAAAAASUVORK5CYII=', width='26', height='26')
             |  Precio: 275 €
-            br
+            hr
+            img(src="https://maxcdn.icons8.com/dotty/PNG/80/Network/domain-80.png", title="Domain", width="26" height="26")
+            |  Web: www.mariasalvatierra.es
+            hr
+            img(src='https://maxcdn.icons8.com/dotty/PNG/80/Mobile/ringing_phone-80.png', title='Ringing Phone', width='26', height='26')
+            |  Teléfono de contacto: 934567890 
+
   .row
-    .col-md-7.panel-two
+    .col-sm-12.col-md-7.panel-two
       .panel-two
         .panel.panel-yellow
           .panel-heading.text-center Descripci&oacute;n
           .panel-body
             p.margin-text #{retiros.description}
-    .col-md-5.panel-three
-      .panel-two
+
+    .col-sm-12.col-md-5.panel-three
+      
         .panel.panel-yellow
           .panel-heading.text-center Compartir
           .panel-body.my-panel.social#sahre

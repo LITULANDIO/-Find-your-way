@@ -2,6 +2,12 @@
   margin-top: 24px
   position: absolute
   margin-left: -4px
+  @media screen and (min-width:300px) and (max-width: 768px)
+    display: none 
+  @media screen and (min-width:300px) and (max-width: 1024px)
+    margin-top: 79px
+  @media screen and (min-width:300px) and (max-width: 1231px)
+    margin-top: 79px
 .intros
   margin-top: 24px
   position: absolute
@@ -16,6 +22,8 @@
   @media screen and (min-width:300px) and (max-width: 768px)
     display: none 
   @media screen and (min-width:300px) and (max-width: 1024px)
+    margin-top: 79px
+  @media screen and (min-width:300px) and (max-width: 1231px)
     margin-top: 79px
 
 body
@@ -112,6 +120,7 @@ label.size-categories
   margin-top: 5px
 .title-mine
   margin-top: 40px
+
 
 .select-taller
   font-size: 18px
@@ -370,8 +379,11 @@ div.form-group.label-taller
   height: 100px
   background-color: #1d1d1b
   clear: both
+  margin-top: 30px 
   position: fixed
   bottom: 0
+  // @media screen and (min-width:300px) and (max-width: 2560px)
+  //   position: relative
   @media screen and (min-width:300px) and (max-width: 700px)
     position: relative
   @media screen and (min-width:768px) and (max-width: 1024px)
@@ -399,7 +411,11 @@ div.form-group.label-taller
 .responsive
   display: flex
   flex-wrap: wrap
-
+.title-terapies
+  margin-left: auto
+  @media screen and (min-width:300px) and (max-width: 1008px)
+    margin: auto
+    margin-top: 30px
 // @media screen and (min-width:300px) and (max-width: 535px)
 // // img   
 // //   max-width: 290px

@@ -3,6 +3,15 @@
   margin-top: 24px;
   position: absolute;
   margin-left: -4px; }
+  @media screen and (min-width: 300px) and (max-width: 768px) {
+    .ino {
+      display: none; } }
+  @media screen and (min-width: 300px) and (max-width: 1024px) {
+    .ino {
+      margin-top: 79px; } }
+  @media screen and (min-width: 300px) and (max-width: 1231px) {
+    .ino {
+      margin-top: 79px; } }
 
 .intros {
   margin-top: 24px;
@@ -19,6 +28,9 @@
     .intros {
       display: none; } }
   @media screen and (min-width: 300px) and (max-width: 1024px) {
+    .intros {
+      margin-top: 79px; } }
+  @media screen and (min-width: 300px) and (max-width: 1231px) {
     .intros {
       margin-top: 79px; } }
 
@@ -374,6 +386,7 @@ div.form-group.label-taller {
   height: 100px;
   background-color: #1d1d1b;
   clear: both;
+  margin-top: 30px;
   position: fixed;
   bottom: 0; }
   .footer a {
@@ -406,6 +419,13 @@ div.form-group.label-taller {
 .responsive {
   display: flex;
   flex-wrap: wrap; }
+
+.title-terapies {
+  margin-left: auto; }
+  @media screen and (min-width: 300px) and (max-width: 1008px) {
+    .title-terapies {
+      margin: auto;
+      margin-top: 30px; } }
 
 .navbar-count {
   margin-top: -30px;
@@ -929,8 +949,13 @@ body {
 
 .panel-two {
   padding-left: 58px;
-  margin-top: -65px;
-  padding-right: 15px; }
+  margin-top: -164px;
+  padding-right: 16px; }
+
+.share {
+  padding-left: 58px;
+  margin-top: 4px;
+  padding-right: 16px; }
 
 .panel-bottom {
   padding-left: 44px;
@@ -952,10 +977,12 @@ body {
   padding-left: 126px !important; }
 
 .panel-three {
-  margin-top: -65px;
+  width: 577px;
+  margin-top: -164px;
   margin-right: -90px;
-  padding-right: 20px;
-  margin-left: -70px; }
+  padding-right: 0px;
+  margin-left: 926px;
+  clear: both; }
 
 .panel-four {
   margin-top: 270px;
@@ -1056,6 +1083,9 @@ hr {
 .events-link {
   padding: 0px;
   margin-top: 0px; }
+
+.responsive-image {
+  margin-top: -47px; }
 
 .social-cont {
   border-style: solid;
