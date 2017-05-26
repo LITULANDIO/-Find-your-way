@@ -7,7 +7,7 @@ block content
     .hr-line
   .my-container
     .row
-      .col-sm-7.responsive-image
+      .col-sm-offset-1.col-sm-6.col-lg-offset-0.col-lg-7.responsive-image
       
         #article-photo-carousel.img-responsive.carousel.slide
           .img-responsive.carousel-inner.cont-slider
@@ -15,7 +15,7 @@ block content
             img(src= retiros.imageUrl, width="100%" height="100%" class="image1")
          
            
-      .col-sm-5.responsive-image
+      .col-sm-4.col-lg-5.responsive-image
         .panel.panel-yellow
           .panel-heading.text-center Detalles
           .panel-body
@@ -45,14 +45,14 @@ block content
             |  Teléfono de contacto: 934567890 
 
   .row
-    .col-sm-7.panel-two
+    .col-sm-offset-1.col-sm-6.col-lg-offset-0.col-lg-7.panel-two
       .panel-two
         .panel.panel-yellow
           .panel-heading.text-center Descripci&oacute;n
           .panel-body
             p.margin-text #{retiros.description}
   
-    .col-sm-4.panel-three
+    .col-sm-4.col-lg-5.panel-three
         .panel.panel-yellow
           .panel-heading.text-center Compartir
           .panel-body.my-panel.social#sahre
@@ -78,7 +78,7 @@ block content
 
                     i.fa.fa-google-plus
     .row                  
-      .col-sm-offset-7
+      .col-sm-offset-7.col-sm-4.col-lg-5
         .panel-four
           .social
             .panel.panel-yellow.text-center.c#ubic
@@ -89,7 +89,7 @@ block content
                 input#long(name="long",,  value=  parseFloat(retiros.long) )
                 input#lat(name="lat",,  value= parseFloat(retiros.lat) )
              
-    .col-md-5.panel-five
+    .col-sm-offset-7.col-sm-4.col-lg-5.panel-five
       .panel-bottom
         .panel.panel-yellow
           .panel-heading.text-center Tags 
