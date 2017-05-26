@@ -7,14 +7,15 @@ block content
     .hr-line
   .my-container
     .row
-      .col-md-7.responsive-image
+      .col-sm-7.responsive-image
+      
         #article-photo-carousel.img-responsive.carousel.slide
           .img-responsive.carousel-inner.cont-slider
             .item.active
             img(src= retiros.imageUrl, width="100%" height="100%" class="image1")
          
            
-      .col-sm-12.col-md-5.responsive-image
+      .col-sm-5.responsive-image
         .panel.panel-yellow
           .panel-heading.text-center Detalles
           .panel-body
@@ -44,19 +45,17 @@ block content
             |  Teléfono de contacto: 934567890 
 
   .row
-    .col-sm-12.col-md-7.panel-two
+    .col-sm-7.panel-two
       .panel-two
         .panel.panel-yellow
           .panel-heading.text-center Descripci&oacute;n
           .panel-body
             p.margin-text #{retiros.description}
-  .row
-    .col-sm-12.col-md-7.panel-three
-      
+  
+    .col-sm-4.panel-three
         .panel.panel-yellow
           .panel-heading.text-center Compartir
           .panel-body.my-panel.social#sahre
-            
             .social-nav    
               ul
                 li
@@ -78,18 +77,18 @@ block content
                   a.google(target='_blank', title='Google plus', rel='nofollow',onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href='https://plus.google.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
 
                     i.fa.fa-google-plus
-                      
- 
-    .panel-four
-      .social
-        .panel.panel-yellow.text-center.c#ubic
-          .panel-heading.text-center Ubicación
-          .panel-body.my-panel.social.bottom-map
-            span.text-center.c
-            #map
-            input#long(name="long",,  value=  parseFloat(retiros.long) )
-            input#lat(name="lat",,  value= parseFloat(retiros.lat) )
-           
+    .row                  
+      .col-sm-offset-7
+        .panel-four
+          .social
+            .panel.panel-yellow.text-center.c#ubic
+              .panel-heading.text-center Ubicación
+              .panel-body.my-panel.social.bottom-map
+                span.text-center.c
+                #map
+                input#long(name="long",,  value=  parseFloat(retiros.long) )
+                input#lat(name="lat",,  value= parseFloat(retiros.lat) )
+             
     .col-md-5.panel-five
       .panel-bottom
         .panel.panel-yellow
