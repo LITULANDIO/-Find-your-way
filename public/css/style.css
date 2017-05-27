@@ -903,7 +903,10 @@ body {
 
 .image1 {
   max-width: 831px !important;
-  border-radius: 6px 6px 0 0; }
+  border-radius: 6px 6px 0 0;
+  margin-left: 8px;
+  margin-top: 0px;
+  margin-bottom: -50px; }
 
 .image2 {
   width: 300px;
@@ -918,19 +921,11 @@ body {
     border: 2px solid #428BCA;
     opacity: 0.7; }
 
-.my-container {
-  padding-right: 100px;
-  padding-left: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: -120px; }
-
 .my-container2 {
   padding-right: 100px;
   padding-left: 100px;
   margin-right: auto;
-  margin-left: auto;
-  margin-top: -100px; }
+  margin-left: auto; }
 
 .thumbnail {
   margin-top: 20px;
@@ -948,19 +943,14 @@ body {
   background-color: #f8af00; }
 
 .panel-two {
-  padding-left: 58px;
-  margin-top: -164px;
+  padding-left: 0px;
+  margin-top: -80px;
   padding-right: 16px; }
 
 .share {
   padding-left: 58px;
   margin-top: 4px;
   padding-right: 16px; }
-
-.panel-bottom {
-  padding-left: 44px;
-  margin-top: -182px;
-  padding-right: 15px; }
 
 .my-panel {
   margin-left: 0px !important;
@@ -986,12 +976,6 @@ body {
 
 .panel-four {
   margin-top: 270px;
-  margin-right: 0px;
-  padding-right: 20px;
-  margin-left: 890px; }
-
-.panel-five {
-  margin-top: 0px;
   margin-right: 0px;
   padding-right: 20px;
   margin-left: 890px; }
@@ -1092,6 +1076,11 @@ hr {
   margin-top: -124px;
   width: 573px;
   margin-right: 92px; }
+
+.details-event {
+  background-color: #f8f8f8; }
+  .details-event ul {
+    list-style: none; }
 
 .social-cont {
   border-style: solid;
