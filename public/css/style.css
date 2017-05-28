@@ -190,6 +190,9 @@ label.size-categories {
   .top-menu a {
     text-decoration: none;
     color: #062f4a; }
+    @media screen and (min-width: 320px) and (max-width: 568px) {
+      .top-menu a {
+        font-size: 15px; } }
   @media screen and (min-width: 100px) and (max-width: 725px) {
     .top-menu {
       margin-top: 0px; } }
@@ -277,6 +280,9 @@ div.form-group.label-taller {
   @media screen and (min-width: 360px) and (max-width: 640px) {
     .welcome {
       margin-left: 15px; } }
+  @media screen and (min-width: 320px) and (max-width: 568px) {
+    .welcome {
+      font-size: 30px; } }
   .welcome span {
     display: inline-block;
     opacity: 0;
@@ -367,14 +373,6 @@ div.form-group.label-taller {
 .box {
   font-family: News Cycle; }
 
-.cont-body {
-  margin-top: 20px !important;
-  margin-left: 100px; }
-
-.cont-body {
-  width: 1100px;
-  height: 60px; }
-
 .pre-footer {
   margin: 0px;
   height: 100%;
@@ -405,7 +403,7 @@ div.form-group.label-taller {
       position: relative; } }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .footer {
-      position: fixed; } }
+      position: relative; } }
   @media screen and (min-width: 1024px) and (max-width: 1366px) {
     .footer {
       position: relative; } }
@@ -466,6 +464,44 @@ p a {
 
 .sizes {
   font-size: 15px !important; }
+
+.cont-body {
+  width: 1100px;
+  height: 60px;
+  margin-top: 20px !important;
+  margin-left: 100px; }
+  @media screen and (min-width: 414px) and (max-width: 736px) {
+    .cont-body {
+      width: 100%;
+      height: 100%;
+      margin-left: 0px; } }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .cont-body {
+      margin-left: 100px; } }
+  @media screen and (min-width: 375px) and (max-width: 667px) {
+    .cont-body {
+      width: 50%;
+      height: 50%;
+      margin-left: 0px; } }
+  @media screen and (min-width: 320px) and (max-width: 568px) {
+    .cont-body {
+      width: 100%;
+      height: 100%;
+      margin: auto 0px; } }
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+  h3 {
+    font-size: 17px !important; } }
+@media screen and (min-width: 375px) and (max-width: 667px) {
+  h3 {
+    font-size: 17px;
+    margin-top: 74px;
+    text-align: center; } }
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  h3 {
+    font-size: 17px;
+    margin-top: 74px;
+    text-align: center; } }
 
 @-webkit-keyframes HeroBG {
   0% {
