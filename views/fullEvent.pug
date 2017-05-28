@@ -7,13 +7,13 @@ block content
     .hr-line
   .my-container
 
-    .row
+    .row.file-event
       div.col-md-offset-1.col-md-6
         //- #article-photo-carousel.img-responsive.carousel.slide
         //-   .img-responsive.carousel-inner.cont-slider
         //-     .item.active
         div.col-sm-12.col-md-12.col-lg-12.responsive-image
-        img(src= retiros.imageUrl, width="100%" height="100%").image1
+        img(src= retiros.imageUrl, width="95%" height="350px", alt= retiros.title).image1
          
         div.col-md-12
           .panel-two
@@ -27,7 +27,6 @@ block content
         div.col-sm-12.details-event
           .panel.panel-yellow
             .panel-heading.text-center Detalles
-            .panel-body
             ul
                 li 
                   img.icon.icons8-Marker(src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABfklEQVRIS6WW4TEFQRCEvxcBGSADIkAEiAARCAEZyAARIAJeBIgAGZCBajVbtbZmdmff219Xd3PT0z09c7cgdzaBI+AY0LXON/AIPNl1N9MigaPktxVA+4oAzw00TDcCugIuE8Uo5BpQvHt6QGLykAQpYScRswhIffgI5PqyrFtOEZJxx+tZBHRmfalz/ZgZXuzmgVW/0QCqX3dtERGQ3CSX1ecQKCDlvsCemzi5ULL/OxGQEu5XkZJrO+iX5KpZLQEVsBLQp2nvYa0FdANcrCida/NIOk97VS771maQ/cumKHXtAW9Z6RQnuSIL63kLoHvvwK6nb29gPYuP5te1tl4araCIlQfYc+YQaIZVuH4yjHq9qlm5s1MHjKRTbIaVtzVSA9v2oN0UU2yy0inOm6sCNmQzAxT1atibUk2mRyXW61U4NzObYbRA9X3ytoM71DOMlEAftFPLdG+OHG2Lv+ezQPV/RHdA15VOC/PVkrhbOqI3y0h56s9ESjYF/QKTs0cbPJsrEgAAAABJRU5ErkJggg==', width='26', height='26')
@@ -59,53 +58,51 @@ block content
                   |&nbsp;&nbsp;  Teléfono de contacto: 934567890   
 
       
-        .row
+        .row.file-event
           div.col-sm-12
-         
-           .text-center Compartir
-           .my-panel.social#sahre
-              .social-nav    
-                ul
-                  li
-                    a.twitter( target='_blank', title='Twitter', rel='nofollow' href='https://twitter.com/share', data-via='mariuCSS') 
-                      script.
-                                    !function(d,s,id){
-                                    var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                                    if(!d.getElementById(id)){
-                                    js=d.createElement(s);
-                                    js.id=id;
-                                    js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');')
-                      i.fa.fa-twitter
-                  li
-                    a.facebook(target='_blank', title='Facebook', rel='nofollow', onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href=' http://www.facebook.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
+            .panel.panel-yellow
+               .panel-heading.text-center Compartir
+               .my-panel.social#sahre
+                  .social-nav    
+                    ul
+                      li
+                        a.twitter( target='_blank', title='Twitter', rel='nofollow' href='https://twitter.com/share', data-via='mariuCSS') 
+                          script.
+                                        !function(d,s,id){
+                                        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                        if(!d.getElementById(id)){
+                                        js=d.createElement(s);
+                                        js.id=id;
+                                        js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');')
+                          i.fa.fa-twitter
+                      li
+                        a.facebook(target='_blank', title='Facebook', rel='nofollow', onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href=' http://www.facebook.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
 
-                      i.fa.fa-facebook
-                     
-                  li
-                    a.google(target='_blank', title='Google plus', rel='nofollow',onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href='https://plus.google.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
+                          i.fa.fa-facebook
+                         
+                      li
+                        a.google(target='_blank', title='Google plus', rel='nofollow',onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href='https://plus.google.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
 
-                      i.fa.fa-google-
+                          i.fa.fa-google-
 
     
             
 
-        .row                 
-          .col-sm-4.col-lg-5
-            
-              .social
-                .panel.panel-yellow.text-center.c#ubic
+        .row.file-event                 
+          .col-sm-12
+                .panel.panel-yellow.text-center
                   .panel-heading.text-center Ubicación
-                  .panel-body.my-panel.social.bottom-map
+                  .panel-body.my-panel.bottom-map
                     span.text-center.c
                     #map
-                    input#long(name="long",hidden,  value=  parseFloat(retiros.long) )
+                    input#long(name="long",hidden,  value= parseFloat(retiros.long) )
                     input#lat(name="lat",hidden,  value= parseFloat(retiros.lat) )
-        .row 
-          .col-sm-4.col-lg-5.panel-five
+        .row.file-event 
+          .col-sm-12
             .panel-bottom
               .panel.panel-yellow
                 .panel-heading.text-center Tags 
-                .panel-body.my-panel
+                .panel-tag
                   span.text-center.c     
                   |#{retiros.tags}    
      
