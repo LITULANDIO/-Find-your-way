@@ -1,7 +1,7 @@
 
 // .carousel
 //   width: 800px
-
+  
 // .article-slide .carousel-indicators
 //   bottom: 0
 //   left: 0
@@ -18,12 +18,25 @@
 //     margin-top: 0
 //     width: 100px
 
-.image1
-  
+
+.image1 
   border-radius: 6px 6px 0 0
   margin-left: 19px
   margin-top: 0px
- 
+  @media screen and (min-width:1024px) and (max-width: 1366px)
+    height: 260px
+  @media screen and (min-width:768px) and (max-width: 1024px)
+    height: 215px
+  @media screen and (min-width:375px) and (max-width: 667px)
+    height: 215px
+    margin-top: 20px
+  @media screen and (min-width:320px) and (max-width: 568px)
+    margin-top: 24px
+    height: 178px
+  @media screen and (min-width:412px) and (max-width: 732px)
+    margin-left: 30px
+  @media screen and (min-width:360px) and (max-width: 640px)
+    margin-left: 30px
 .image2
   width: 300px
   height: 300px
@@ -38,8 +51,31 @@
     border: 2px solid #428BCA
     opacity: 0.7
 
-
- 
+.event-margin
+  margin-left: 15px
+  margin-right: -15px
+  @media screen and (min-width:412px) and (max-width: 732px)
+    margin-left: 30px
+    margin-right: -30px
+  @media screen and (min-width:360px) and (max-width: 640px)
+    margin-left: 30px
+    margin-right: -30px 
+.margin-description
+  @media screen and (min-width:375px) and (max-width: 667px)
+    margin-right: -15px
+  @media screen and (min-width:768px) and (max-width: 1024px)
+    padding-right: 0px !important
+  @media screen and (min-width:320px) and (max-width: 568px)
+    margin-right: -15px
+  @media screen and (min-width:412px) and (max-width: 732px)
+    margin-left: 15px
+    margin-right: -30px
+  @media screen and (min-width:360px) and (max-width: 640px)
+    margin-left: 15px
+    margin-right: -30px
+.title-event
+  @media screen and (min-width:375px) and (max-width: 667px)
+    font-size: 32px
 
 .my-container2 
   padding-right: 100px
@@ -192,6 +228,7 @@ hr
 
 
 .details-event
+  
   display:flex
   padding-left: 0px !important
   ul 
