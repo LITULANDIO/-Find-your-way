@@ -979,7 +979,11 @@ hr {
 .social-nav {
   padding: 0;
   list-style: none;
-  margin: -10px 0 0 -10px; }
+  display: flex;
+  justify-content: center;
+  margin: 10px; }
+  .social-nav ul {
+    padding-left: 0px; }
   .social-nav li {
     float: left;
     margin: 10px 0 0 10px;
