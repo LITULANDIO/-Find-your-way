@@ -8,13 +8,18 @@ block content
     .col-md-6.responsive
       img(src='/img/search.png', width='26px', height='26px').ino 
       input#search.intros( type="text" placeholder="indica el lugar") 
-      h1#title-mine.title-terapies
+      h1#title-mine.title-terapies|: #{retiros.length}
       .hr-line2
+        br
+        .container|Total encontrados: #{retiros.length}
       div.over
-       each retiro in retiros
+         
        
-        
+       each retiro in retiros
+         
+       
           .col-md-6.col-lg-4.events-link
+
             .thumbnail.offer.margins.links.hvr-grow-shadow
              a.image-a.img-responsive(href='/details/'+ retiro.id)
               img(src= retiro.imageUrl, width="201px" height="174px" class="image2")
@@ -40,9 +45,15 @@ block content
                 div#long(hidden) #{retiro.long}
               img(src='https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/price_tag-24.png', title='Price Tag', width='24')
               |   #{retiro.tags} 
+      if !retiros.length
+        .container
+          h3 No se han encontrado retiros
+        
+         
     .col-md-6
       div#maps
-    
+        
+         
       
     
 
