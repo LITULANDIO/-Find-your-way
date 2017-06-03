@@ -1,77 +1,49 @@
-// Funcion que muestra la ubicacion de los objetos en Google Maps
-var map
+window.onload = function () {
+  // Funcion que muestra la ubicacion de los objetos en Google Maps
+  var map
 
-function viewMap () {
-    // coordenadas
-  myLatlng = {
-    Lat: '41.5911589',
-    Lng: '1.5208623999999418'
+  var lat = document.getElementsByClassName('lat')
+  var long = document.getElementsByClassName('long')
+
+  var coord = []
+  for (var i = 0; i < lat.length; i++) {
+    coord.push({lat: Number(lat[i].innerHTML), lng: Number(long[i].innerHTML)})
   }
 
+  viewMap()
+
+  /**
+  * helpers functions
+  */
+  function viewMap () {
     // Objeto utilizado para la manipulación de las opciones del mapa.
-  var mapOptions = {
-    zoom: 5,
-    center: new google.maps.LatLng(myLatlng.Lat, myLatlng.Lng),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
+    var mapOptions = {
+      zoom: 5,
+      center: { lat: 41.5911589, lng: 1.5208623999999418 },
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
 
     // construyo el mapa
-  map = new google.maps.Map(document.getElementById('maps'),
-        mapOptions)
-  var longs = []
-  var lat
-  var long
-  var collection = $('#lat').val()
-  // console.log(collection)
-  for (var i = collection.length - 1; i >= 0; i--) {
-    longs.push(collection[i])
+    map = new google.maps.Map(document.getElementById('maps'), mapOptions)
+
+    addMarkers()
   }
-  $.each(longs, function (value, index) {
-    console.log(value + '/' + index)
-  })
-  // for (var i in collection)
-  //   console.log(collection[i])
-  // collection.each(function () {
-  //   lat = $('#lat p').html()
-  //   long = $('#long p').html()
-  //   longs.push(lat + ' / ' + long)
-  // })
-  console.log(longs)
-  addMarkers()
-}
 
-function addMarker (m_position, m_title) {
-  marker = new google.maps.Marker({
-    position: m_position,
-    map: map,
-    title: m_title
-  })
-}
-
-var lat = document.getElementById('lat').innerHTML
-var long = document.getElementById('long').innerHTML
-var parseLat = parseFloat(lat)
-var parseLong = parseFloat(long)
-var geoc = { lat: parseLat, lng: parseLong}
-
-var markersArray = [{
-
-  lat: parseLat,
-  lng: parseLong
-}
-
-]
-
-console.log(markersArray)
-    // agrego multiples POIs al mapa
-function addMarkers () {
-  for (var i = 0; i < markersArray.length; i++) {
-    var location = new google.maps.LatLng(markersArray[i].lat, markersArray[i].lng)
-    addMarker(location, 'Encuentra tu camino ' + i)
+  function addMarker (m_position, m_title) {
+    var marker = new google.maps.Marker({
+      position: m_position,
+      map: map,
+      title: m_title
+    })
   }
-}
 
-viewMap()
+  // agrego multiples POIs al mapa
+  function addMarkers () {
+    for (var i = 0; i < coord.length; i++) {
+      var location = { lat: coord[i].lat, lng: coord[i].lng }
+      addMarker(location, 'Encuentra tu camino ' + i)
+    }
+  }
 
 // var geocoder = new google.maps.Geocoder()
 // var infowindow = new google.maps.InfoWindow()
@@ -88,3 +60,4 @@ viewMap()
 //     if (status === google.maps.GeocoderStatus.OK) {
 //       resultsMap.setCenter(results[0].geometry.location)
 // }})
+}
