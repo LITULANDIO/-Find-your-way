@@ -12,11 +12,12 @@ block content
           a(href='/acount')  Mis anuncios en encuentra tu camino
       if user
         h3.hellow HOLA #{user.username} !
-     
+        |Anuncios creados: #{retiros.length}
       else
         h3 You are NOT logged!
         //- li
         //-   a(href='about.html')  Datos del perfil
+
   .container.demo.size-font-categories
     #accordion.panel-group(role='tablist', aria-multiselectable='')
       .panel.panel-default
