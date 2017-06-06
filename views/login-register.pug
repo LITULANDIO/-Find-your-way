@@ -48,12 +48,19 @@ block content
 				ul
 					each error in validationErrors
 						li #{error}
+	if validationSucces
+		.container
+			div.alert.alert-success(role='alert')
+				ul
+					each succes in validationSucces
+						li #{succes}
 							
 								
 		//- if (h2===LOGIN)						 				
 		//- 	a#login.text-center A&uacute;n no estoy registrado. Registrarme!
 		//- else
 		//- 	a#register.text-center Ya estoy registrado. Iniciar sesion!
+						}
 												
 
 	script(src="/bower_components/jquery/dist/jquery.min.js")

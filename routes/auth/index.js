@@ -32,24 +32,60 @@ router.post('/acount', passport.authenticate('local', { session: true }), (req, 
 })
 
 // REGISTER
-router.post('/register', function (req, res) {
+router.post('/register', function (req, res, next) {
+  const { username, password, email } = req.body
+  const count = new Account({ username, email, password })
+
   var post = req.body
   var validation_errors = []
+  var validation_succes = []
 
   if (!post.username) validation_errors.push('El nombre de usuario no puede estar vacío')
   if (!post.password) validation_errors.push('La contraseña no puede estar vacía')
   if (!post.email) validation_errors.push('El email no puede estar vacío')
-  if (validation_errors.length) return res.render('login-register', {validationErrors: validation_errors})
-  console.log(validation_errors)
+  // if (post.username === username) validation_errors.push('Lo sentimos, el nombre de usuario ya exite, vuelva a insertar un nuevo nombre de usuario. Gracias!')
+  if (validation_errors.length) {
+    return res.render('login-register', {validationErrors: validation_errors})
+  }
 
-  Account.create(post, function (err, result) {
-    if (err) throw err
-    req.login(result, function (err) {
-      if (err) throw err
-      res.redirect('/login')
-    })
+  if (post.username === username) validation_errors.push('Lo sentimos el nombre de usuario ya existe, escriba un nuevo nombre de ussuario, gracias!')
+
+  Account.register(count, password, function (err) {
+    if (err) {
+      console.log('error while user register!', err)
+      return res.render('login-register', {validationErrors: validation_errors})
+    }
+
+    console.log('user registered!')
+    res.redirect('/login')
   })
 })
+
+  // var post = req.body
+  // var validation_errors = []
+  // var validation_succes = []
+
+  // if (!post.username) validation_errors.push('El nombre de usuario no puede estar vacío')
+  // if (!post.password) validation_errors.push('La contraseña no puede estar vacía')
+  // if (!post.email) validation_errors.push('El email no puede estar vacío')
+  // // if (post.username === username) validation_errors.push('Lo sentimos, el nombre de usuario ya exite, vuelva a insertar un nuevo nombre de usuario. Gracias!')
+  // if (validation_errors.length) {
+  //   return res.render('login-register', {validationErrors: validation_errors})
+  // }
+
+//   Account.create(post, function (err, result) {
+//     if (err) throw err
+//     req.login(result, function (err) {
+//       if (err) throw err
+//       res.redirect('/login')
+//     })
+//   })
+// })
+
+  // if (post.username)&&(post.password)&&(post.email) validation_succes.push('Usuario registrado correctamente')
+  // if (validation_succes.length)
+  //   return res.render('login-register', {validationSucces: validation_succes})
+  // console.log(validation_errors)
 
 // LOGOUT
 router.get('/logout', (req, res) => {
