@@ -39,8 +39,15 @@ block content
 									.form-group
 										.row
 											.col-sm-6.col-sm-offset-3
+												
 												input#register-submit.form-control.btn.btn-register.font-categories(type='submit', name='register-submit', value='Registrarme')
-							
+		                     	
+	if validationErrors
+		.container
+			div.style-validation.alert.alert-danger(role='alert')
+				ul
+					each error in validationErrors
+						li #{error}
 							
 								
 		//- if (h2===LOGIN)						 				

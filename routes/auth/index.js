@@ -32,18 +32,22 @@ router.post('/acount', passport.authenticate('local', { session: true }), (req, 
 })
 
 // REGISTER
-router.post('/register', function (req, res, next) {
-  const { username, password, email } = req.body
-  const count = new Account({ username, email, password })
+router.post('/register', function (req, res) {
+  var post = req.body
+  var validation_errors = []
 
-  Account.register(count, password, function (err) {
-    if (err) {
-      console.log('error while user register!', err)
-      return res.send('Username already exists.')
-    }
+  if (!post.username) validation_errors.push('El nombre de usuario no puede estar vacío')
+  if (!post.password) validation_errors.push('La contraseña no puede estar vacía')
+  if (!post.email) validation_errors.push('El email no puede estar vacío')
+  if (validation_errors.length) return res.render('login-register', {validationErrors: validation_errors})
+  console.log(validation_errors)
 
-    console.log('user registered!')
-    res.redirect('/login')
+  Account.create(post, function (err, result) {
+    if (err) throw err
+    req.login(result, function (err) {
+      if (err) throw err
+      res.redirect('/login')
+    })
   })
 })
 
