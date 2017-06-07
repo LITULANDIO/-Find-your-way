@@ -13,12 +13,12 @@ block content
 					.panel-body
 						.row
 							.col-lg-12
-								form#login-form(action='/acount', method='post', role='form', style='display: block;')
+								form#login-form(action='/login', method='post', role='form', style='display: block;')
 									h2.font-categories LOGIIN
 									.form-group
-										input#username.form-control(type='text', name='username',placeholder='Username', value='')
+										input#username.form-control(type='text', name='username',placeholder='Nombre de usuario', value='')
 									.form-group
-										input#password.form-control(type='password', name='password', placeholder='Password')
+										input#password.form-control(type='password', name='password', placeholder='Contraseña')
 									.col-xs-6.form-group.pull-left.checkbox
 										input#checkbox1(type='checkbox', name='remember')
 										label(for='checkbox1') Recordar contraseña
@@ -30,11 +30,11 @@ block content
 								form#register-form(action='/register', method='post', role='form', style='display: none;')
 									h2.font-categories REGISTRO
 									.form-group
-										input#username.form-control(type='text', name='username', placeholder='Username', value='')
+										input#username.form-control(type='text', name='username', placeholder='Nombre de usuario', value='')
 									.form-group
-										input#email.form-control(type='email', name='email', placeholder='Email Address', value='')
+										input#email.form-control(type='email', name='email', placeholder='Email', value='')
 									.form-group
-										input#password.form-control(type='password', name='password', placeholder='Password')
+										input#password.form-control(type='password', name='password', placeholder='Contraseña')
 									
 									.form-group
 										.row
@@ -43,17 +43,28 @@ block content
 												input#register-submit.form-control.btn.btn-register.font-categories(type='submit', name='register-submit', value='Registrarme')
 		                     	
 	if validationErrors
-		.container
-			div.style-validation.alert.alert-danger(role='alert')
-				ul
+		.col-sm-offset-4.col-sm-4
+			div.alert.alert-danger(role='alert')
+				ul.list-Error
 					each error in validationErrors
 						li #{error}
 	if validationSucces
-		.container
+		.col-sm-offset-4.col-sm-4
 			div.alert.alert-success(role='alert')
-				ul
+				ul.list-Succes
 					each succes in validationSucces
 						li #{succes}
+	if validationLogin
+		.col-sm-offset-4.col-sm-4
+			div.alert.alert-danger(role='alert')
+				ul.list-Error
+					each login in validationLogin
+						li #{login}
+
+	
+
+
+
 							
 								
 		//- if (h2===LOGIN)						 				

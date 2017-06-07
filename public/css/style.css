@@ -689,6 +689,12 @@ form input:invalid {
     color: #fff;
     background-color: #2D3B55; }
 
+ul.list-Error {
+  list-style: none; }
+
+ul.list-Succes {
+  list-style: none; }
+
 body {
   margin-top: px; }
 
