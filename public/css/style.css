@@ -463,6 +463,9 @@ div.form-group.label-taller {
   text-align: center;
   font-size: 40px; }
 
+.text-bot {
+  font-size: 22px; }
+
 .navbar-count {
   margin-top: -30px;
   height: 60px; }
