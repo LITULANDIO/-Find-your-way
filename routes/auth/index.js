@@ -22,7 +22,7 @@ router.use(session({
 router.use(passport.initialize())
 router.use(passport.session())
 router.use(flash())
-// passport.use(new LocalStrategy(Account.authenticate()))
+passport.use(new LocalStrategy(Account.authenticate()))
 passport.serializeUser(Account.serializeUser())
 passport.deserializeUser(Account.deserializeUser())
 
