@@ -446,6 +446,23 @@ div.form-group.label-taller {
       margin: auto;
       margin-top: 30px; } }
 
+.circle-ayurveda {
+  margin: auto;
+  border-radius: 127px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+  background-color: #f8af00;
+  margin-bottom: 40px; }
+
+.title-bot {
+  text-align: center;
+  font-size: 40px; }
+
 .navbar-count {
   margin-top: -30px;
   height: 60px; }
