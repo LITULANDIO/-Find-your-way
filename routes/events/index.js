@@ -3,12 +3,12 @@ const express = require('express')
 const router = express.Router()
 
 // const getAll = require('./handlers/getAll')
-const Home = require('./handlers/getHome')
-const getRetiros = require('./handlers/getRetiros')
-const showForm = require('./handlers/showForm')
-const addRetiros = require('./handlers/addRetiros')
-const myAcount = require('./handlers/getCategories')
-const login = require('./handlers/show-login')
+const Home = require('./handlers/retiros/getHome')
+const getRetiros = require('./handlers/retiros/getRetiros')
+const showForm = require('./handlers/retiros/showForm')
+const addRetiros = require('./handlers/retiros/addRetiros')
+const myAcount = require('./handlers/retiros/getCategories')
+const login = require('./handlers/retiros/show-login')
 
 // const showAcount = require('./handlers/ShowAcount')
 

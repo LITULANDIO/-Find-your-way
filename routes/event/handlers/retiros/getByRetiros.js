@@ -1,4 +1,4 @@
-const Retiro = require('../../../models/retiros')
+const Retiro = require('../../../../models/retiros')
 
 module.exports = (req, res) => {
   const { tipo } = req.params // variable que introduim per filtrar tipus
