@@ -57,7 +57,7 @@ module.exports = (req, res) => {
     // })
   }
 
-  console.log('Retiro creado' + taller)
+  console.log('Taller creado' + taller)
   // res.status(200).json(event)
   res.redirect('/acount')
 }

@@ -11,6 +11,7 @@ const FormacionSchema = new mongoose.Schema({ // Creamos la base de datos y espe
   title: String,
   mision: String,
   imageUrl: String,
+  aprender: String,
   road: String,
   lat: Number,
   long: Number,

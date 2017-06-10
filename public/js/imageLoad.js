@@ -3,7 +3,7 @@
         // Define plugin options
      var settings = $.extend({
             // Input name attribute
-       name: '',
+       name: 'image_item',
             // Classes for styling the input
        class: 'form-control btn btn-default btn-block',
             // Icon which displays in center of input

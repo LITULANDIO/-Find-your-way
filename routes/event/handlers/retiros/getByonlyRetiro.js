@@ -9,7 +9,7 @@ module.exports = (req, res) => {
       const method = 'PUT'
       const edited = 'Modificar'
       console.log(retiros)
-      res.render('add-event', { retiros, action, method, edited })
+      res.render('add-event-retiro', { retiros, action, method, edited })
     })
     .catch(err => { throw err })
   console.log(id)

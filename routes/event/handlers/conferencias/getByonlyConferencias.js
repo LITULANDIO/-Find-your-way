@@ -9,7 +9,7 @@ module.exports = (req, res) => {
       const method = 'PUT'
       const edited = 'Modificar'
       console.log(conferencias)
-      res.render('add-event', { conferencias, action, method, edited })
+      res.render('add-event-conferencia', { conferencias, action, method, edited })
     })
     .catch(err => { throw err })
   console.log(id)

@@ -15,25 +15,25 @@ block content
       ul.top-menu
         li
           a(href='/acount')  Mis anuncios en encuentra tu camino
-        li
-          a(href='about.html')  Datos del perfil
+        //- li
+        //-   a(href='about.html')  Datos del perfil
       if user
         h3 HOLA #{user.username} !
      
       else
         h3 You are NOT logged!
  
-  h1.font-categories.container Retiros
+  h1.font-categories.container Talleres
   .container.well
-      form.edit-retiro(action= action ? action : '/acount/add' method= method ? method : 'POST' enctype="multipart/form-data")
+      form.edit-retiro(action= action ? action : '/acount-taller/add' method= method ? method : 'POST' enctype="multipart/form-data")
         .container
           .col-sm-8        
         .row
             br
             fieldset.form-group.col-sm-2
-              label Imagen
-              input(type="file", name="image_item" id="image_item" )   
-              .img-picker
+              label Fotografía
+              input.img-picker(type="file", name="image_item" id="image_item" )   
+              //- .img-picker
             
             //- fieldset.form-group.col-sm-2
             //-           .img-picker
@@ -49,15 +49,15 @@ block content
             fieldset.form-group
               label(for='recipetitle') Titulo
               | 
-              input#recipetitle.form-control(rows='1', maxlength='30', name="title", required ,  value= !retiros ? " " : retiros.title ) 
+              input#recipetitle.form-control(rows='1', maxlength='30', name="title", required ,  value= !talleres ? " " : talleres.title ) 
           .col-xs-12.col-md-4
             fieldset.form-group
               label(for='recipe-editor-ingredients') Camino
               |
               select.form-control(name="road", id="selectPath" )
-                each val in ['Selecciona...', 'Yoga', 'Ayurveda', 'Yoga y Ayurveda']
+                each val in ['Selecciona...', 'Ayurveda', 'Yoga', 'Tantra', 'Ayurveda y Yoga']
                   -
-                    let selectRoad = !retiros ? "" : retiros.road
+                    let selectRoad = !talleres ? "" : talleres.road
                   if (selectRoad === (val) )
                     option(selected="selected")= selectRoad
                   else
@@ -78,28 +78,35 @@ block content
               select.form-control(name="comunity", id="selectComunity")
                 each val in cities
                   -
-                    let selectComunity = !retiros ? "" : retiros.comunity
+                    let selectComunity = !talleres ? "" : talleres.comunity
                   if (selectComunity === (val) )
                     option(selected="selected")= selectComunity
                   else
                     option= val
-          .col-xs-12.col-md-12
+          .col-xs-6.col-md-6
             fieldset.form-group
               label(for='recipetitle') Localidad
               |
-              input#pac-input.controls.form-control(rows='1',type="textbox", maxlength='30', name="localitation" value= !retiros ? " " : retiros.localitation  )
-              input#submit(type='button', value='Buscar')
+              input#pac-input.controls.form-control(rows='1',type="textbox", maxlength='30', name="localitation" value= !talleres ? " " : talleres.localitation  )
+          .col-xs-6.col-md-6
+            fieldset.form-group
+              label Misión
+              |
+              input#pac-input.controls.form-control(rows='1',type="textbox", maxlength='50', name="mision" value= !talleres ? " " : talleres.mision  )
+              
                
+          .col-xs-12 
+              input#submit(type='button', value='Encuentra la localidad')  
               #map
-              input#long(name="long",hidden,  value= !retiros ? " " : retiros.long  )
-              input#lat(name="lat",hidden,  value= !retiros ? " " : retiros.lat  )
+              input#long(name="long",hidden,  value= !talleres ? " " : talleres.long  )
+              input#lat(name="lat",hidden,  value= !talleres ? " " : talleres.lat  )
             
                
           .col-xs-12.col-md-2
             fieldset.form-group
               label(for='recipetitle') Fecha Inicio
               |
-              input.tcal.form-control(name="startDate", value= !retiros ? " " : retiros.startDate  )
+              input.tcal.form-control(name="startDate", value= !talleres ? " " : talleres.startDate  )
           .col-xs-12.col-md-1
             p.label-time Hora
           .col-xs-12.col-md-1.label-nums
@@ -109,7 +116,7 @@ block content
               select.form-control(name="timeHourStart" id="selectHourStart")
                 each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
 
-                  if (retiros === parseInt(val) )
+                  if (talleres === parseInt(val) )
                     option(selected="selected")= val
                   else
                     option= val
@@ -121,7 +128,7 @@ block content
               |
               select.form-control(name="timeMinuteStart", id="selectMinuteStart")
                 each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"]
-                  if (retiros === parseInt(val) )
+                  if (talleres === parseInt(val) )
                     option(selected="selected")= val
                   else
                     option= val
@@ -129,7 +136,7 @@ block content
             fieldset.form-group
               label(for='recipetitle') Fecha Fin
               |
-              input.tcal.form-control(name="endDate" value= !retiros ? " " : retiros.endDate )
+              input.tcal.form-control(name="endDate" value= !talleres ? " " : talleres.endDate )
           .col-xs-12.col-md-1
             p Hora
           .col-xs-12.col-md-1
@@ -138,7 +145,7 @@ block content
               |
               select.form-control(name="timeHourEnd", id="selectHourEnd")
                 each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"]
-                  if (retiros === parseInt(val) )
+                  if (talleres === parseInt(val) )
                     option(selected="selected")= val
                   else
                     option= val
@@ -150,7 +157,7 @@ block content
               |
               select.form-control(name="timeMinuteEnd", id="selectMinuteEnd")
                 each val in ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"]
-                  if (retiros === parseInt(val) )
+                  if (talleres === parseInt(val) )
                     option(selected="selected")= val
                   else
                     option= val
@@ -158,13 +165,41 @@ block content
             fieldset.form-group
               label(for='recipe-editor-ingredients') Descripci&oacute;n
               -
-                let textDescription = !retiros ? "" : retiros.description
+                let textDescription = !talleres ? "" : talleres.description
               textarea#recipe-editor-ingredients.form-control(rows='10' name="description")=textDescription 
 
+          .col-xs-12
+            fieldset.form-group
+              |Servicio
+              br
+              label.radio-inline 
+                input(type="radio" name="Optradio" id="price")
+                | De pago
+              label.radio-inline
+                input(type="radio" name="Optradio" id="free")
+                | Gratuito
 
+
+
+          .col-xs-4
+             fieldset.form-group
+              label(for='recipe-editor-directions') Precio
+              input#recipe-editor-directions.form-control(rows='3' name="price" value= !talleres ? " " : talleres.price  )
+
+          .col-xs-4
+            fieldset.form-group
+              label(for='recipe-editor-directions') Teléfono de contacto
+              input#recipe-editor-directions.form-control(rows='3' name="tel" value= !talleres ? " " : talleres.tel  )
+
+          .col-xs-4
+            fieldset.form-group
+              label(for='recipe-editor-directions') Web
+              input#recipe-editor-directions.form-control(rows='3' name="web" value= !talleres ? " " : talleres.web  )
+
+          .col-xs-12
             fieldset.form-group
               label(for='recipe-editor-directions') Tags
-              input#recipe-editor-directions.form-control(rows='3' name="tags" value= !retiros ? " " : retiros.tags  )
+              input#recipe-editor-directions.form-control(rows='3' placeholder="Inserta palabras clave" name="tags"  value= !talleres ? " " : talleres.tags  )
             .text-center
              
              if (method=== 'PUT')
@@ -175,20 +210,6 @@ block content
   script(src='/bower_components/jquery/dist/jquery.min.js')
   script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
   script(src='/js/main.js')       
-  //-script(src='/js/imageLoad.js')
+  script(src='/js/disabled-input.js')
   script(src='/js/maps.js')
-  script(src='/js/imageLoad.js')
   script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=initMap')
-
-
-  //- .container          
-  //-     each retiro in retiros
-  //-         h2 Categoria: #{retiro.category}
-  //-         h3 Titulo del evento: #{retiro.title}
-  //-         p Localidad: #{retiro.localitation}
-  //-         p Comunidad autónoma: #{retiro.comunity}
-  //-         p Publicación: #{retiro.createEvent} 
-  //-         p Hora inicio: #{retiro.timeHourStart}:#{retiro.timeMinuteStart}
-  //-         p Descripción: #{retiro.description} 
-  //-         p Tags: #{retiro.tags} 
-

@@ -1,0 +1,77 @@
+extends layout
+block content
+  
+    .container 
+    
+    
+      
+    .col-sm-6.responsive
+      img(src='/img/search.png', width='26px', height='26px').ino
+      - var cities = ["Selecciona...", "Andalucía", "Baleares", "Canarias", "Cantabria", "Cataluña", "Galicia", "La Rioja", "Navarra", "Aragón", "Castilla-La Mancha", "Castilla y León", "Comunidad Valenciana", "Extremadura", "Comunidad Valenciana", "Madrid", "Región de Murcia"]; 
+      select#sel2.intros( name="comunity") 
+         each val in cities
+                  -
+                    let selectComunity = !conferencias ? "" : conferencias.comunity
+                  if (selectComunity === (val) )
+                    option(selected="selected")= selectComunity
+                  else
+                    option= val
+      h1#title-mine.title-terapies|
+      .hr-line2
+        br
+        .container|Total encontrados: #{conferencias.length}
+      div.over
+         
+       
+       each conferencia in conferencias
+         
+          .col-sm-7.col-lg-4.events-link
+
+            .thumbnail.offer.margins.links.hvr-grow-shadow
+             a.image-a.img-responsive(href='/details/'+ conferencia.id)
+              img(src= conferencia.imageUrl, width="201px" height="174px" class="image2")
+              
+              h2.tit#box.text-center
+                |#{conferencia.title} 
+              div
+                
+                <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Maps/location-25.png" title="Marker" width="26" height="26">
+                  |&nbsp;&nbsp; Localización #{conferencias.localitation}
+                
+                 
+              br
+              div
+                <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/calendar-25.png" title="Calendar" width="26" height="26">
+                |&nbsp;&nbsp;Fecha: #{conferencias.startDate}
+              p
+                |
+              hr
+                
+              div.iter
+                div.lat.hidden #{conferencia.lat}
+                div.long.hidden #{conferencia.long}
+                
+              img(src='https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/price_tag-24.png', title='Price Tag', width='24')
+              |   #{conferencia.tags} 
+      if !conferencias.length
+        .container
+          h3 No se han encontrado conferencias
+        
+         
+    .col-sm-5
+      .col.sm-12
+        div#maps
+        
+         
+      
+    
+
+            
+      script(src="/bower_components/jquery/dist/jquery.min.js")       
+      script(src='/js/allMaps.js')
+      script(src='/js/filters.js')
+      script(src='/js/SelectComunity.js')
+          
+      script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=viewMap')
+      script(src='/js/insert-title.js')
+           
