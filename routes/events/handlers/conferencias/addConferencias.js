@@ -1,4 +1,4 @@
-const Retiro = require('../../../models/retiros')
+const Conferencia = require('../../../../models/conferencias')
 const cloudinary = require('cloudinary')
 
 cloudinary.config({
@@ -13,6 +13,8 @@ module.exports = (req, res) => {
   const owner = req.user.username
   const { title } = req.body
   const { category } = req.body
+  const { plataforma} = req.body
+  const { mision } = req.body
   const { imageUrl } = req.file
   const { road } = req.body
   const { lat } = req.body
@@ -26,16 +28,19 @@ module.exports = (req, res) => {
   const { timeHourEnd } = req.body
   const { timeMinuteEnd } = req.body
   const { description } = req.body
+  const { price } = req.body
+  const { tel } = req.body
+  const { web } = req.body
   const { tags } = req.body
-  const retiro = new Retiro({ owner, title, imageUrl, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, tags })
+  const conferencia = new Conferencia({ owner, title, mision, imageUrl, category, plataforma, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, price, tel, web, tags })
 
   console.log('la imagen es: ' + req.file.imageUrl)
 
   if (req.file) {
     cloudinary.uploader.upload(req.file.path,
   function (result) {
-    retiro.imageUrl = result.url
-    retiro.save()// (function (err) {
+    conferencia.imageUrl = result.url
+    conferencia.save()// (function (err) {
       // res.render('add-event')
     // })
   },
@@ -47,13 +52,13 @@ module.exports = (req, res) => {
       }
 )
   } else {
-    retiro.save()// (function (err) {
+    conferencia.save()// (function (err) {
      // console.log(retiro)
       // res.render('add-event')
     // })
   }
 
-  console.log('Retiro creado' + retiro)
+  console.log('Retiro creado' + conferencia)
   // res.status(200).json(event)
   res.redirect('/acount')
 }
