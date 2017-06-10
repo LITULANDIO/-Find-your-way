@@ -1,8 +1,8 @@
-const Retiro = require('../../../models/retiros')
+const Taller = require('../../../../models/talleres')
 
 module.exports = (req, res) => {
   const { user } = req
-  Retiro.find()
-    .then(retiros => res.render('Allretiros', { retiros, user }))
+  Taller.find()
+    .then(talleres => res.render('Alltalleres', { talleres, user }))
     .catch(err => { throw err })
 }

@@ -1,11 +1,11 @@
-const Retiro = require('../../../models/retiros')
+const Instructor = require('../../../../models/instructores')
 
 module.exports = (req, res) => {
   const { user } = req
 
   console.log(`El usuario es: ${user.username}`)
-  Retiro.find({ 'owner': user.username })
-    .then(retiros => res.render('myAcount', { retiros, user }))
+  Instructor.find({ 'owner': user.username })
+    .then(instructores => res.render('myAcount', { instructores, user }))
     .catch(err => { throw err })
 }
 

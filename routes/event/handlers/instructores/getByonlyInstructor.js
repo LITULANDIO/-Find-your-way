@@ -1,4 +1,4 @@
-const Instructor = require('../../../../models/retiros')
+const Instructor = require('../../../../models/instructores')
 
 module.exports = (req, res) => {
   const { id } = req.params

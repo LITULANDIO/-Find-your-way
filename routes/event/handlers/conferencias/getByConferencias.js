@@ -1,4 +1,4 @@
-const Conferencia = require('../../../models/conferencias')
+const Conferencia = require('../../../../models/conferencias')
 
 module.exports = (req, res) => {
   const { tipo } = req.params // variable que introduim per filtrar tipus

@@ -1,4 +1,4 @@
-const Formacion = require('../../../models/formaciones')
+const Formacion = require('../../../../models/formaciones')
 
 module.exports = (req, res) => {
   const { id } = req.params
