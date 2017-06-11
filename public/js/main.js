@@ -20,12 +20,17 @@
   $('form.edit-retiro').on('submit', function (e) {
     const method = $(this).attr('method')
     if (method === 'PUT') {
-    	e.preventDefault()
+      e.preventDefault()
       const $form = $(this)
       const title = $form.find('input[name="title"]').val()
+      const image = $form.find('input[name="image_item"]').val()
       const category = $form.find('select[name="category"]').val()
       const road = $form.find('select[name="road"]').val()
       const comunity = $form.find('select[name="cominity"]').val()
+      const localitation = $form.find('input[name="localitation"]').val()
+      const mision = $form.find('input[name="mision"]').val()
+      const long = $form.find('input[name="long"]').val()
+      const lat = $form.find('input[name="lat"]').val()
       const startDate = $form.find('input[name="startDate"]').val()
       const timeHourStart = $form.find('select[name="timeHourStart"]').val()
       const timeMinuteStart = $form.find('select[name="timeMinuteStart"]').val()
@@ -33,10 +38,13 @@
       const timeHourEnd = $form.find('select[name="timeHourEnd"]').val()
       const timeMinuteEnd = $form.find('select[name="timeMinuteEnd"]').val()
       const description = $form.find('textarea[name="description"]').val()
+      const price = $form.find('input[name="price"]').val()
+      const tel = $form.find('input[name="tel"]').val()
+      const web = $form.find('input[name="web"]').val()
       const tags = $form.find('input[name="tags"]').val()
 
       const url = this.action
-      const data = `title=${title}&category=${category}&road=${road}&comunity=${comunity}&startDate=${startDate}&timeHourStart=${timeHourStart}&timeMinuteStart=${timeMinuteStart}&endDate=${endDate}&timeHourEnd=${timeHourEnd}&timeMinuteEnd=${timeMinuteEnd}&description=${description}&tags=${tags}`
+      const data = `title=${title}&imageUrl=${image}&category=${category}&localitation=${localitation}&long=${long}&lat=${lat}&mision=${mision}road=${road}&comunity=${comunity}&startDate=${startDate}&timeHourStart=${timeHourStart}&timeMinuteStart=${timeMinuteStart}&endDate=${endDate}&timeHourEnd=${timeHourEnd}&timeMinuteEnd=${timeMinuteEnd}&description=${description}&price=${price}&tel=${tel}&web=${web}&tags=${tags}`
 
       $.ajax({ url, data, method })
         .then(() => window.location = '/acount')

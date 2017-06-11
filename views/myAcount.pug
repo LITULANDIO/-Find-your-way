@@ -12,7 +12,7 @@ block content
           a(href='/acount')  Mis anuncios en encuentra tu camino
       if user
         h3.hellow HOLA #{user.username} !
-        |Anuncios creados: #{retiros.length}
+        //- |Anuncios creados: #{retiros.length}
       else
         h3 You are NOT logged!
         //- li
@@ -35,7 +35,7 @@ block content
             .row.cont-body
 
               div.col-sm-12
-                each retiro in retiros
+                each retiro in eventos[0]
                   .thumbnail.offer.margins.col-sm-3.retiro
                     img(src=retiro.imageUrl, width='100%')
                     .caption
@@ -57,10 +57,10 @@ block content
                           a.sizes(href='/retiros/edited/'+ retiro.id) 
                             |  Modificar
                           p.size-mod.text-center
-                          a.sizes(href='#success', data-toggle='modal')  
+                          a.sizes(href='#succes1', data-toggle='modal')  
                               i.glyphicon.glyphicon-share-alt
                               |  Compartir
-                  #success.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+                  #succes1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
                     .modal-dialog
                       .modal-content
                         .modal-header.modal-header-success
@@ -129,11 +129,100 @@ block content
               i.more-less.glyphicon.glyphicon-plus
               |  Formaciones
         #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
-          .panel-body
+         .panel-body
             aside.text-right
               a(href='/acount-formacion/empty')
                 i.glyphicon.glyphicon-plus-sign
                 |  Crear anuncio
+            .row.cont-body
+
+              div.col-sm-12
+                each formacion in eventos[3]
+                  .thumbnail.offer.margins.col-sm-3.retiro
+                    img(src=formacion.imageUrl, width='100%')
+                    .caption
+                      div.container.size-mods
+                          h2.text-center 
+                          |Titulo: #{formacion.title}, #{formacion.mision}
+                          p
+                          i.glyphicon.glyphicon-calendar
+                          | Fecha Public: #{formacion.createdEvent} 
+                          p
+                          i.glyphicon.glyphicon-time
+                          | Hora Publi: #{formacion.hourEvent}         
+                          hr
+                      div.size-mods
+                          a.btn.remove(type='button' data-id=`${formacion._id}`)
+                              i.remove.glyphicon.glyphicon-trash
+                              |  Eliminar
+                          p.size-mod
+                          a.sizes(href='/formaciones/edited/'+ formacion.id) 
+                            |  Modificar
+                          p.size-mod.text-center
+                          a.sizes(href='#succes2', data-toggle='modal')  
+                              i.glyphicon.glyphicon-share-alt
+                              |  Compartir
+                  #succes2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel2', aria-hidden='true')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header.modal-header-success
+                          button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+                          h1
+                            i.i-modal.glyphicon.glyphicon-thumbs-up
+                            |  Quieres compartir: #{formacion.title} 
+                        .modal-body
+                          .containear.margins-modal
+                            br
+                            br
+                            script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+                            ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-5715866801509976', data-ad-slot='6618380844', data-ad-format='auto')
+                            script.
+                              (adsbygoogle = window.adsbygoogle || []).push({});
+                            br
+                            br
+                            #buttons-modal
+                              .facebook.button-modal
+                                i.icon-modal
+                                  i.icon-facebook
+                                .slide-modal
+                                  p.p-modal  facebook
+                                iframe(src='//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&send=false&layout=button_count&width=80&show_faces=false&font&colorscheme=light&action=like&height=20&appId=568581339861351', scrolling='no', frameborder='0', style='border:none; overflow:hidden; width:80px; height:20px;', allowtransparency='true')
+                              .twitter.button-modal
+                                i.icon-modal
+                                  i.icon-twitter
+                                .slide-modal
+                                  p.p-modal  twitter
+                                |  
+                                a.twitter-share-button(href='https://twitter.com/share', data-via='mariuCSS') Tweet
+                                script.
+                                  !function(d,s,id){
+                                  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                  if(!d.getElementById(id)){
+                                  js=d.createElement(s);
+                                  js.id=id;
+                                  js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                              .google.button-modal
+                                i.icon-modal
+                                  i.icon-modal-google-plus
+                                .slide-modal
+                                  p.p-modal  google+
+                                .g-plusone(data-size='medium')
+                                script(type='text/javascript').
+                                  (function() {
+                                  var po = document.createElement('script');
+                                  po.type = 'text/javascript';
+                                  po.async = true;
+                                  po.src = 'https://apis.google.com/js/plusone.js';
+                                  var s = document.getElementsByTagName('script')[0];
+                                  s.parentNode.insertBefore(po, s);
+                                  }
+                                  )();
+
+                            .modal-footer
+                              button.btn.btn-default.pull-left(type='button', data-dismiss='modal') Close
+            
+           
+  
       .panel.panel-default
         #headingThree.panel-heading(role='tab')
           h4.panel-title
@@ -146,6 +235,94 @@ block content
               a(href='/acount-taller/empty')
                 i.glyphicon.glyphicon-plus-sign
                 |  Crear anuncio
+            .row.cont-body
+
+              div.col-sm-12
+                each taller in eventos[1]
+                  .thumbnail.offer.margins.col-sm-3.retiro
+                    img(src=taller.imageUrl, width='100%')
+                    .caption
+                      div.container.size-mods
+                          h2.text-center 
+                          |Titulo: #{taller.title}
+                          p
+                          i.glyphicon.glyphicon-calendar
+                          | Fecha Public: #{taller.createdEvent} 
+                          p
+                          i.glyphicon.glyphicon-time
+                          | Hora Publi: #{taller.hourEvent}         
+                          hr
+                      div.size-mods
+                          a.btn.remove(type='button' data-id=`${taller._id}`)
+                              i.remove.glyphicon.glyphicon-trash
+                              |  Eliminar
+                          p.size-mod
+                          a.sizes(href='/talleres/edited/'+ taller.id) 
+                            |  Modificar
+                          p.size-mod.text-center
+                          a.sizes(href='#succes3', data-toggle='modal')  
+                              i.glyphicon.glyphicon-share-alt
+                              |  Compartir
+                  #succes3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel3', aria-hidden='true')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header.modal-header-success
+                          button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+                          h1
+                            i.i-modal.glyphicon.glyphicon-thumbs-up
+                            |  Quieres compartir: #{taller.title} 
+                        .modal-body
+                          .containear.margins-modal
+                            br
+                            br
+                            script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+                            ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-5715866801509976', data-ad-slot='6618380844', data-ad-format='auto')
+                            script.
+                              (adsbygoogle = window.adsbygoogle || []).push({});
+                            br
+                            br
+                            #buttons-modal
+                              .facebook.button-modal
+                                i.icon-modal
+                                  i.icon-facebook
+                                .slide-modal
+                                  p.p-modal  facebook
+                                iframe(src='//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&send=false&layout=button_count&width=80&show_faces=false&font&colorscheme=light&action=like&height=20&appId=568581339861351', scrolling='no', frameborder='0', style='border:none; overflow:hidden; width:80px; height:20px;', allowtransparency='true')
+                              .twitter.button-modal
+                                i.icon-modal
+                                  i.icon-twitter
+                                .slide-modal
+                                  p.p-modal  twitter
+                                |  
+                                a.twitter-share-button(href='https://twitter.com/share', data-via='mariuCSS') Tweet
+                                script.
+                                  !function(d,s,id){
+                                  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                  if(!d.getElementById(id)){
+                                  js=d.createElement(s);
+                                  js.id=id;
+                                  js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                              .google.button-modal
+                                i.icon-modal
+                                  i.icon-modal-google-plus
+                                .slide-modal
+                                  p.p-modal  google+
+                                .g-plusone(data-size='medium')
+                                script(type='text/javascript').
+                                  (function() {
+                                  var po = document.createElement('script');
+                                  po.type = 'text/javascript';
+                                  po.async = true;
+                                  po.src = 'https://apis.google.com/js/plusone.js';
+                                  var s = document.getElementsByTagName('script')[0];
+                                  s.parentNode.insertBefore(po, s);
+                                  }
+                                  )();
+
+                            .modal-footer
+                              button.btn.btn-default.pull-left(type='button', data-dismiss='modal') Close
+            
+                        
       .panel.panel-default
         #headingFour.panel-heading(role='tab')
           h4.panel-title
@@ -158,6 +335,92 @@ block content
               a(href='/acount-conferencia/empty')
                 i.glyphicon.glyphicon-plus-sign
                 |  Crear anuncio 
+            .row.cont-body
+
+              div.col-sm-12
+                each conferencia in eventos[4]
+                  .thumbnail.offer.margins.col-sm-3.retiro
+                    img(src=conferencia.imageUrl, width='100%')
+                    .caption
+                      div.container.size-mods
+                          h2.text-center 
+                          |Titulo: #{conferencia.title}, #{conferencia.mision}
+                          p
+                          i.glyphicon.glyphicon-calendar
+                          | Fecha Public: #{conferencia.createdEvent} 
+                          p
+                          i.glyphicon.glyphicon-time
+                          | Hora Publi: #{conferencia.hourEvent}         
+                          hr
+                      div.size-mods
+                          a.btn.remove(type='button' data-id=`${conferencia._id}`)
+                              i.remove.glyphicon.glyphicon-trash
+                              |  Eliminar
+                          p.size-mod
+                          a.sizes(href='/conferencias/edited/'+ conferencia.id) 
+                            |  Modificar
+                          p.size-mod.text-center
+                          a.sizes(href='#succes4', data-toggle='modal')  
+                              i.glyphicon.glyphicon-share-alt
+                              |  Compartir
+                  #succes4.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel4', aria-hidden='true')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header.modal-header-success
+                          button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+                          h1
+                            i.i-modal.glyphicon.glyphicon-thumbs-up
+                            |  Quieres compartir: #{conferencia.title} 
+                        .modal-body
+                          .containear.margins-modal
+                            br
+                            br
+                            script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+                            ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-5715866801509976', data-ad-slot='6618380844', data-ad-format='auto')
+                            script.
+                              (adsbygoogle = window.adsbygoogle || []).push({});
+                            br
+                            br
+                            #buttons-modal
+                              .facebook.button-modal
+                                i.icon-modal
+                                  i.icon-facebook
+                                .slide-modal
+                                  p.p-modal  facebook
+                                iframe(src='//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&send=false&layout=button_count&width=80&show_faces=false&font&colorscheme=light&action=like&height=20&appId=568581339861351', scrolling='no', frameborder='0', style='border:none; overflow:hidden; width:80px; height:20px;', allowtransparency='true')
+                              .twitter.button-modal
+                                i.icon-modal
+                                  i.icon-twitter
+                                .slide-modal
+                                  p.p-modal  twitter
+                                |  
+                                a.twitter-share-button(href='https://twitter.com/share', data-via='mariuCSS') Tweet
+                                script.
+                                  !function(d,s,id){
+                                  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                  if(!d.getElementById(id)){
+                                  js=d.createElement(s);
+                                  js.id=id;
+                                  js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                              .google.button-modal
+                                i.icon-modal
+                                  i.icon-modal-google-plus
+                                .slide-modal
+                                  p.p-modal  google+
+                                .g-plusone(data-size='medium')
+                                script(type='text/javascript').
+                                  (function() {
+                                  var po = document.createElement('script');
+                                  po.type = 'text/javascript';
+                                  po.async = true;
+                                  po.src = 'https://apis.google.com/js/plusone.js';
+                                  var s = document.getElementsByTagName('script')[0];
+                                  s.parentNode.insertBefore(po, s);
+                                  }
+                                  )();
+
+                            .modal-footer
+                              button.btn.btn-default.pull-left(type='button', data-dismiss='modal') Close
 
       .panel.panel-default
         #headingFive.panel-heading(role='tab')
@@ -171,7 +434,92 @@ block content
               a(href='/acount-instructor/empty')
                 i.glyphicon.glyphicon-plus-sign
                 |  Crear anuncio 
-              .container
+            .row.cont-body
+
+              div.col-sm-12
+                each instructor in eventos[2]
+                  .thumbnail.offer.margins.col-sm-3.retiro
+                    img(src=instructor.imageUrl, width='100%')
+                    .caption
+                      div.container.size-mods
+                          h2.text-center 
+                          |Titulo: #{instructor.title}
+                          p
+                          i.glyphicon.glyphicon-calendar
+                          | Fecha Public: #{instructor.createdEvent} 
+                          p
+                          i.glyphicon.glyphicon-time
+                          | Hora Publi: #{instructor.hourEvent}         
+                          hr
+                      div.size-mods
+                          a.btn.remove(type='button' data-id=`${instructor._id}`)
+                              i.remove.glyphicon.glyphicon-trash
+                              |  Eliminar
+                          p.size-mod
+                          a.sizes(href='/instructores/edited/'+ instructor.id) 
+                            |  Modificar
+                          p.size-mod.text-center
+                          a.sizes(href='#succes5', data-toggle='modal')  
+                              i.glyphicon.glyphicon-share-alt
+                              |  Compartir
+                  #succes5.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel5', aria-hidden='true')
+                    .modal-dialog
+                      .modal-content
+                        .modal-header.modal-header-success
+                          button.close(type='button', data-dismiss='modal', aria-hidden='true') &times;
+                          h1
+                            i.i-modal.glyphicon.glyphicon-thumbs-up
+                            |  Quieres compartir: #{instructor.title} 
+                        .modal-body
+                          .containear.margins-modal
+                            br
+                            br
+                            script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+                            ins.adsbygoogle(style='display:block', data-ad-client='ca-pub-5715866801509976', data-ad-slot='6618380844', data-ad-format='auto')
+                            script.
+                              (adsbygoogle = window.adsbygoogle || []).push({});
+                            br
+                            br
+                            #buttons-modal
+                              .facebook.button-modal
+                                i.icon-modal
+                                  i.icon-facebook
+                                .slide-modal
+                                  p.p-modal  facebook
+                                iframe(src='//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Freference%2Fplugins%2Flike&send=false&layout=button_count&width=80&show_faces=false&font&colorscheme=light&action=like&height=20&appId=568581339861351', scrolling='no', frameborder='0', style='border:none; overflow:hidden; width:80px; height:20px;', allowtransparency='true')
+                              .twitter.button-modal
+                                i.icon-modal
+                                  i.icon-twitter
+                                .slide-modal
+                                  p.p-modal  twitter
+                                |  
+                                a.twitter-share-button(href='https://twitter.com/share', data-via='mariuCSS') Tweet
+                                script.
+                                  !function(d,s,id){
+                                  var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                  if(!d.getElementById(id)){
+                                  js=d.createElement(s);
+                                  js.id=id;
+                                  js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+                              .google.button-modal
+                                i.icon-modal
+                                  i.icon-modal-google-plus
+                                .slide-modal
+                                  p.p-modal  google+
+                                .g-plusone(data-size='medium')
+                                script(type='text/javascript').
+                                  (function() {
+                                  var po = document.createElement('script');
+                                  po.type = 'text/javascript';
+                                  po.async = true;
+                                  po.src = 'https://apis.google.com/js/plusone.js';
+                                  var s = document.getElementsByTagName('script')[0];
+                                  s.parentNode.insertBefore(po, s);
+                                  }
+                                  )();
+
+                            .modal-footer
+                              button.btn.btn-default.pull-left(type='button', data-dismiss='modal') Close
    
   
 
@@ -182,4 +530,4 @@ block content
   script(src='/bower_components/jquery/dist/jquery.min.js')
   script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
   script(src='/js/accurdion.js')
-  script(src='/js/main.js')
+  script(src='/js/mai.js')

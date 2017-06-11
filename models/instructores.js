@@ -2,15 +2,13 @@ const mongoose = require('mongoose') // requerimos mongoose
 const collection = 'instructores' // creamos una colección llamada retiros
 const passportLocalMongoose = require('passport-local-mongoose')
 
-const moment = require('moment') // libreria moments
-moment.locale('es') // traducir moments de inglés a español
-
 const InstructorSchema = new mongoose.Schema({ // Creamos la base de datos y especificamos los campos con sus tipos
   owner: {type: String, required: false},
   category: { type: String, default: 'instructor' },
   imageUrl: String,
   nombre: String,
   apellidos: String,
+  date: String,
   road: String,
   comunity: String,
   localitation: String,
@@ -21,6 +19,7 @@ const InstructorSchema = new mongoose.Schema({ // Creamos la base de datos y esp
   articles: String,
   books: String,
   webs: String,
+  socials: String,
   tags: String
 }, { collection })
 
