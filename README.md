@@ -1,4 +1,4 @@
-### DEMO -- 1ª versión beta del Portal de anuncios Yoga y Ayurveda "Encuentra tu camino"
+### DEMO -- 1ª versión beta del Portal de anuncios Ayurveda Yoga y Tantra "Encuentra tu camino" 
 
 **Autor: Carles Far Pierres**
 

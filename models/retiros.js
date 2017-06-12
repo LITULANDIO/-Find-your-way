@@ -1,17 +1,19 @@
 
 const mongoose = require('mongoose') // requerimos mongoose
-const collection = 'retiros' // creamos una colección llamada retiros
+
 const passportLocalMongoose = require('passport-local-mongoose')
 
 const moment = require('moment') // libreria moments
 moment.locale('es') // traducir moments de inglés a español
 
-const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especificamos los campos con sus tipos
+const collection = 'retiros' // creamos una colección llamada retiros
+const RetiroSchema = new mongoose.Schema({
+// Creamos la base de datos y especificamos los campos con sus tipos
   owner: {type: String, required: false},
   category: { type: String, default: 'retiro' },
   title: String,
+  mision: String,
   imageUrl: String,
-  precio: Number,
   road: String,
   lat: Number,
   long: Number,
@@ -26,6 +28,10 @@ const RetiroSchema = new mongoose.Schema({ // Creamos la base de datos y especif
   timeHourEnd: Number,
   timeMinuteEnd: Number,
   description: String,
+  Service: Boolean,
+  price: Number,
+  tel: Number,
+  web: String,
   tags: String
 }, { collection })
 
@@ -36,4 +42,5 @@ RetiroSchema.virtual('imageurl').get(function () {
   return this.imageUrl
 })
 RetiroSchema.plugin(passportLocalMongoose)
-module.exports = mongoose.model('retiros', RetiroSchema) // exportamos el modelo creado de la base de datos + coleccion
+module.exports = mongoose.model('retiros', RetiroSchema)
+// exportamos el modelo creado de la base de datos + coleccion

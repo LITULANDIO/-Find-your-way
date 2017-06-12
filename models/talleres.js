@@ -1,11 +1,13 @@
 const mongoose = require('mongoose') // requerimos mongoose
-const collection = 'talleres' // creamos una colección llamada retiros
+
 const passportLocalMongoose = require('passport-local-mongoose')
 
 const moment = require('moment') // libreria moments
 moment.locale('es') // traducir moments de inglés a español
 
-const TallerSchema = new mongoose.Schema({ // Creamos la base de datos y especificamos los campos con sus tipos
+const collection = 'talleres' // creamos una colección llamada talleres
+const TallerSchema = new mongoose.Schema({
+// Creamos la base de datos y especificamos los campos con sus tipos
   owner: {type: String, required: false},
   category: { type: String, default: 'taller' },
   title: String,
@@ -25,6 +27,7 @@ const TallerSchema = new mongoose.Schema({ // Creamos la base de datos y especif
   timeHourEnd: Number,
   timeMinuteEnd: Number,
   description: String,
+  Service: Boolean,
   price: Number,
   tel: Number,
   web: String,

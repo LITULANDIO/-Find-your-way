@@ -1,7 +1,6 @@
 const express = require('express')
 const passport = require('passport')
 const Account = require('../../models/counts')
-const Retiros = require(('../../models/retiros'))
 const flash = require('connect-flash')
 
 const router = express.Router()
@@ -21,7 +20,6 @@ router.use(session({
 // Configure passport middleware
 router.use(passport.initialize())
 router.use(passport.session())
-router.use(flash())
 passport.use(new LocalStrategy(Account.authenticate()))
 passport.serializeUser(Account.serializeUser())
 passport.deserializeUser(Account.deserializeUser())

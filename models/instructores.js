@@ -1,8 +1,10 @@
 const mongoose = require('mongoose') // requerimos mongoose
-const collection = 'instructores' // creamos una colección llamada retiros
+
 const passportLocalMongoose = require('passport-local-mongoose')
 
-const InstructorSchema = new mongoose.Schema({ // Creamos la base de datos y especificamos los campos con sus tipos
+const collection = 'instructores' // creamos una colección llamada instructores
+const InstructorSchema = new mongoose.Schema({
+// Creamos la base de datos y especificamos los campos con sus tipos
   owner: {type: String, required: false},
   category: { type: String, default: 'instructor' },
   imageUrl: String,
@@ -16,10 +18,10 @@ const InstructorSchema = new mongoose.Schema({ // Creamos la base de datos y esp
   long: Number,
   curriculum: String,
   mision: String,
-  articles: String,
-  books: String,
-  webs: String,
-  socials: String,
+  articles: [],
+  books: [],
+  webs: [],
+  socials: [],
   tags: String
 }, { collection })
 
@@ -30,5 +32,6 @@ InstructorSchema.virtual('imageurl').get(function () {
   return this.imageUrl
 })
 InstructorSchema.plugin(passportLocalMongoose)
-module.exports = mongoose.model('instructores', InstructorSchema) // exportamos el modelo creado de la base de datos + coleccion
+module.exports = mongoose.model('instructores', InstructorSchema)
+// exportamos el modelo creado de la base de datos + coleccion
 
