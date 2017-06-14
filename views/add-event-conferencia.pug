@@ -32,8 +32,7 @@ block content
             br
             fieldset.form-group.col-sm-2
               label Fotografía/ Logo
-              input.img-picker(type="file", name="image_item" id="image_item" )
-
+             input.img-picker(type="file", name="imageUrl" id="image_item" value= !conferencias ? " " : conferencias.imageUrl)
 		  
             fieldset.form-group.text-right.col-xs-12
               | Modalidad

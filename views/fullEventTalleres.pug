@@ -3,7 +3,7 @@ extends layout
 block content
   .welcome.text-center.container
     p#welcome-top.title-event
-     | #{retiros.title}
+     | #{talleres.title}
     .hr-line
   .my-container
 
@@ -13,14 +13,14 @@ block content
         //-   .img-responsive.carousel-inner.cont-slider
         //-     .item.active
         div.col-sm-12.col-md-12.col-lg-12.responsive-image
-        img(src= retiros.imageUrl, width="95%" height="350px", alt= retiros.title).image1
+        img(src= talleres.imageUrl, width="95%" height="350px", alt= talleres.title).image1
          
         div.col-sm-12.margin-description
           .panel-two
             .panel.panel-yellow
               .panel-heading.text-center Descripci&oacute;n
               .panel-body
-                p.margin-text #{retiros.description}
+                p.margin-text #{talleres.description}
 
       div.col-sm-6.col-md-4.event-margin
 
@@ -30,32 +30,32 @@ block content
             ul
                 li 
                   <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Maps/location-25.png" title="Marker" width="26" height="26">
-                  |&nbsp;&nbsp; Localidad: #{retiros.localitation}
+                  |&nbsp;&nbsp; Localidad: #{talleres.localitation}
                 hr
                 li
                   <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/calendar-25.png" title="Calendar" width="26" height="26">
-                  |&nbsp;&nbsp;Fecha Inicio: #{retiros.startDate}
+                  |&nbsp;&nbsp;Fecha Inicio: #{talleres.startDate}
                   br
-                  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fecha Fin: #{retiros.endDate}
+                  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fecha Fin: #{talleres.endDate}
                 hr
                 li 
                   <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/clock-25.png" title="Clock" width="26" height="26">
-                  |&nbsp;&nbsp; Hora Inicio: #{retiros.timeHourStart}:#{retiros.timeMinuteStart}
+                  |&nbsp;&nbsp; Hora Inicio: #{talleres.timeHourStart}:#{talleres.timeMinuteStart}
                   br
-                  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hora Fin: #{retiros.timeHourEnd}:#{retiros.timeMinuteEnd}
+                  |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hora Fin: #{talleres.timeHourEnd}:#{talleres.timeMinuteEnd}
                 hr
                  
                 li 
                   <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Finance/euro-25.png" title="Euro" width="26" height="26">
-                  |&nbsp;&nbsp; Precio: 275 €
+                  |&nbsp;&nbsp; Precio: #{talleres.price}
                 hr
                 li
                   img(src="https://maxcdn.icons8.com/dotty/PNG/80/Network/domain-80.png", title="Domain", width="26" height="26")
-                  |&nbsp;&nbsp; Web: www.mariasalvatierra.es
+                  |&nbsp;&nbsp; Web: #{talleres.web}
                 hr
                 li
                   img(src='https://maxcdn.icons8.com/dotty/PNG/80/Mobile/ringing_phone-80.png', title='Ringing Phone', width='26', height='26')
-                  |&nbsp;&nbsp;  Teléfono de contacto: 934567890   
+                  |&nbsp;&nbsp;  Teléfono de contacto: #{talleres.tel}  
 
       
         .row.file-event
@@ -76,12 +76,12 @@ block content
                                           js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');')
                             i.fa.fa-twitter
                     li
-                      a.facebook(target='_blank', title='Facebook', rel='nofollow', onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href=' http://www.facebook.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
+                      a.facebook(target='_blank', title='Facebook', rel='nofollow', onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href=' http://www.facebook.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ talleres._id) 
 
                             i.fa.fa-facebook    
                            
                     li
-                      a.google(target='_blank', title='Google plus', rel='nofollow',onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href='https://plus.google.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ retiros._id) 
+                      a.google(target='_blank', title='Google plus', rel='nofollow',onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;", href='https://plus.google.com/share?url=http://encuentratucamino.herokuapp.com/details/'+ talleres._id) 
 
                             i.fa.fa-google-     
 
@@ -92,8 +92,8 @@ block content
                   .panel-body.my-panel.bottom-map
                     span.text-center.c
                     #map
-                    input#long(name="long",hidden,  value= parseFloat(retiros.long) )
-                    input#lat(name="lat",hidden,  value= parseFloat(retiros.lat) )
+                    input#long(name="long",hidden,  value= parseFloat(talleres.long) )
+                    input#lat(name="lat",hidden,  value= parseFloat(talleres.lat) )
         .row.file-event 
           .col-sm-12
             .panel-bottom
@@ -101,7 +101,7 @@ block content
                 .panel-heading.text-center Tags 
                 .panel-tag
                   span.text-center.c     
-                  |#{retiros.tags}    
+                  |#{talleres.tags}    
      
 
   script(src='/js/mapsEvent.js')

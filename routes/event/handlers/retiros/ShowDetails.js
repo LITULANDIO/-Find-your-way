@@ -1,1 +1,1 @@
-module.exports = (req, res) => res.render('fullEvent')
+module.exports = (req, res) => res.render('fullEventRetiros')

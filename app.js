@@ -20,7 +20,7 @@ app.locals.moment = require('moment') // requerimos la libreria moments
 // app.use Middleware --> es una función conectora
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json()) // middleware que requerimos para poder utilizar el método post y recoger los valores del formulario
-app.use(multer({dest: './uploads'}).single('image_item'))
+app.use(multer({dest: './uploads'}).single('imageUrl'))
 app.use(method_override('_method'))
 app.set('view engine', 'pug') // declaramos que en la carpeta view (dinámica) se encuentran  las paginas apunto para ser renderizadas con pug
 

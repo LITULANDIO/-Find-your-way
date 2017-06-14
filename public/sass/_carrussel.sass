@@ -366,26 +366,52 @@ div.form-group.label-taller
   h1
     color: white
 
+
+.select-taller
+  @media screen and (min-width:360px) and (max-width: 640px)
+    margin-left: 2px
+    width: 195px
+
 .footer
+  h4
+    color: #f8af00
+
+    @media screen and (min-width:360px) and (max-width: 640px)
+      font-size: 12px !important
+      margin-left: -27px
+  ul
+    list-style: none
+    margin-left: -40px
+    @media screen and (min-width:300px) and (max-width: 700px)
+      padding-left: 10px
   a
     text-decoration: none !important
     color: white
   a:hover
-    color: #f8af00
+    color: #f8af00 !important
   color: white
   margin: auto 0px
   padding: 10px
   width: 100%
-  height: 100px
+  height: 257px
   background-color: #1d1d1b
   clear: both
   margin-top: 30px 
-  position: fixed
+  position: relative
   bottom: 0
+  border-style: solid
+  border-top-color: #f8af00
+
+.col-xs-3
+  width: 25% 
+  @media screen and (min-width:360px) and (max-width: 640px)
+    width: -1%
+    
   // @media screen and (min-width:300px) and (max-width: 2560px)
-  //   position: relative
+  //   position: -relative
   @media screen and (min-width:300px) and (max-width: 700px)
-    position: relative
+    font-size: 15px
+    padding-left: 20px
   @media screen and (min-width:768px) and (max-width: 1024px)
     position: relative
   @media screen and (min-width:1024px) and (max-width: 1366px)
@@ -455,3 +481,29 @@ div.form-group.label-taller
   font-size: 40px
 .text-bot
   font-size: 22px
+
+.copyright
+  display: flex
+  @media screen and (min-width:360px) and (max-width: 640px)
+    justify-content: space-between
+.map-food
+  display: flex
+  padding-top: 15px
+  @media screen and (min-width:360px) and (max-width: 640px)
+    margin-left: 55px
+    padding: 0px
+    display: block
+
+  h1
+    color: #f8af00
+.null
+  height: 400px
+
+  .mobile1
+    @media screen and (min-width:360px) and (max-width: 640px)
+      padding-left: 20px
+
+  .mobile2
+    @media screen and (min-width:360px) and (max-width: 640px)
+      padding-left: 20px
+

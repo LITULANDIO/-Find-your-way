@@ -2,6 +2,7 @@ const Retiro = require('../../../../models/retiros')
 
 module.exports = (req, res) => {
   const { id } = req.params
+  const { user } = req
 
   Retiro.findById(id)
     .then(retiros => {
@@ -9,7 +10,7 @@ module.exports = (req, res) => {
       const method = 'PUT'
       const edited = 'Modificar'
       console.log(retiros)
-      res.render('add-event-retiro', { retiros, action, method, edited })
+      res.render('add-event-retiro', { retiros, action, method, edited, user })
     })
     .catch(err => { throw err })
   console.log(id)

@@ -37,13 +37,13 @@ block content
               div
                 
                 <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Maps/location-25.png" title="Marker" width="26" height="26">
-                  |&nbsp;&nbsp; Localización #{retiros.localitation}
+                  |&nbsp;&nbsp; Localización: #{retiro.localitation}
                 
                  
               br
               div
                 <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/calendar-25.png" title="Calendar" width="26" height="26">
-                |&nbsp;&nbsp;Fecha: #{retiros.startDate}
+                |&nbsp;&nbsp;Fecha: #{retiro.startDate}
               p
                 |
               hr
@@ -56,7 +56,7 @@ block content
               |   #{retiro.tags} 
       if !retiros.length
         .container
-          h3 No se han encontrado retiros
+          h3.null No se han encontrado retiros
         
          
     .col-sm-5

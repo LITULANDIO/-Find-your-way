@@ -31,7 +31,7 @@ router.post('/login',
     session: true,
     successRedirect: '/acount',
     failureRedirect: '/login',
-    failureFlash: true }))
+    failureFlash: false }))
 
 // REGISTER
 router.post('/register', function (req, res, next) {

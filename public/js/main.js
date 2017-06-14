@@ -1,4 +1,4 @@
-// DELETE
+// DELETE RETIRO
 
   $('.remove').on('click', function (e) {
     e.preventDefault()
@@ -10,6 +10,71 @@
     $.ajax({ url, method, data })
     .then(() => {
       $(this).closest('.retiro').remove()
+    })
+
+    .catch(() => console.log('Error!!'))
+  })
+
+// DELETE FORMACION
+  $('.remove').on('click', function (e) {
+    e.preventDefault()
+    const url = '/acount'
+    const method = 'DELETE'
+    const id = $(this).attr('data-id')
+    const data = { id }
+
+    $.ajax({ url, method, data })
+    .then(() => {
+      $(this).closest('.formacion').remove()
+    })
+
+    .catch(() => console.log('Error!!'))
+  })
+
+  // DELETE TALLER
+
+  $('.remove').on('click', function (e) {
+    e.preventDefault()
+    const url = '/acount'
+    const method = 'DELETE'
+    const id = $(this).attr('data-id')
+    const data = { id }
+
+    $.ajax({ url, method, data })
+    .then(() => {
+      $(this).closest('.taller').remove()
+    })
+
+    .catch(() => console.log('Error!!'))
+  })
+
+// DELETE CONFERENCIA
+  $('.remove').on('click', function (e) {
+    e.preventDefault()
+    const url = '/acount'
+    const method = 'DELETE'
+    const id = $(this).attr('data-id')
+    const data = { id }
+
+    $.ajax({ url, method, data })
+    .then(() => {
+      $(this).closest('.conferencia').remove()
+    })
+
+    .catch(() => console.log('Error!!'))
+  })
+
+// DELETE INSTRUCTOR
+  $('.remove').on('click', function (e) {
+    e.preventDefault()
+    const url = '/acount'
+    const method = 'DELETE'
+    const id = $(this).attr('data-id')
+    const data = { id }
+
+    $.ajax({ url, method, data })
+    .then(() => {
+      $(this).closest('.instructor').remove()
     })
 
     .catch(() => console.log('Error!!'))

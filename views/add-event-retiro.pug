@@ -32,7 +32,7 @@ block content
             br
             fieldset.form-group.col-sm-2
               label Fotografía
-              input.img-picker(type="file", name="image_item" id="image_item" )   
+              input.img-picker(type="file", name="imageUrl" id="image_item" value= !retiros ? " " : retiros.imageUrl )    
               //- .img-picker
             
             //- fieldset.form-group.col-sm-2
@@ -168,6 +168,20 @@ block content
                 let textDescription = !retiros ? "" : retiros.description
               textarea#recipe-editor-ingredients.form-control(rows='10' name="description")=textDescription 
 
+          .col-xs-12
+            fieldset.form-group
+              |Servicio
+              br
+              label.radio-inline 
+                input(type="radio" name="Optradio" id="price")
+                | De pago
+              label.radio-inline
+                input(type="radio" name="Optradio" id="free")
+                | Gratuito
+
+
+
+
           .col-xs-4
              fieldset.form-group
               label(for='recipe-editor-directions') Precio
@@ -197,7 +211,7 @@ block content
   script(src='/bower_components/jquery/dist/jquery.min.js')
   script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
   script(src='/js/main.js')       
-  //-script(src='/js/imageLoad.js')
+  script(src="/js/disabled-input.js")
   script(src='/js/maps.js')
   script(src='/js/imageLoad.js')
   script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=initMap')

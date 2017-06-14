@@ -382,44 +382,70 @@ div.form-group.label-taller {
   .pre-footer h1 {
     color: white; }
 
+@media screen and (min-width: 360px) and (max-width: 640px) {
+  .select-taller {
+    margin-left: 2px;
+    width: 195px; } }
+
 .footer {
   color: white;
   margin: auto 0px;
   padding: 10px;
   width: 100%;
-  height: 100px;
+  height: 257px;
   background-color: #1d1d1b;
   clear: both;
   margin-top: 30px;
-  position: fixed;
-  bottom: 0; }
+  position: relative;
+  bottom: 0;
+  border-style: solid;
+  border-top-color: #f8af00; }
+  .footer h4 {
+    color: #f8af00; }
+    @media screen and (min-width: 360px) and (max-width: 640px) {
+      .footer h4 {
+        font-size: 12px !important;
+        margin-left: -27px; } }
+  .footer ul {
+    list-style: none;
+    margin-left: -40px; }
+    @media screen and (min-width: 300px) and (max-width: 700px) {
+      .footer ul {
+        padding-left: 10px; } }
   .footer a {
     text-decoration: none !important;
     color: white; }
   .footer a:hover {
-    color: #f8af00; }
+    color: #f8af00 !important; }
+
+.col-xs-3 {
+  width: 25%; }
+  @media screen and (min-width: 360px) and (max-width: 640px) {
+    .col-xs-3 {
+      width: -1%; } }
   @media screen and (min-width: 300px) and (max-width: 700px) {
-    .footer {
-      position: relative; } }
+    .col-xs-3 {
+      font-size: 15px;
+      padding-left: 20px; } }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .footer {
+    .col-xs-3 {
       position: relative; } }
   @media screen and (min-width: 1024px) and (max-width: 1366px) {
-    .footer {
+    .col-xs-3 {
       position: relative; } }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .footer {
+    .col-xs-3 {
       position: relative; } }
   @media screen and (min-width: 1680px) and (max-width: 1050px) {
-    .footer {
+    .col-xs-3 {
       position: relative; } }
   @media screen and (min-width: 2560px) and (max-width: 1440px) {
-    .footer {
+    .col-xs-3 {
       position: relative; } }
   @media screen and (min-width: 1600px) and (max-width: 900px) {
-    .footer {
+    .col-xs-3 {
       position: relative; } }
-  .footer .localitation {
+  .col-xs-3 .localitation {
     background-image: url("image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABfklEQVRIS6WW4TEFQRCEvxcBGSADIkAEiAARCAEZyAARIAJeBIgAGZCBajVbtbZmdmff219Xd3PT0z09c7cgdzaBI+AY0LXON/AIPNl1N9MigaPktxVA+4oAzw00TDcCugIuE8Uo5BpQvHt6QGLykAQpYScRswhIffgI5PqyrFtOEZJxx+tZBHRmfalz/ZgZXuzmgVW/0QCqX3dtERGQ3CSX1ecQKCDlvsCemzi5ULL/OxGQEu5XkZJrO+iX5KpZLQEVsBLQp2nvYa0FdANcrCida/NIOk97VS771maQ/cumKHXtAW9Z6RQnuSIL63kLoHvvwK6nb29gPYuP5te1tl4araCIlQfYc+YQaIZVuH4yjHq9qlm5s1MHjKRTbIaVtzVSA9v2oN0UU2yy0inOm6sCNmQzAxT1atibUk2mRyXW61U4NzObYbRA9X3ytoM71DOMlEAftFPLdG+OHG2Lv+ezQPV/RHdA15VOC/PVkrhbOqI3y0h56s9ESjYF/QKTs0cbPJsrEgAAAABJRU5ErkJggg== width='26' height='26'"); }
 
 .navbar-default .navbar-nav > li > a {
@@ -465,6 +491,32 @@ div.form-group.label-taller {
 
 .text-bot {
   font-size: 22px; }
+
+.copyright {
+  display: flex; }
+  @media screen and (min-width: 360px) and (max-width: 640px) {
+    .copyright {
+      justify-content: space-between; } }
+
+.map-food {
+  display: flex;
+  padding-top: 15px; }
+  @media screen and (min-width: 360px) and (max-width: 640px) {
+    .map-food {
+      margin-left: 55px;
+      padding: 0px;
+      display: block; } }
+  .map-food h1 {
+    color: #f8af00; }
+
+.null {
+  height: 400px; }
+  @media screen and (min-width: 360px) and (max-width: 640px) {
+    .null .mobile1 {
+      padding-left: 20px; } }
+  @media screen and (min-width: 360px) and (max-width: 640px) {
+    .null .mobile2 {
+      padding-left: 20px; } }
 
 .navbar-count {
   margin-top: -30px;
@@ -731,6 +783,9 @@ body {
 
 .well {
   margin-bottom: 100px; }
+
+.select-image {
+  font-family: Lobster Two; }
 
 .tcalInput {
   background: url("/img/cal.gif") 100% 50% no-repeat;

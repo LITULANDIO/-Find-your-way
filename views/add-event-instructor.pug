@@ -32,8 +32,7 @@ block content
             br
             fieldset.form-group.col-sm-2
               label Foto carnet
-              input.img-picker(type="file", name="image_item" id="image_item" )
-
+             input.img-picker(type="file", name="imageUrl" id="image_item" value= !instructores ? " " : instructores.imageUrl)
 		  
         .row
           .col-xs-4
