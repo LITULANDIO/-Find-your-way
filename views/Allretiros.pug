@@ -6,7 +6,11 @@ block content
     
       
     .col-sm-6.responsive
-      img(src='/img/search.png', width='26px', height='26px').ino
+      .encuentra
+        input#busqueda.form-control3(type='text', placeholder='Encuentra ...')
+        i.fa.fa-search
+
+      
       - var cities = ["Selecciona...", "Andalucía", "Baleares", "Canarias", "Cantabria", "Cataluña", "Galicia", "La Rioja", "Navarra", "Aragón", "Castilla-La Mancha", "Castilla y León", "Comunidad Valenciana", "Extremadura", "Comunidad Valenciana", "Madrid", "Región de Murcia"]; 
       select#sel2.intros( name="comunity") 
          each val in cities
@@ -16,44 +20,48 @@ block content
                     option(selected="selected")= selectComunity
                   else
                     option= val
+      
       h1#title-mine.title-terapies|: #{retiros.length}
       .hr-line2
         br
-        .container|Total encontrados: #{retiros.length}
+        .container
+          div.resultado Total encontrados: #{retiros.length}
       div.over
          
        
        each retiro in retiros
          
        
-          .col-sm-7.col-lg-4.events-link
-
-            .thumbnail.offer.margins.links.hvr-grow-shadow
-             a.image-a.img-responsive(href='/details/'+ retiro.id)
-              img(src= retiro.imageUrl, width="201px" height="174px" class="image2")
-              
-              h2.tit#box.text-center
-                |#{retiro.title} 
-              div
-                
-                <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Maps/location-25.png" title="Marker" width="26" height="26">
-                  |&nbsp;&nbsp; Localización: #{retiro.localitation}
+          div.total.events-link.col-sm-7.col-lg-4
+            div.cousin
+              div.result.thumbnail.offer.margins.links.hvr-grow-shadow
+               a.image-a.img-responsive(href='/details/'+ retiro.id)
+                img(src= retiro.imageUrl, width="201px" height="174px" class="image2")
                 
                  
-              br
-              div
-                <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/calendar-25.png" title="Calendar" width="26" height="26">
-                |&nbsp;&nbsp;Fecha: #{retiro.startDate}
-              p
-                |
-              hr
-                
-              div.iter
-                div.lat.hidden #{retiro.lat}
-                div.long.hidden #{retiro.long}
-                
-              img(src='https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/price_tag-24.png', title='Price Tag', width='24')
-              |   #{retiro.tags} 
+                div.tit#box.text-center
+                  h3.namer #{retiro.title} 
+                 
+                div.local
+                  img(src="https://maxcdn.icons8.com/iOS7/PNG/25/Maps/location-25.png" title="Marker" width="26" height="26")
+                  |&nbsp;&nbsp;Localización: #{retiro.localitation}
+                    
+                br
+                div.dater
+                  img(src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/calendar-25.png" title="Calendar" width="26" height="26")
+                  |&nbsp;&nbsp;Fecha: #{retiro.startDate}
+                p
+                  |
+                hr
+                  
+                div.iter
+                  div.lat.hidden #{retiro.lat}
+                  div.long.hidden #{retiro.long}
+                  
+                img(src='https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/price_tag-24.png', title='Price Tag', width='24')
+                h3.tags  #{retiro.tags}
+
+               
       if !retiros.length
         .container
           h3.null No se han encontrado retiros
@@ -61,7 +69,8 @@ block content
          
     .col-sm-5
       .col.sm-12
-        div#maps
+        div.cousin
+          div#maps
         
          
       
@@ -72,6 +81,7 @@ block content
       script(src='/js/allMaps.js')
       script(src='/js/filters.js')
       script(src='/js/SelectComunity.js')
+      script(src='/js/buscador.js')
           
       script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=viewMap')
       script(src='/js/insert-title.js')

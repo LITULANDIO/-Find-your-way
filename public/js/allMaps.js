@@ -11,7 +11,7 @@ window.onload = function () {
     coord.push({lat: Number(lat[i].innerHTML), lng: Number(long[i].innerHTML)})
   }
 
-  var tit = document.getElementsByClassName('tit')
+  var tit = document.getElementsByClassName('namer')
 
 // almaceno en un array los titulos de los eventos
   var titulos = []

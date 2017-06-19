@@ -89,9 +89,8 @@
       const $form = $(this)
       const title = $form.find('input[name="title"]').val()
       const image = $form.find('input[name="image_item"]').val()
-      const category = $form.find('select[name="category"]').val()
       const road = $form.find('select[name="road"]').val()
-      const comunity = $form.find('select[name="cominity"]').val()
+      const comunity = $form.find('select[name="comunity"]').val()
       const localitation = $form.find('input[name="localitation"]').val()
       const mision = $form.find('input[name="mision"]').val()
       const long = $form.find('input[name="long"]').val()
@@ -109,7 +108,7 @@
       const tags = $form.find('input[name="tags"]').val()
 
       const url = this.action
-      const data = `title=${title}&imageUrl=${image}&category=${category}&localitation=${localitation}&long=${long}&lat=${lat}&mision=${mision}road=${road}&comunity=${comunity}&startDate=${startDate}&timeHourStart=${timeHourStart}&timeMinuteStart=${timeMinuteStart}&endDate=${endDate}&timeHourEnd=${timeHourEnd}&timeMinuteEnd=${timeMinuteEnd}&description=${description}&price=${price}&tel=${tel}&web=${web}&tags=${tags}`
+      const data = `title=${title}&imageUrl=${image}&road=${road}&comunity=${comunity}&localitation=${localitation}&mision=${mision}&long=${long}&lat=${lat}&startDate=${startDate}&timeHourStart=${timeHourStart}&timeMinuteStart=${timeMinuteStart}&endDate=${endDate}&timeHourEnd=${timeHourEnd}&timeMinuteEnd=${timeMinuteEnd}&description=${description}&price=${price}&tel=${tel}&web=${web}&tags=${tags}`
 
       $.ajax({ url, data, method })
         .then(() => window.location = '/acount')

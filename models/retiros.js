@@ -13,7 +13,7 @@ const RetiroSchema = new mongoose.Schema({
   category: { type: String, default: 'retiro' },
   title: String,
   mision: String,
-  imageUrl: String,
+  imageUrl: { type: String, default: 'http://www.hsmq.cl/blog/wp-content/uploads/imagenes/img_no_disponible.jpg' },
   road: String,
   lat: Number,
   long: Number,
@@ -37,7 +37,7 @@ const RetiroSchema = new mongoose.Schema({
 
 RetiroSchema.virtual('imageurl').get(function () {
   if (this.imageUrl === undefined) {
-    return '.img/nodisponible.png'
+    return '.img/nodisponible.jpg'
   }
   return this.imageUrl
 })
