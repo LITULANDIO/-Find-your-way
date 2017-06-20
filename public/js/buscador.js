@@ -11,29 +11,35 @@ $(document).ready(function () {
       this.value = this.value.toLowerCase()
 //
       var clase = $('.encuentra i')
-      if ($(busqueda).val() != '') {
+      if ($(busqueda).val() != '' && $(titulo).filter(':visible')) {
         $(clase).attr('class', 'fa fa-times')
+        $('.resultado').text('Total encontrados: ' + $('.events-link').filter(':visible').length)
       } else {
         $(clase).attr('class', 'fa fa-search')
       }
       if ($(clase).hasClass('fa fa-times')) {
         $(clase).click(function () {
+          $('.resultado').text('Total encontrados: ' + $('.events-link').filter(':visible').length)
 // borramos el contenido del input
           $(busqueda).val('')
 // mostramos todas las listas
+
           $(h2).parent().show()
+          $('.resultado').text('Total encontrados: ' + $('.events-link').filter(':visible').length)
 // volvemos a añadir la clase para mostrar la lupa
           $(clase).attr('class', 'fa fa-search')
         })
       }
 // ocultamos toda la lista
       $(h2).parent().hide()
+      $('.resultado').text('Total encontrados: ' + $('.events-link').filter(':visible').length)
 // valor del h3
       var txt = $(this).val()
 // si hay coincidencias en la búsqueda cambiando a minusculas
       if ($(h2).text().toLowerCase().indexOf(txt) > -1) {
 // mostramos las listas que coincidan
         $(h2).parent().show()
+        $('.resultado').text('Total encontrados: ' + $('.events-link').filter(':visible').length)
       }
     })
   })
