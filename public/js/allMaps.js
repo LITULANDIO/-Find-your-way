@@ -40,7 +40,8 @@ window.onload = function () {
     var mapOptions = {
       zoom: 6,
       center: { lat: 40.4830106, lng: -4.087557299999958 },
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel: false
     }
 
     // construyo el mapa

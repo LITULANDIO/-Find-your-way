@@ -7,7 +7,7 @@ block content
       
     .col-sm-6.responsive
       .encuentra
-        input#busqueda.form-control3(type='text', placeholder='Encuentra ...')
+        input#busqueda.form-control3(type='text', placeholder='Encuentra por nombre, ciudad, fecha...')
         i.fa.fa-search
 
       
@@ -21,7 +21,7 @@ block content
                   else
                     option= val
       
-      h1#title-mine.title-terapies|: #{retiros.length}
+      h1#title-mine.title-terapies
       .hr-line2
         br
         .container
@@ -44,22 +44,19 @@ block content
                  
                 div.local
                   img(src="https://maxcdn.icons8.com/iOS7/PNG/25/Maps/location-25.png" title="Marker" width="26" height="26")
-                  |&nbsp;&nbsp;Localización: #{retiro.localitation}
+                  |&nbsp;#{retiro.localitation}, #{retiro.comunity}
                     
                 br
                 div.dater
                   img(src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/calendar-25.png" title="Calendar" width="26" height="26")
-                  |&nbsp;&nbsp;Fecha: #{retiro.startDate}
-                p
-                  |
-                hr
-                  
+                  |&nbsp;&nbsp;#{retiro.startDate}
+                br      
                 div.iter
                   div.lat.hidden #{retiro.lat}
                   div.long.hidden #{retiro.long}
-                  
+                button.btn-warning.view-more(type="button") Ver más ...
                 img(src='https://maxcdn.icons8.com/Android_L/PNG/24/Ecommerce/price_tag-24.png', title='Price Tag', width='24')
-                h3.tags  #{retiro.tags}
+                div.tags.text-center  #{retiro.tags}
 
                
       if !retiros.length

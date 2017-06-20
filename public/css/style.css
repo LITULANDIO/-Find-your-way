@@ -14,9 +14,10 @@
       margin-top: 79px; } }
 
 .intros {
-  margin-top: 22px;
+  z-index: 1;
+  margin-top: -23px;
   position: absolute;
-  margin-left: 211px;
+  margin-left: 793px;
   border-bottom: 1px solid #f8af00;
   outline: 0px;
   border-top: 0px;
@@ -253,7 +254,6 @@ div.form-group.label-taller {
 
 .hr-line {
   margin-bottom: 30px;
-  margin-top: -30px !important;
   width: 100%;
   height: 4px;
   background-color: #f8af00; }
@@ -389,13 +389,11 @@ div.form-group.label-taller {
 
 .footer {
   color: white;
-  margin: auto 0px;
   padding: 10px;
   width: 100%;
   height: 257px;
   background-color: #1d1d1b;
   clear: both;
-  margin-top: 30px;
   position: relative;
   bottom: 0;
   border-style: solid;
@@ -506,15 +504,15 @@ div.form-group.label-taller {
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  width: 173px;
+  width: 345px;
   font-size: 21px;
-  margin-left: -148px;
+  margin-left: -36px;
   margin-top: 18px; }
 
 .encuentra i {
   position: absolute;
   cursor: pointer;
-  left: 0px;
+  left: 280px;
   top: 20px; }
 
 .namer {
@@ -528,6 +526,9 @@ div.form-group.label-taller {
 
 .tags {
   color: grey; }
+
+.view-more {
+  width: 100%; }
 
 .copyright {
   display: flex; }
@@ -1195,7 +1196,7 @@ div.panel-body {
   border-radius: 0px !important;
   height: 100%;
   color: #4D4D4D;
-  padding: 0px !important; }
+  padding: 15px !important; }
 
 .panel-tag {
   padding: 15px; }
