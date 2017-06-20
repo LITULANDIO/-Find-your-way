@@ -38,7 +38,7 @@ $(document).ready(function () {
       var footer = $('.footer')
       var results = $('.events-link').filter(':visible').length
 
-      if (results === 0) {
+      if (results <= 3) {
         footer.css('margin-top', '520px')
       } else {
         footer.css('margin-top', '50px')

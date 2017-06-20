@@ -10,16 +10,63 @@ block content
         input#busqueda.form-control3(type='text', placeholder='Encuentra por nombre, ciudad, fecha...')
         i.fa.fa-search
 
-      
-      - var cities = ["Selecciona...", "Andalucía", "Baleares", "Canarias", "Cantabria", "Cataluña", "Galicia", "La Rioja", "Navarra", "Aragón", "Castilla-La Mancha", "Castilla y León", "Comunidad Valenciana", "Extremadura", "Comunidad Valenciana", "Madrid", "Región de Murcia"]; 
       select#sel2.intros( name="comunity") 
-         each val in cities
-                  -
-                    let selectComunity = !retiros ? "" : retiros.comunity
-                  if (selectComunity === (val) )
-                    option(selected="selected")= selectComunity
-                  else
-                    option= val
+        option(value='0') Encuentra tu lugar ...
+        option(value='A Coruña') A Coruña
+        option(value='Álava') Álava
+        option(value='Albacete') Albacete
+        option(value='Alicante') Alicante
+        option(value='Almería') Almería
+        option(value='Asturias') Asturias
+        option(value='Ávila') Ávila
+        option(value='Badajoz') Badajoz
+        option(value='Barcelona') Barcelona
+        option(value='Burgos') Burgos
+        option(value='Cáceres') Cáceres
+        option(value='Cádiz') Cádiz
+        option(value='Cantabria') Cantabria
+        option(value='Castellón') Castellón
+        option(value='Ceuta') Ceuta
+        option(value='Ciudad Real') Ciudad Real
+        option(value='Córdoba') Córdoba
+        option(value='Cuenca') Cuenca
+        option(value='Gerona') Gerona
+        option(value='Granada') Granada
+        option(value='Guadalajara') Guadalajara
+        option(value='Guipúzcoa') Guipúzcoa
+        option(value='Huelva') Huelva
+        option(value='Huesca') Huesca
+        option(value='Ibiza') Ibiza
+        option(value='Jaén') Jaén
+        option(value='La Rioja') La Rioja
+        option(value='Las Palmas') Las Palmas
+        option(value='León') León
+        option(value='Lleida') Lleida
+        option(value='Lugo') Lugo
+        option(value='Madrid') Madrid
+        option(value='Malaga') Málaga
+        option(value='Mallorca') Mallorca
+        option(value='Melilla') Melilla
+        option(value='Menorca') Menorca
+        option(value='Murcia') Murcia
+        option(value='Navarra') Navarra
+        option(value='Orense') Orense
+        option(value='Palencia') Palencia
+        option(value='Pontevedra') Pontevedra
+        option(value='Salamanca') Salamanca
+        option(value='Segovia') Segovia
+        option(value='Sevilla') Sevilla
+        option(value='Soria') Soria
+        option(value='Tarragona') Tarragona
+        option(value='Tenerife') Tenerife
+        option(value='Teruel') Teruel
+        option(value='Toledo') Toledo
+        option(value='Valencia') Valencia
+        option(value='Valladolid') Valladolid
+        option(value='Vizcaya') Vizcaya
+        option(value='Zamora') Zamora
+        option(value='Zaragoza') Zaragoza
+      
       
       h1#title-mine.title-terapies
       .hr-line2
@@ -75,9 +122,65 @@ block content
 
             
       script(src="/bower_components/jquery/dist/jquery.min.js")       
-      script(src='/js/allMaps.js')
-      script(src='/js/filters.js')
-      script(src='/js/SelectComunity.js')
+      script(src='/js/maps/allMaps.js')
+      script(src='/js/maps/filtersMapACoruña.js')
+      script(src='/js/maps/filtersMapAlaba.js')
+      script(src='/js/maps/filtersMapAlbacete.js')
+      script(src='/js/maps/filtersMapAlicante.js')
+      script(src='/js/maps/filtersMapAlmeria.js')
+      script(src='/js/maps/filtersMapAvila.js')
+      script(src='/js/maps/filtersMapAsturias.js')
+      script(src='/js/maps/filtersMapBadajoz.js')
+      script(src='/js/maps/filtersMapBarcelona.js')
+      script(src='/js/maps/filtersMapBurgos.js')
+      script(src='/js/maps/filtersMapCaceres.js')
+      script(src='/js/maps/filtersMapCantabria.js')
+      script(src='/js/maps/filtersMapCadiz.js')
+      script(src='/js/maps/filtersMapCastellon.js')
+      script(src='/js/maps/filtersMapCeuta.js')
+      script(src='/js/maps/filtersMapCiudadReal.js')
+      script(src='/js/maps/filtersMapCordoba.js')
+      script(src='/js/maps/filtersMapCuenca.js')
+      script(src='/js/maps/filtersMapGerona.js')
+      script(src='/js/maps/filtersMapGranada.js')
+      script(src='/js/maps/filtersMapGuadalajara.js')
+      script(src='/js/maps/filtersMapGuipuzcoa.js')
+      script(src='/js/maps/filtersMapHuelva.js')
+      script(src='/js/maps/filtersMapHuesca.js')
+      script(src='/js/maps/filtersMapIbiza.js')
+      script(src='/js/maps/filtersMapJaen.js')
+      script(src='/js/maps/filtersMapLaRioja.js')
+      script(src='/js/maps/filtersMapLasPalmas.js')
+      script(src='/js/maps/filtersMapLeon.js')
+      script(src='/js/maps/filtersMapLleida.js')
+      script(src='/js/maps/filtersMapLugo.js')
+      script(src='/js/maps/filtersMapMadrid.js')
+      script(src='/js/maps/filtersMapMalaga.js')
+      script(src='/js/maps/filtersMapMallorca.js')
+      script(src='/js/maps/filtersMapMelilla.js')
+      script(src='/js/maps/filtersMapMenorca.js')
+      script(src='/js/maps/filtersMapMurcia.js')
+      script(src='/js/maps/filtersMapNavarra.js')
+      script(src='/js/maps/filtersMapOrense.js')
+      script(src='/js/maps/filtersMapPalencia.js')
+      script(src='/js/maps/filtersMapPontevedra.js')
+      script(src='/js/maps/filtersMapSalamanca.js')
+      script(src='/js/maps/filtersMapSegovia.js')
+      script(src='/js/maps/filtersMapSevilla.js')
+      script(src='/js/maps/filtersMapSoria.js')
+      script(src='/js/maps/filtersMapTarragona.js')
+      script(src='/js/maps/filtersMapTenerife.js')
+      script(src='/js/maps/filtersMapTeruel.js')
+      script(src='/js/maps/filtersMapToledo.js')
+      script(src='/js/maps/filtersMapValencia.js')
+      script(src='/js/maps/filtersMapValladolid.js')
+      script(src='/js/maps/filtersMapVizcaya.js')
+      script(src='/js/maps/filtersMapZamora.js')
+      script(src='/js/maps/filtersMapZaragoza.js')
+
+
+
+      //- script(src='/js/SelectComunity.js')
       script(src='/js/buscador.js')
           
       script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=viewMap')
