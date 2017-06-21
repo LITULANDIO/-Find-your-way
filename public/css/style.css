@@ -24,7 +24,8 @@
   border-left: 0px;
   border-right: 0px;
   width: 190px;
-  font-size: 21px; }
+  font-size: 21px;
+  background-color: #a4ddf5 !important; }
   @media screen and (min-width: 300px) and (max-width: 768px) {
     .intros {
       display: none; } }
@@ -205,7 +206,7 @@ label.size-categories {
     .top-menu {
       margin-top: 0px; } }
 
-.center-logo li {
+.center-logo li a {
   padding-left: 30px;
   font-size: 22px;
   color: #3f5f74;
@@ -213,9 +214,9 @@ label.size-categories {
   position: relative;
   padding-bottom: 2px; }
   @media screen and (min-width: 100px) and (max-width: 747px) {
-    .center-logo li {
+    .center-logo li a {
       font-size: 15px; } }
-  .center-logo li:after {
+  .center-logo li a:after {
     content: "";
     display: block;
     position: absolute;
@@ -225,7 +226,7 @@ label.size-categories {
     width: 0;
     background: transparent;
     transition: width 0.5s ease, background-color 0.5s ease; }
-  .center-logo li:hover:after {
+  .center-logo li a:hover:after {
     width: 100%;
     background: #f8af00; }
 
@@ -657,12 +658,59 @@ label {
 form input:invalid {
   border: 2px solid red; }
 
+li.log {
+  padding-left: 0px;
+  font-size: 18px;
+  color: #3f5f74;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px; }
+  li.log:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 255px;
+    bottom: 0;
+    height: 6px;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease; }
+  li.log:hover:after {
+    width: 28%;
+    background: #f8af00; }
+
+li.reg {
+  padding-left: 0px;
+  font-size: 18px;
+  color: #3f5f74;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 2px; }
+  li.reg:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 175px;
+    bottom: 0;
+    height: 6px;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease; }
+  li.reg:hover:after {
+    width: 230%;
+    background: #f8af00; }
+
+.logueo {
+  list-style: none; }
+
 #login {
   margin-top: -18px;
-  margin-right: 264px; }
+  margin-right: 264px;
+  color: #062f4a !important;
+  text-decoration: none; }
 
 #register {
-  margin-left: -227px; }
+  margin-left: -227px;
+  color: #062f4a !important;
+  text-decoration: none; }
   #register .checkbox {
     padding-left: 20px; }
     #register .checkbox input[type=checkbox] {

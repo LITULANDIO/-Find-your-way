@@ -33,13 +33,59 @@ label
  
 form input:invalid
   border: 2px solid red
+li.log
+  padding-left: 0px
+  font-size: 18px
+  color: #3f5f74
+  display: inline-block
+  position: relative
+  padding-bottom: 2px
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    right: 255px
+    bottom: 0
+    height: 6px
+    background: transparent
+    transition: width .5s ease, background-color .5s ease
+  &:hover:after
+    width: 28%
+    background: #f8af00
+li.reg
+  padding-left: 0px
+  font-size: 18px
+  color: #3f5f74
+  display: inline-block
+  position: relative
+  padding-bottom: 2px
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    right: 175px
+    bottom: 0
+    height: 6px
+    background: transparent
+    transition: width .5s ease, background-color .5s ease
+  &:hover:after
+    width: 230%
+    background: #f8af00
 
-  
-#login
+.logueo
+  list-style: none
+#login 
   margin-top: -18px
   margin-right: 264px
+  color: #062f4a !important
+  text-decoration: none
+ 
+
 #register
   margin-left: -227px
+  color: #062f4a !important
+  text-decoration: none
+
   .checkbox
     input[type=checkbox]
       margin-left: 0px

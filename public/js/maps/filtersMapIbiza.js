@@ -37,7 +37,7 @@ $(document).ready(function () {
       function viewMap () {
     // Objeto utilizado para la manipulación de las opciones del mapa.
         var mapOptions = {
-          zoom: 10,
+          zoom: 11,
           center: { lat: 39.0200099, lng: 1.4821481999999833 },
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           scrollwheel: false
