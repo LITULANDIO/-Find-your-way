@@ -24,8 +24,7 @@
   border-left: 0px;
   border-right: 0px;
   width: 190px;
-  font-size: 21px;
-  background-color: #a4ddf5 !important; }
+  font-size: 21px; }
   @media screen and (min-width: 300px) and (max-width: 768px) {
     .intros {
       display: none; } }
@@ -206,7 +205,7 @@ label.size-categories {
     .top-menu {
       margin-top: 0px; } }
 
-.center-logo li a {
+.center-logo li {
   padding-left: 30px;
   font-size: 22px;
   color: #3f5f74;
@@ -214,9 +213,9 @@ label.size-categories {
   position: relative;
   padding-bottom: 2px; }
   @media screen and (min-width: 100px) and (max-width: 747px) {
-    .center-logo li a {
+    .center-logo li {
       font-size: 15px; } }
-  .center-logo li a:after {
+  .center-logo li:after {
     content: "";
     display: block;
     position: absolute;
@@ -226,7 +225,7 @@ label.size-categories {
     width: 0;
     background: transparent;
     transition: width 0.5s ease, background-color 0.5s ease; }
-  .center-logo li a:hover:after {
+  .center-logo li:hover:after {
     width: 100%;
     background: #f8af00; }
 
