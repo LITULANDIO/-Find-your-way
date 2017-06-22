@@ -7,7 +7,7 @@ function initMap () {
   var geocoder = new google.maps.Geocoder()
   var infowindow = new google.maps.InfoWindow()
 
-  document.getElementById('submit').addEventListener('click', function () {
+  document.getElementById('search-map').addEventListener('click', function () {
     geocodeAddress(geocoder, map, infowindow)
   })
 }

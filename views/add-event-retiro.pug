@@ -1,8 +1,7 @@
 extends layout
 
-block content
- 
-  .welcome.text-center.container
+block content 
+  .welcome.text-center.container 
     p#welcome-top
      
       if (method==='PUT')
@@ -25,14 +24,14 @@ block content
  
   h1.font-categories.container Retiros
   .container.well
-      form.edit-retiro(action= action ? action : '/acount-retiro/add' method= method ? method : 'POST' enctype="multipart/form-data")
+      form.edit-retiro(action= action ? action : '/acount-retiro/add' method= method ? method : 'POST' enctype="multipart/form-data", onload="initialize()")
         .container
           .col-sm-8        
         .row
             br
             fieldset.form-group.col-sm-2
               label Fotografía
-              input.img-picker(type="file", name="imageUrl" id="image_item" value= !retiros ? " " : retiros.image_item )    
+              input.img-picker(type="file", name="imageUrl" id="image_item" value= !retiros ? " " : retiros.image_Url )    
               //- .img-picker
             
             //- fieldset.form-group.col-sm-2
@@ -87,16 +86,16 @@ block content
             fieldset.form-group
               label(for='recipetitle') Localidad
               |
-              input#pac-input.controls.form-control(rows='1',type="textbox", maxlength='30', name="localitation" value= !retiros ? " " : retiros.localitation  )
+              input#pac-input.controls.form-control(rows='1',type="textbox", onFocus="geolocate()", maxlength='30', name="localitation" value= !retiros ? " " : retiros.localitation  )
           .col-xs-6.col-md-6
             fieldset.form-group
               label Misión
               |
-              input#pac-input.controls.form-control(rows='1',type="textbox", maxlength='50', name="mision" value= !retiros ? " " : retiros.mision  )
+              input.controls.form-control(rows='1',type="textbox", maxlength='50', name="mision" value= !retiros ? " " : retiros.mision  )
               
                
           .col-xs-12 
-              input#submit(type='button', value='Encuentra la localidad')  
+              input#search-map(type='button', value='Encuentra la localidad')  
               #map
               input#long(name="long",hidden,  value= !retiros ? " " : retiros.long  )
               input#lat(name="lat",hidden,  value= !retiros ? " " : retiros.lat  )
@@ -212,9 +211,10 @@ block content
   script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
   script(src='/js/main.js')       
   script(src="/js/disabled-input.js")
-  script(src='/js/maps.js')
+  script(src='/js/maps/maps.js')
   script(src='/js/imageLoad.js')
   script(src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2CtWqsM0k23XnQMwJQXASOmNEkE8IAgM&callback=initMap')
+  script(src='/js/maps/autocompleteMaps.js')
 
 
   //- .container          

@@ -1,3 +1,4 @@
+
 window.onload = function () {
   // Funcion que muestra la ubicacion de los objetos en Google Maps
   var map
@@ -62,14 +63,15 @@ window.onload = function () {
     scaledSize: new google.maps.Size(25, 25)
   }
 
-  function addMarker (m_position, m_title) {
+  function addMarker (m_position, m_title, info) {
     window.setTimeout(function () {
       var marker = new google.maps.Marker({
         position: m_position,
         icon: image,
         map: map,
         animation: google.maps.Animation.DROP,
-        title: m_title
+        title: m_title,
+        infowindow: info
 
       })
       marker.addListener('click', function () {
@@ -78,11 +80,14 @@ window.onload = function () {
     }, 1000)
   }
 
+  // var titulo = document.getElementsByClassName('events-link')
+
+  // if (titulo.filter(':visible')) {
   // agrego multiples POIs al mapa
   function addMarkers () {
     for (var i = 0; i < coord.length; i++) {
       var location = { lat: coord[i].lat, lng: coord[i].lng }
-      addMarker(location, titulos[i])
+      addMarker(location, titulos[i], info[i])
     }
   }
 
@@ -102,3 +107,4 @@ window.onload = function () {
 //       resultsMap.setCenter(results[0].geometry.location)
 // }})
 }
+
