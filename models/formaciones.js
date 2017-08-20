@@ -1,11 +1,13 @@
 const mongoose = require('mongoose') // requerimos mongoose
-const collection = 'formaciones' // creamos una colección llamada retiros
+
 const passportLocalMongoose = require('passport-local-mongoose')
 
 const moment = require('moment') // libreria moments
 moment.locale('es') // traducir moments de inglés a español
 
-const FormacionSchema = new mongoose.Schema({ // Creamos la base de datos y especificamos los campos con sus tipos
+const collection = 'formaciones' // creamos una colección llamada formaciones
+const FormacionSchema = new mongoose.Schema({
+// Creamos la base de datos y especificamos los campos con sus tipos
   owner: {type: String, required: false},
   category: { type: String, default: 'formacion' },
   title: String,
@@ -26,6 +28,7 @@ const FormacionSchema = new mongoose.Schema({ // Creamos la base de datos y espe
   timeHourEnd: Number,
   timeMinuteEnd: Number,
   description: String,
+  Service: Boolean,
   price: Number,
   tel: Number,
   web: String,
@@ -39,5 +42,6 @@ FormacionSchema.virtual('imageurl').get(function () {
   return this.imageUrl
 })
 FormacionSchema.plugin(passportLocalMongoose)
-module.exports = mongoose.model('formaciones', FormacionSchema) // exportamos el modelo creado de la base de datos + coleccion
+module.exports = mongoose.model('formaciones', FormacionSchema)
+// exportamos el modelo creado de la base de datos + coleccion
 

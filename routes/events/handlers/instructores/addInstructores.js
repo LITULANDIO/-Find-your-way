@@ -25,8 +25,9 @@ module.exports = (req, res) => {
   const { articles } = req.body
   const { books } = req.body
   const { webs } = req.body
+  const { socials } = req.body
   const { tags } = req.body
-  const instructor = new Instructor({ owner, imageUrl, nombre, apellidos, category, road, comunity, localitation, lat, long, curriculum, mision, articles, books, webs, tags })
+  const instructor = new Instructor({ owner, imageUrl, nombre, apellidos, category, road, comunity, localitation, lat, long, curriculum, mision, articles, books, webs, socials, tags })
 
   console.log('la imagen es: ' + req.file.imageUrl)
 

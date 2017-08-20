@@ -14,6 +14,7 @@ module.exports = (req, res) => {
   const { title } = req.body
   const { category } = req.body
   const { mision } = req.body
+  const { aprender } = req.body
   const { imageUrl } = req.file
   const { road } = req.body
   const { lat } = req.body
@@ -31,7 +32,7 @@ module.exports = (req, res) => {
   const { tel } = req.body
   const { web } = req.body
   const { tags } = req.body
-  const formacion = new Formacion({ owner, title, mision, imageUrl, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, price, tel, web, tags })
+  const formacion = new Formacion({ owner, title, mision, aprender, imageUrl, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, price, tel, web, tags })
 
   console.log('la imagen es: ' + req.file.imageUrl)
 

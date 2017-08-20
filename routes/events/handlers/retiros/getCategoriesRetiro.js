@@ -17,7 +17,8 @@ module.exports = (req, res) => {
 
   const conferencia = Conferencia.find({ 'owner': user.username })
 
-  Promise.all([retir, taller, instructor, formacion, conferencia]).then(eventos => res.render('myAcount', { eventos, user }))
+  Promise.all([retir, taller, instructor, formacion, conferencia])
+  .then(eventos => res.render('myAcount', { eventos, user }))
     .catch(err => { throw err })
 }
 

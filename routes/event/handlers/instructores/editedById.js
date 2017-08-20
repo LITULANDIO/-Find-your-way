@@ -7,7 +7,7 @@ module.exports = (req, res) => {
 
   Instructor.findByIdAndUpdate(id, {nombre, apellidos, road, comunity, localitation, lat, long, curriculum, mision, articles, books, webs, socials, tags })
     .then(instructores => {
-      console.log('retiro modificado correctamente: ' + id)
+      console.log('instructor modificado correctamente: ' + id)
       res.status(200).json(instructores)
     })
     .catch(err => res.status(500).json(err))

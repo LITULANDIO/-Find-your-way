@@ -1,4 +1,6 @@
 node_modules
 .notes
 bower_components
-
+uploads
+routes
+public/js

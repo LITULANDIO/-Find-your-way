@@ -41,4 +41,5 @@ TallerSchema.virtual('imageurl').get(function () {
   return this.imageUrl
 })
 TallerSchema.plugin(passportLocalMongoose)
-module.exports = mongoose.model('talleres', TallerSchema) // exportamos el modelo creado de la base de datos + coleccion
+module.exports = mongoose.model('talleres', TallerSchema)
+// exportamos el modelo creado de la base de datos + coleccion

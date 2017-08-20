@@ -1,73 +1,66 @@
+    // This example displays an address form, using the autocomplete feature
+      // of the Google Places API to help users fill in the information.
 
-var placeSearch, autocomplete, autocomplete_textarea
-var componentForm = {
-  street_number: 'short_name',
-  route: 'long_name',
-  locality: 'long_name',
-  administrative_area_level_1: 'short_name',
-  country: 'long_name',
-  postal_code: 'short_name'
-}
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-function initialize () {
-  // Cree el objeto de autocompletado, restringiendo la búsqueda
-  autocomplete = new google.maps.places.Autocomplete(
-     (document.getElementById('pac-input')),
-      { types: ['geocode'] })
-  // Cuando el usuario selecciona una dirección en el menú desplegable,
-  // rellena los campos de dirección en el formulario.
-  google.maps.event.addListener(autocomplete, 'place_changed', function () {
-    fillInAddress()
-  })
+      var placeSearch, autocomplete
+      var componentForm = {
+        street_number: 'short_name',
+        route: 'long_name',
+        locality: 'long_name',
+        administrative_area_level_1: 'short_name',
+        country: 'long_name',
+        postal_code: 'short_name'
+      }
 
-  autocomplete_textarea = new google.maps.places.Autocomplete((document.getElementById('pac-input')),
-      { types: ['geocode'] }
-  )
-  google.maps.event.addListener(autocomplete_textarea, 'place_changed', function () {
-    fillInAddress_textarea()
-  })
-}
+      function initAutocomplete () {
+        // Create the autocomplete object, restricting the search to geographical
+        // location types.
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */(document.getElementById('autocomplete')),
+            {types: ['geocode']})
 
-function fillInAddress_textarea () {
-  var place = autocomplete_textarea.getPlace()
-  console.log(place.formatted_address)
-  console.log(JSON.stringify(place))
-  $('#pac-input').val(place.formatted_address)
-}
+        // When the user selects an address from the dropdown, populate the address
+        // fields in the form.
+        autocomplete.addListener('place_changed', fillInAddress)
+      }
 
-function fillInAddress () {
-  // Obtener los detalles de lugar el objeto de autocompletado.
-  var place = autocomplete.getPlace()
-  console.log(JSON.stringify(place))
-  for (var component in componentForm) {
-    document.getElementById(component).value = ''
-    document.getElementById(component).disabled = false
-  }
+      function fillInAddress () {
+        // Get the place details from the autocomplete object.
+        var place = autocomplete.getPlace()
 
-  // Recibe cada componente de la dirección de los lugares más detalles
-  // y llena el campo correspondiente en el formulario.
-  for (var i = 0; i < place.address_components.length; i++) {
-    var addressType = place.address_components[i].types[0]
-    if (componentForm[addressType]) {
-      var val = place.address_components[i][componentForm[addressType]]
-      document.getElementById(addressType).value = val
-    }
-  }
-}
+        for (var component in componentForm) {
+          document.getElementById(component).value = ''
+          document.getElementById(component).disabled = false
+        }
 
-// ubicación geográfica del usuario,
+        // Get each component of the address from the place details
+        // and fill the corresponding field on the form.
+        for (var i = 0; i < place.address_components.length; i++) {
+          var addressType = place.address_components[i].types[0]
+          if (componentForm[addressType]) {
+            var val = place.address_components[i][componentForm[addressType]]
+            document.getElementById(addressType).value = val
+          }
+        }
+      }
 
-function geolocate () {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      var geolocation = new google.maps.LatLng(
-          position.coords.latitude, position.coords.longitude)
-      var circle = new google.maps.Circle({
-        center: geolocation,
-        radius: position.coords.accuracy
-      })
-      autocomplete.setBounds(circle.getBounds())
-      autocomplete_textarea.setBounds(circle.getBounds())
-    })
-  }
-}
+      // Bias the autocomplete object to the user's geographical location,
+      // as supplied by the browser's 'navigator.geolocation' object.
+      function geolocate () {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (position) {
+            var geolocation = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            }
+            var circle = new google.maps.Circle({
+              center: geolocation,
+              radius: position.coords.accuracy
+            })
+            autocomplete.setBounds(circle.getBounds())
+          })
+        }
+      }
