@@ -50,22 +50,37 @@ nav.navbar.navbar-default.navbar-fixed-top.header-mine
           .col-xs-12.col-md-12
             h2.title-find "Encuentra tu camino"
       ul.top-menu
-        //-li
-          //-a(href='about.html')
-            //- | Encuentra 
-            //- small
-            //-   i.glyphicon.glyphicon-menu-down
-          //- li
-          //-   a(href='about.html')  Conóncenos
-          //- li
-          //-   a(href='about.html')  Blog
-        li
+        li#link-sup.menu_li
+          a.dropdown-toggle(title='Encuentra', href='#', data-toggle='dropdown', aria-haspopup='true')
+            | Encuentra 
+            small
+              i.glyphicon.glyphicon-menu-down
+          ul.dropdown-menu(role='menu')
+            li
+              a(href='/retiros') Retios
+            |
+            li
+              a(href='/formaciones') Formaciones
+            |  
+            li
+              a(href='talleres') Talleres
+            |
+            li
+              a(href='conferencias') Conferencias
+            |  
+            li
+              a(href='instructores') Instructores
+            |
+            li.hola
+          
+        li.anuncio-free
           if user
             a(href='/acount')
               i.glyphicon.glyphicon-user
               |  Mi Cuenta
           else
             a(href='/login')  Anúnciate gratis
+
 
 include includes/footer.pug
   block content
@@ -116,6 +131,7 @@ include includes/footer.pug
   script(src='/js/imageLoad.js')
   script(src='/js/allMaps.js')
   script(src='/js/insert-title.js')
+  script(src='/js/menu.js')
  
 
 
