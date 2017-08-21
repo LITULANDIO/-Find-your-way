@@ -1,13 +1,10 @@
-
-// menu: hover Encuentra
-
   $(document).ready(function () {
     $('.menu_li').on({
-      moouseover: function () {
+      mouseenter: function () {
         $(this).addClass('hover_menu')
         $(this).find('ul').fadeIn(300)
         $('.menu_li ul').on({
-          mouseover: function () {
+          mouseenter: function () {
             $(this).parent('.menu_li').addClass('hover_menu')
           },
           mouseleave: function () {
