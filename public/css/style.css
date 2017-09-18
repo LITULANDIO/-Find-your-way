@@ -592,7 +592,7 @@ div.form-group.label-taller {
   padding-top: 15px; }
   @media screen and (min-width: 360px) and (max-width: 640px) {
     .map-food {
-      margin-left: 55px;
+      margin-left: 0px;
       padding: 0px;
       display: block; } }
   .map-food h1 {
@@ -668,16 +668,30 @@ div.form-group.label-taller {
 
 @media screen and (max-width: 414px) {
   .mobile1 {
-    padding-left: 0; } }
+    padding-left: 41px;
+    font-size: 16px; } }
+
+@media screen and (max-width: 414px) {
+  .mobile2 {
+    padding-left: 52px;
+    font-size: 16px; } }
 
 @media screen and (max-width: 414px) {
   .mobile3 {
-    padding-left: 34px; } }
+    padding-left: 54px;
+    font-size: 16px; } }
 
 @media screen and (max-width: 414px) {
   .copyright.col-xs-12 {
     font-size: 15px;
     margin-top: 39px; } }
+
+@media screen and (max-width: 375px) {
+  .map-food {
+    margin-left: 0px; } }
+@media screen and (max-width: 414px) {
+  .map-food {
+    margin-left: 0px; } }
 
 .navbar-count {
   margin-top: -30px;
