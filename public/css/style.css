@@ -622,11 +622,11 @@ div.form-group.label-taller {
 
 @media screen and (max-width: 414px) {
   li#link-sup {
-    margin-top: 43px; } }
+    margin-top: 8px; } }
 
 @media screen and (max-width: 414px) {
   li.anuncio-free {
-    margin-top: 50px; } }
+    margin-top: 6px; } }
 
 @media screen and (max-width: 414px) {
   #welcome-top {
