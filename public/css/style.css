@@ -615,16 +615,16 @@ div.form-group.label-taller {
   form#form-home {
     margin-top: -15px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   #sel1.form-control.form-personal.select-taller {
     margin-left: 7px;
     width: 195px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   li#link-sup {
     margin-top: 0px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   li.anuncio-free {
     margin-top: 6px; } }
 
@@ -632,60 +632,91 @@ div.form-group.label-taller {
   #welcome-top {
     margin-top: 20px !important;
     font-size: 20px; } }
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   #welcome-top {
     margin-top: -5px;
     font-size: 24px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   form#form-home {
     margin-top: -29px;
     margin-left: 22px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   .hr-line {
     margin-top: -16px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   .size-title-categories {
     font-size: 44px;
     margin-left: 10px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
+  #myCarousel {
+    margin-top: 0px; } }
+@media screen and (min-width: 414px) {
   #myCarousel {
     margin-top: 0px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
+  .title-bot {
+    font-size: 28px; } }
+@media screen and (min-width: 414px) {
   .title-bot {
     font-size: 28px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
+  .text-bot {
+    font-size: 20px;
+    text-align: justify; } }
+@media screen and (min-width: 414px) {
   .text-bot {
     font-size: 20px;
     text-align: justify; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
+  .circle-ayurveda {
+    width: 142px;
+    height: 138px;
+    font-size: 27px; } }
+@media screen and (min-width: 414px) {
   .circle-ayurveda {
     width: 142px;
     height: 138px;
     font-size: 27px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
+  .mobile1 {
+    padding-left: 41px;
+    font-size: 16px; } }
+@media screen and (min-width: 414px) {
   .mobile1 {
     padding-left: 41px;
     font-size: 16px; } }
 
+@media screen and (max-width: 375px) {
+  .mobile2 {
+    padding-left: 52px;
+    font-size: 16px; } }
 @media screen and (max-width: 414px) {
   .mobile2 {
     padding-left: 52px;
     font-size: 16px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
+  .mobile3 {
+    padding-left: 54px;
+    font-size: 16px; } }
+@media screen and (min-width: 414px) {
   .mobile3 {
     padding-left: 54px;
     font-size: 16px; } }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 375px) {
+  .copyright.col-xs-12 {
+    font-size: 15px;
+    margin-top: 39px; } }
+@media screen and (min-width: 414px) {
   .copyright.col-xs-12 {
     font-size: 15px;
     margin-top: 39px; } }
@@ -693,7 +724,7 @@ div.form-group.label-taller {
 @media screen and (max-width: 375px) {
   .map-food {
     margin-left: 0px; } }
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 414px) {
   .map-food {
     margin-left: 0px; } }
 
