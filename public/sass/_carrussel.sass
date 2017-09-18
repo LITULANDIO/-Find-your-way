@@ -607,7 +607,7 @@ div.form-group.label-taller
       padding-left: 20px
 
 li.anuncio-free 
-  @media screen and (max-width: 375px)
+  @media screen and (min-width: 375px)
     margin-top: 6px
 
 form#form-home 
@@ -622,14 +622,18 @@ form#form-home
 
 li#link-sup 
   @media screen and (max-width: 414px)
-    margin-top: 8px
+    margin-top: 0px
 
 li.anuncio-free
+
   @media screen and (max-width: 414px)
     margin-top: 6px
 
 
 #welcome-top
+  @media screen and (max-width: 375px)
+    margin-top: 20px !important
+    font-size: 20px
   @media screen and (max-width: 414px)
     margin-top: -5px
     font-size: 24px

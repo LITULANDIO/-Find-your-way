@@ -607,7 +607,7 @@ div.form-group.label-taller {
     .null .mobile2 {
       padding-left: 20px; } }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
   li.anuncio-free {
     margin-top: 6px; } }
 
@@ -622,12 +622,16 @@ div.form-group.label-taller {
 
 @media screen and (max-width: 414px) {
   li#link-sup {
-    margin-top: 8px; } }
+    margin-top: 0px; } }
 
 @media screen and (max-width: 414px) {
   li.anuncio-free {
     margin-top: 6px; } }
 
+@media screen and (max-width: 375px) {
+  #welcome-top {
+    margin-top: 20px !important;
+    font-size: 20px; } }
 @media screen and (max-width: 414px) {
   #welcome-top {
     margin-top: -5px;
