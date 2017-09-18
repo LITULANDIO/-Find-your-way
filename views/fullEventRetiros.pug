@@ -2,7 +2,7 @@ extends layout
 
 block content
   .welcome.text-center.container
-    p#welcome-top.title-event
+    p(onload="countDown('true','2018','4','12','13','31','14')")#welcome-top.title-event
      | #{retiros.title}
     .hr-line
   .my-container
@@ -32,6 +32,57 @@ block content
                   <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Maps/location-25.png" title="Marker" width="26" height="26">
                   |&nbsp;&nbsp; Localidad: #{retiros.localitation}
                 hr
+                script(type='text/javascript').
+                  function countDown(repite,a,me,d,h,m,s){
+                  var form=document.getElementById('form');
+                  if (repite=='true'){
+                  var anyo=a;
+                  var mes=me-1;
+                  var dia=d;
+                  var hora=h;
+                  var minuto=m;
+                  var segundo=s;
+                  var La_fecha = new Date();
+                  var La_fecha_total = new Date(anyo,mes,dia,hora,minuto,segundo);
+                  toSecond = (La_fecha_total - La_fecha)/1000
+                  toDay = parseInt(toSecond/86400);
+                  toSecond=toSecond-(toDay*86400);
+                  toHour = parseInt(toSecond/3600);
+                  toSecond=toSecond-(toHour*3600);
+                  toMinute=parseInt(toSecond/60);
+                  toSecond=parseInt(toSecond-(toMinute*60));
+                  }
+                  toSecond=toSecond-1;
+                  if(toSecond<0)
+                  {
+                  toSecond=59;
+                  toMinute=toMinute-1;
+                  }
+                  form.second.value=toSecond;
+                  if(toMinute<0)
+                  {
+                  toMinute=59;
+                  toHour=toHour-1;
+                  }
+                  form.minute.value=toMinute;
+                  if(toHour<0)
+                  {   toHour=23;
+                  toDay=toDay-1;
+                  }
+                  form.hour.value=toHour;
+                  form.day.value=toDay;
+                  if(toDay<0)
+                  {
+                  form.second.value=0;
+                  form.minute.value=0;
+                  form.hour.value=0;
+                  form.day.value=0;
+                  }
+                  else{
+                  setTimeout("countDown('false')",1000);
+                  }
+                  }
+  
                 li
                   <img src="https://maxcdn.icons8.com/iOS7/PNG/25/Time_And_Date/calendar-25.png" title="Calendar" width="26" height="26">
                   |&nbsp;&nbsp;Fecha Inicio: #{retiros.startDate}

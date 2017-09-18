@@ -231,6 +231,9 @@ label.size-categories {
   @media screen and (min-width: 100px) and (max-width: 725px) {
     .top-menu {
       margin-top: 0px; } }
+  @media screen and (max-width: 375px) {
+    .top-menu {
+      margin-top: -42px; } }
 
 ul.dropdown-menu {
   margin-left: -58px; }
@@ -311,6 +314,9 @@ div.form-group.label-taller {
 
 #welcome-top {
   margin-top: 10px; }
+  @media screen and (max-width: 375px) {
+    #welcome-top {
+      font-size: 21px; } }
 
 .welcome {
   font-size: 40px;
@@ -600,6 +606,78 @@ div.form-group.label-taller {
   @media screen and (min-width: 360px) and (max-width: 640px) {
     .null .mobile2 {
       padding-left: 20px; } }
+
+@media screen and (max-width: 375px) {
+  li.anuncio-free {
+    margin-top: 6px; } }
+
+@media screen and (max-width: 375px) {
+  form#form-home {
+    margin-top: -15px; } }
+
+@media screen and (max-width: 414px) {
+  #sel1.form-control.form-personal.select-taller {
+    margin-left: 7px;
+    width: 195px; } }
+
+@media screen and (max-width: 414px) {
+  li#link-sup {
+    margin-top: 43px; } }
+
+@media screen and (max-width: 414px) {
+  li.anuncio-free {
+    margin-top: 50px; } }
+
+@media screen and (max-width: 414px) {
+  #welcome-top {
+    margin-top: -5px;
+    font-size: 24px; } }
+
+@media screen and (max-width: 414px) {
+  form#form-home {
+    margin-top: -29px;
+    margin-left: 22px; } }
+
+@media screen and (max-width: 414px) {
+  .hr-line {
+    margin-top: -16px; } }
+
+@media screen and (max-width: 414px) {
+  .size-title-categories {
+    font-size: 44px;
+    margin-left: 10px; } }
+
+@media screen and (max-width: 414px) {
+  #myCarousel {
+    margin-top: 0px; } }
+
+@media screen and (max-width: 414px) {
+  .title-bot {
+    font-size: 28px; } }
+
+@media screen and (max-width: 414px) {
+  .text-bot {
+    font-size: 20px;
+    text-align: justify; } }
+
+@media screen and (max-width: 414px) {
+  .circle-ayurveda {
+    width: 142px;
+    height: 138px;
+    font-size: 27px; } }
+
+@media screen and (max-width: 414px) {
+  .mobile1 {
+    padding-left: 0; } }
+
+@media screen and (max-width: 414px) {
+  .mobile3 {
+    padding-left: 34px; } }
+
+@media screen and (max-width: 414px) {
+  .copyright.col-xs-12 {
+    font-size: 15px;
+    margin-top: 39px; } }
 
 .navbar-count {
   margin-top: -30px;
