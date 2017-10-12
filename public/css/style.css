@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  background-image: url("../img/mandala.gif");
+  max-width: 100%; }
+
 .ino {
   margin-top: 24px;
   position: absolute;
@@ -34,6 +38,9 @@
   @media screen and (min-width: 300px) and (max-width: 1231px) {
     .intros {
       margin-top: 79px; } }
+
+.hover_menu {
+  display: block; }
 
 .dropdown-menu {
   position: absolute;
@@ -87,8 +94,9 @@ body {
 h2.title-find {
   display: flex;
   margin: auto;
-  margin-bottom: 21px; }
-  @media screen and (min-width: 414px) {
+  margin-bottom: 21px;
+  font-size: 25px; }
+  @media screen and (max-width: 414px) {
     h2.title-find {
       font-size: 12px;
       margin-top: 22px;
@@ -100,7 +108,7 @@ h2.title-find {
       margin-top: 22px;
       margin-left: -100px;
       margin-bottom: -20px; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 768px) {
     h2.title-find {
       margin-bottom: -32px;
       margin-left: 38px;
@@ -746,6 +754,9 @@ div.form-group.label-taller {
 @media screen and (max-width: 414px) {
   .map-food {
     margin-left: 0px; } }
+
+.mandala {
+  opacity: 1.5; }
 
 .navbar-count {
   margin-top: -30px;
