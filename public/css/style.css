@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   background-image: url("../img/mandalaBody.gif");
-  max-width: 10gif; }
+  max-width: 10; }
 
 .ino {
   margin-top: 24px;
@@ -111,7 +111,7 @@ h2.title-find {
   @media screen and (max-width: 768px) {
     h2.title-find {
       margin-bottom: -32px;
-      margin-left: 38px;
+      margin-left: -102px;
       margin-top: 22px; } }
 
 .search {
@@ -267,7 +267,7 @@ ul.dropdown-menu {
   padding-bottom: 2px; }
   @media screen and (max-width: 414px) {
     .top-menu li:last-child {
-      padding-top: 46px; } }
+      padding-top: 17px; } }
   @media screen and (min-width: 100px) and (max-width: 747px) {
     .top-menu li:last-child {
       font-size: 15px; } }
@@ -296,6 +296,9 @@ ul.dropdown-menu {
   @media screen and (max-width: 414px) {
     #link-sup {
       padding-top: 41px; } }
+  @media screen and (max-width: 375px) {
+    #link-sup {
+      padding-top: 10px; } }
 
 .form-personal {
   color: #fcf8e3 !important;
@@ -362,10 +365,8 @@ div.form-group.label-taller {
     transition: 2s; }
 
 .navbar {
+  max-height: 84px;
   margin-bottom: 0px !important; }
-  @media screen and (min-width: 100px) and (max-width: 535px) {
-    .navbar {
-      max-height: 170px; } }
 
 .item {
   display: inline-flex; }
