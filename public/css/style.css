@@ -267,6 +267,9 @@ ul.dropdown-menu {
   padding-bottom: 2px; }
   @media screen and (max-width: 414px) {
     .top-menu li:last-child {
+      padding-top: 46px; } }
+  @media screen and (max-width: 375px) {
+    .top-menu li:last-child {
       padding-top: 17px; } }
   @media screen and (min-width: 100px) and (max-width: 747px) {
     .top-menu li:last-child {
