@@ -15,7 +15,7 @@ module.exports = (req, res) => {
   const { category } = req.body
   const { plataforma} = req.body
   const { mision } = req.body
-  const { imageUrl } = req.file
+ // const { imageUrl } = req.file
   const { road } = req.body
   const { lat } = req.body
   const { long } = req.body
@@ -32,31 +32,31 @@ module.exports = (req, res) => {
   const { tel } = req.body
   const { web } = req.body
   const { tags } = req.body
-  const conferencia = new Conferencia({ owner, title, mision, imageUrl, category, plataforma, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, price, tel, web, tags })
+  const conferencia = new Conferencia({ owner, title, mision, category, plataforma, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, price, tel, web, tags })
 
-  console.log('la imagen es: ' + req.file.imageUrl)
+//   console.log('la imagen es: ' + req.file.imageUrl)
 
-  if (req.file) {
-    cloudinary.uploader.upload(req.file.path,
-  function (result) {
-    conferencia.imageUrl = result.url
-    conferencia.save()// (function (err) {
-      // res.render('add-event')
-    // })
-  },
-      {
-        public_id: 'sample_id',
-        crop: 'limit',
-        width: 1000,
-        height: 1000
-      }
-)
-  } else {
-    conferencia.save()// (function (err) {
+//   if (req.file) {
+//     cloudinary.uploader.upload(req.file.path,
+//   function (result) {
+//     conferencia.imageUrl = result.url
+//     conferencia.save()// (function (err) {
+//       // res.render('add-event')
+//     // })
+//   },
+//       {
+//         public_id: 'sample_id',
+//         crop: 'limit',
+//         width: 1000,
+//         height: 1000
+//       }
+// )
+//   } else {
+  conferencia.save()// (function (err) {
      // console.log(retiro)
       // res.render('add-event')
     // })
-  }
+  // }
 
   console.log('Retiro creado' + conferencia)
   // res.status(200).json(event)

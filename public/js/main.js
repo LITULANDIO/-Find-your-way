@@ -2,7 +2,7 @@
 
   $('.remove').on('click', function (e) {
     e.preventDefault()
-    const url = '/acount'
+    const url = '/retiros/delete'
     const method = 'DELETE'
     const id = $(this).attr('data-id')
     const data = { id }
@@ -18,7 +18,7 @@
 // DELETE FORMACION
   $('.remove').on('click', function (e) {
     e.preventDefault()
-    const url = '/acount'
+    const url = '/formaciones/delete'
     const method = 'DELETE'
     const id = $(this).attr('data-id')
     const data = { id }
@@ -35,7 +35,7 @@
 
   $('.remove').on('click', function (e) {
     e.preventDefault()
-    const url = '/acount'
+    const url = '/talleres/delete'
     const method = 'DELETE'
     const id = $(this).attr('data-id')
     const data = { id }
@@ -51,7 +51,7 @@
 // DELETE CONFERENCIA
   $('.remove').on('click', function (e) {
     e.preventDefault()
-    const url = '/acount'
+    const url = '/conferencias/delete'
     const method = 'DELETE'
     const id = $(this).attr('data-id')
     const data = { id }
@@ -67,7 +67,7 @@
 // DELETE INSTRUCTOR
   $('.remove').on('click', function (e) {
     e.preventDefault()
-    const url = '/acount'
+    const url = '/instructores/delete'
     const method = 'DELETE'
     const id = $(this).attr('data-id')
     const data = { id }

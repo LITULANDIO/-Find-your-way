@@ -39,28 +39,28 @@ router.get('/acount', myAcount)
 
 // ------------END POINTS RETIROS--------------------------------------------
 router.get('/retiros', getRetiros) // Muestra todos los retiros
-router.get('/acount-retiro/empty', showFormRetiro) // Vemos el formulario vacio
-router.post('/acount-retiro/add', addRetiros) // Guardamos los datos del formulario
+router.get('/retiros/acount/empty', showFormRetiro) // Vemos el formulario vacio
+router.post('/retiros/acount/add', addRetiros) // Guardamos los datos del formulario
 
 // ------------END POINTS TALLERES--------------------------------------------
 router.get('/talleres', getTalleres) // Muestra todos los retiros
-router.get('/acount-taller/empty', showFormTaller) // Vemos el formulario vacio
-router.post('/acount-taller/add', addTalleres) // Guardamos los datos del formulario
+router.get('/talleres/acount/empty', showFormTaller) // Vemos el formulario vacio
+router.post('/talleres/acount/add', addTalleres) // Guardamos los datos del formulario
 
 // ------------END POINTS INSTRUCTORES--------------------------------------------
 router.get('/instructores', getInstructor) // Muestra todos los retiros
-router.get('/acount-instructor/empty', showFormInstructor) // Vemos el formulario vacio
-router.post('/acount-instructor/add', addInstructor) // Guardamos los datos del formulario
+router.get('/instructores/acount/empty', showFormInstructor) // Vemos el formulario vacio
+router.post('instructores/acount/add', addInstructor) // Guardamos los datos del formulario
 
 // ------------END POINTS FORMACIONES--------------------------------------------
 router.get('/formaciones', getFormacion) // Muestra todos los retiros
-router.get('/acount-formacion/empty', showFormFormacion) // Vemos el formulario vacio
-router.post('/acount-formacion/add', addFormacion) // Guardamos los datos del formulario
+router.get('/formaciones/acount/empty', showFormFormacion) // Vemos el formulario vacio
+router.post('/formaciones/acount/add', addFormacion) // Guardamos los datos del formulario
 
 // ------------END POINTS CONFERENCIAS--------------------------------------------
 router.get('/conferencias', getConferencia) // Muestra todos los retiros
-router.get('/acount-conferencia/empty', showFormConferencia) // Vemos el formulario vacio
-router.post('/acount-conferencia/add', addConferencia) // Guardamos los datos del formulario
+router.get('/conferencias/acount/empty', showFormConferencia) // Vemos el formulario vacio
+router.post('/conferencias/acount/add', addConferencia) // Guardamos los datos del formulario
 
 module.exports = router
 

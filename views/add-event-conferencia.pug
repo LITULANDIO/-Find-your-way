@@ -25,14 +25,14 @@ block content
  
   h1.font-categories.container Conferencias
   .container.well
-      form.edit-retiro(action= action ? action : '/acount-conferencia/add' method= method ? method : 'POST' enctype="multipart/form-data")
+      form.edit-retiro(action= action ? action : '/conferencias/acount/add' method= method ? method : 'POST' enctype="multipart/form-data")
         .container
           .col-sm-8        
         .row
             br
             fieldset.form-group.col-sm-2
               label Fotografía/ Logo
-             input.img-picker(type="file", name="imageUrl" id="image_item" value= !conferencias ? " " : conferencias.imageUrl)
+            input.img-picker(type="file", name="imageUrl" id="image_item" value= !conferencias ? " " : conferencias.imageUrl)
 		  
             fieldset.form-group.text-right.col-xs-12
               | Modalidad

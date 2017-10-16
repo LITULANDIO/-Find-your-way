@@ -14,7 +14,7 @@ module.exports = (req, res) => {
   const { title } = req.body
   const { category } = req.body
   const { mision } = req.body
-  const { imageUrl } = req.file
+ // const { imageUrl } = req.file
   const { road } = req.body
   const { lat } = req.body
   const { long } = req.body
@@ -31,31 +31,31 @@ module.exports = (req, res) => {
   const { tel } = req.body
   const { web } = req.body
   const { tags } = req.body
-  const retiro = new Retiro({ owner, title, mision, imageUrl, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, price, tel, web, tags })
+  const retiro = new Retiro({ owner, title, mision, category, road, comunity, localitation, lat, long, startDate, timeHourStart, timeMinuteStart, endDate, timeHourEnd, timeMinuteEnd, description, price, tel, web, tags })
 
-  console.log('la imagen es: ' + req.file.imageUrl)
+  // console.log('la imagen es: ' + req.file.imageUrl)
 
-  if (req.file) {
-    cloudinary.uploader.upload(req.file.path,
-  function (result) {
-    retiro.imageUrl = result.url
-    retiro.save()// (function (err) {
-      // res.render('add-event')
-    // })
-  },
-      {
-        public_id: 'sample_id',
-        crop: 'limit',
-        width: 1000,
-        height: 1000
-      }
-)
-  } else {
-    retiro.save()// (function (err) {
+//   if (req.file) {
+//     cloudinary.uploader.upload(req.file.path,
+//   function (result) {
+//     retiro.imageUrl = result.url
+//     retiro.save()// (function (err) {
+//       // res.render('add-event')
+//     // })
+//   },
+//       {
+//         public_id: 'sample_id',
+//         crop: 'limit',
+//         width: 1000,
+//         height: 1000
+//       }
+// )
+//   } else {
+  retiro.save()// (function (err) {
      // console.log(retiro)
       // res.render('add-event')
     // })
-  }
+  // }
 
   console.log('Retiro creado' + retiro)
   // res.status(200).json(event)

@@ -44,50 +44,50 @@ const getDetailsInstructores = require('./handlers/instructores/getDetails')
 // -----------------------------------END POINTS RETIROS-----------------------------------------------------------
 
 router.get('/retiros/:tipo', getRetiros) // Filtramos resultados de tipos
-router.delete('/acount', deleteByIdRetiro) // eliminar evento
-router.get('/details', ShowDetailsRetiro) // Muestra el detalle completo del evento
+router.delete('/retiros/delete', deleteByIdRetiro) // eliminar evento
+router.get('/retiros/details', ShowDetailsRetiro) // Muestra el detalle completo del evento
 router.put('/retiros/edited/:id', updateByIdRetiro) // editamos evento metodo put
-router.get('/retiros/edited/:id', getOnlyRetiro) //
-router.get('/details/:id', getDetailsRetiro) // renderizamos info detallada del evento
+router.get('/retiros/view/:id', getOnlyRetiro) //
+router.get('/retiros/details/:id', getDetailsRetiro) // renderizamos info detallada del evento
 // router.get('/retiros/add', getOnlyRetiro)
 
 // -----------------------------------END POINTS TALLERES-----------------------------------------------------------
 
 router.get('/talleres/:tipo', getTalleres) // Filtramos resultados de tipos
-router.delete('/acount', deleteByIdTaller) // eliminar evento
-router.get('/details', ShowDetailsTaller) // Muestra el detalle completo del evento
+router.delete('/talleres/delete', deleteByIdTaller) // eliminar evento
+router.get('/talleres/details', ShowDetailsTaller) // Muestra el detalle completo del evento
 router.put('/talleres/edited/:id', updateByIdTaller) // editamos evento metodo put
-router.get('/talleres/edited/:id', getOnlyTaller) //
-router.get('/details/:id', getDetailsTaller) // renderizamos info detallada del evento
+router.get('/talleres/view/:id', getOnlyTaller) //
+router.get('/talleres/details/:id', getDetailsTaller) // renderizamos info detallada del evento
 // router.get('/retiros/add', getOnlyRetiro)
 
 // -----------------------------------END POINTS FORMACIONES-----------------------------------------------------------
 
 router.get('/formaciones/:tipo', getFormaciones) // Filtramos resultados de tipos
-router.delete('/acount', deleteByIdFormaciones) // eliminar evento
-router.get('/details', ShowDetailsFormaciones) // Muestra el detalle completo del evento
+router.delete('/formaciones/delete', deleteByIdFormaciones) // eliminar evento
+router.get('/formaciones/details', ShowDetailsFormaciones) // Muestra el detalle completo del evento
 router.put('/formaciones/edited/:id', updateByIdFormaciones) // editamos evento metodo put
-router.get('/formaciones/edited/:id', getOnlyFormaciones) //
-router.get('/details/:id', getDetailsFormaciones) // renderizamos info detallada del evento
+router.get('/formaciones/view/:id', getOnlyFormaciones) //
+router.get('/formaciones/details/:id', getDetailsFormaciones) // renderizamos info detallada del evento
 // router.get('/retiros/add', getOnlyRetiro)
 
 // -----------------------------------END POINTS CONFERENCIAS-----------------------------------------------------------
 
 router.get('/conferencias/:tipo', getConferencias) // Filtramos resultados de tipos
-router.delete('/acount', deleteByIdConferencias) // eliminar evento
-router.get('/details', ShowDetailsConferencias) // Muestra el detalle completo del evento
+router.delete('/conferencias/delete', deleteByIdConferencias) // eliminar evento
+router.get('/conferencias/details', ShowDetailsConferencias) // Muestra el detalle completo del evento
 router.put('/conferencias/edited/:id', updateByIdConferencias) // editamos evento metodo put
-router.get('/conferencias/edited/:id', getOnlyConferencias) //
-router.get('/details/:id', getDetailsConferencias) // renderizamos info detallada del evento
+router.get('/conferencias/view/:id', getOnlyConferencias) //
+router.get('/conferencias/details/:id', getDetailsConferencias) // renderizamos info detallada del evento
 // router.get('/retiros/add', getOnlyRetiro)
 
 // -----------------------------------END POINTS INSTRUCTORES-----------------------------------------------------------
 
 router.get('/instructores/:tipo', getInstructores) // Filtramos resultados de tipos
-router.delete('/acount', deleteByIdInstructores) // eliminar evento
-router.get('/details', ShowDetailsInstructores) // Muestra el detalle completo del evento
+router.delete('/instructores/delete', deleteByIdInstructores) // eliminar evento
+router.get('/instructores/details', ShowDetailsInstructores) // Muestra el detalle completo del evento
 router.put('/instructores/edited/:id', updateByIdInstructores) // editamos evento metodo put
-router.get('/instructores/edited/:id', getOnlyInstructores) //
-router.get('/details/:id', getDetailsInstructores) // renderizamos info detallada del evento
+router.get('/instructores/view/:id', getOnlyInstructores) //
+router.get('/instructores/details/:id', getDetailsInstructores) // renderizamos info detallada del evento
 // // router.get('/retiros/add', getOnlyRetiro)
 module.exports = router

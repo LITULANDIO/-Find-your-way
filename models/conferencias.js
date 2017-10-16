@@ -36,7 +36,8 @@ const ConferenciaSchema = new mongoose.Schema({
 
 ConferenciaSchema.virtual('imageurl').get(function () {
   if (this.imageUrl === undefined) {
-    return '.img/nodisponible.png'
+    return 'img/nodisponible.png'
+    console.log('no se inserta la imagen')
   }
   return this.imageUrl
 })
