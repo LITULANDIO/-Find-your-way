@@ -2,6 +2,7 @@ const express = require('express')
 const passport = require('passport')
 const Account = require('../../models/counts')
 const flash = require('connect-flash')
+const nodemailer = require('nodemailer')
 
 const router = express.Router()
 
@@ -31,7 +32,27 @@ router.post('/login',
     session: true,
     successRedirect: '/acount',
     failureRedirect: '/login',
-    failureFlash: false }))
+    failureFlash: false })
+   )
+
+// configuración cuenta mail
+const transporter = nodemailer.createTransport({
+  service: 'Gmail',
+  auth: {
+    user: 'info.encuentratucamino@gmail.com',
+    pass: '3trinidad'
+
+  }
+})
+
+ // setup email data with unicode symbols
+let mailOptions = {
+  from: '"Encuentra tu camino" <info.encuentratucamino@gmail.com>', // sender address
+  to: '', // list of receivers
+  subject: 'Confirmación de cuenta', // Subject line
+  text: '' // plain text body
+       // html: '<b>Hello world?</b>' // html body
+}
 
 // REGISTER
 router.post('/register', function (req, res, next) {
@@ -57,7 +78,11 @@ router.post('/register', function (req, res, next) {
       return res.render('login-register', {validationErrors: validation_errors})
     }
     if (post.username === username) validation_succes.push('Usuario Registrado! Bienvenid@ ' + post.username + ', ya puedes iniciar sesión.')
-
+    mailOptions.to = email
+    transporter.sendMail(mailOptions, function (err, info) {
+      if (err) throw err
+      console.log('info email:', info)
+    })
     return res.render('login-register', {validationSucces: validation_succes})
   })
 })

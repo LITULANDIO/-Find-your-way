@@ -5,6 +5,7 @@ module.exports = (req, res) => {
   console.log(req.params)
 
   Retiro.find({'road': {$eq: tipo} })
+  	.limit(5)
     .then(retiros => res.render('Allretiros', { retiros }))
     .catch(err => { throw err })
   console.log('el camino escogido es: ' + tipo)
